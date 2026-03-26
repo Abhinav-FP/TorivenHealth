@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibility &amp; AODA Statement | Toriven Health</title>
+  <meta name="description" content="Toriven Health accessibility commitment and AODA compliance statement for Ontario users." />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <style>
+     
+    /* ── HERO ── */
+    .hero{background:linear-gradient(135deg,#0D1B2A 0%,#1a3350 60%,#0f2840 100%);color:var(--white);padding:72px 5% 64px;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(0,196,122,.12) 0%,transparent 60%)}
+    .hero-inner{max-width:860px;margin:0 auto;position:relative}
+    .page-label{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--green);display:block;margin-bottom:14px}
+    .hero h1{font-size:clamp(2rem,4vw,2.8rem);font-weight:900;line-height:1.15;letter-spacing:-.03em;margin-bottom:16px}
+    .hero h1 em{color:var(--green);font-style:normal}
+    .hero p{font-size:1rem;color:rgba(255,255,255,.8);max-width:600px;line-height:1.75}
+
+    /* ── CONTENT ── */
+    .content-section{padding:64px 5%}
+    .content-inner{max-width:860px;margin:0 auto}
+    .content-section h2{font-size:1.4rem;font-weight:900;color:var(--navy);margin-bottom:14px;margin-top:44px;letter-spacing:-.02em}
+    .content-section h2:first-child{margin-top:0}
+    .content-section h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px;margin-top:28px}
+    .content-section p{font-size:.95rem;color:var(--slate);line-height:1.78;margin-bottom:14px}
+    .content-section ul{margin:10px 0 14px 20px;display:flex;flex-direction:column;gap:8px}
+    .content-section li{font-size:.95rem;color:var(--slate);line-height:1.65}
+    .highlight-box{background:var(--green-light);border-left:4px solid var(--green);border-radius:0 8px 8px 0;padding:18px 22px;margin:24px 0}
+    .highlight-box p{margin-bottom:0;color:var(--navy);font-weight:500;font-size:.95rem}
+    .contact-box{background:var(--light);border:1px solid var(--border);border-radius:14px;padding:28px 32px;margin-top:28px}
+    .contact-box h3{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:12px;margin-top:0}
+    .contact-box p{font-size:.9rem;color:var(--slate);margin-bottom:8px;line-height:1.65}
+    .contact-box a{color:var(--green-accessible);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+    .divider{border:none;border-top:1px solid var(--border);margin:36px 0}
+    .doc-meta{font-size:.82rem;color:var(--gray);line-height:1.7}
+
+    /* ── CRISIS BAR ── */
+    .crisis-bar{background:#0D1B2A;border-top:1px solid rgba(255,255,255,.07);padding:14px 5%;text-align:center}
+    .crisis-bar p{font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.6}
+    .crisis-bar strong{color:rgba(255,255,255,.9)}
+    .crisis-bar .crisis-num{color:var(--green);font-weight:800}
+ 
+
+    /* ── RESPONSIVE ── */
+  
+    @media(max-width:600px){
+      
+      .hero{padding:52px 5% 48px}
+      .content-section{padding:48px 5%}
+      .contact-box{padding:20px}
+    }
+ 
+  </style>
+</head>
+<body>
+
+<!-- SKIP LINK -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <!-- Logo as a link (WCAG 2.4.4) -->
+  <a href="index.html" class="logo" aria-label="Toriven Health — return to homepage">Toriven<span>Health</span></a>
+
+  <!-- Desktop nav links -->
+  <div class="nav-links" id="desktop-nav">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <div class="nav-has-dropdown">
+      <a href="services.html" class="nav-services-trigger" aria-haspopup="true" aria-expanded="false" id="services-menu-btn" type="button">Services</a>
+      <div class="nav-dropdown" role="menu" aria-labelledby="services-menu-btn">
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">For Children &amp; Teens</div>
+          <a href="services/autism-assessment.html" role="menuitem">Autism &amp; ASD Assessment</a>
+          <a href="services/adhd-assessment.html" role="menuitem">ADHD &amp; Learning Assessment</a>
+          <a href="services/speech-language.html" role="menuitem">Speech-Language Therapy</a>
+          <a href="services/occupational-therapy.html" role="menuitem">Occupational Therapy</a>
+          <a href="services/education-school-support.html" role="menuitem">Education &amp; School Support</a>
+          <a href="services/communication-social.html" role="menuitem">Communication &amp; Social Skills</a>
+        </div>
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">For Adults</div>
+          <a href="services/therapy-counselling.html" role="menuitem">Therapy &amp; Counselling</a>
+          <a href="services/anxiety-depression.html" role="menuitem">Anxiety &amp; Depression</a>
+          <a href="services/trauma-ptsd-therapy.html" role="menuitem">Trauma &amp; PTSD</a>
+          <a href="services/work-stress-burnout.html" role="menuitem">Work Stress &amp; Burnout</a>
+          <a href="services/return-to-work.html" role="menuitem">Return to Work</a>
+          <a href="services/individual-therapy.html" role="menuitem">Individual Therapy</a>
+        </div>
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">Specialized Programs</div>
+          <a href="./services/womens-mental-health.html" role="menuitem">Women&rsquo;s Mental Health</a>
+          <a href="services/2slgbtq-mental-health.html" role="menuitem">2SLGBTQ+ Affirming Care</a>
+          <a href="services/veterans-first-responders.html" role="menuitem">Veterans &amp; First Responders</a>
+          <a href="services/parent-coaching.html" role="menuitem">Parent Coaching &amp; Support</a>
+          <a href="services/specialized-programs.html" role="menuitem">View All Programs &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <a href="careers.html">Careers</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Desktop CTA buttons -->
+  <div class="nav-cta-group">
+    <a href="contact.html" class="btn-nav-portal">Patient Portal</a>
+    <a href="contact.html" class="btn-nav-cta">Book Free Consultation</a>
+  </div>
+
+  <!-- Hamburger button (mobile only) -->
+  <button class="nav-hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu" onclick="toggleMobileNav(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile navigation menu -->
+<div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="career.html">Careers</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-nav-ctas">
+    <a href="contact.html" class="btn-nav-portal">Patient Portal</a>
+    <a href="contact.html" class="btn-nav-cta">Book Free Consultation</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+  <section class="hero" aria-labelledby="page-heading">
+    <div class="hero-inner">
+      <span class="page-label" aria-hidden="true">Accessibility</span>
+      <h1 id="page-heading">Accessibility &amp; <em>AODA</em> Statement</h1>
+      <p>Toriven Health is committed to providing an accessible digital experience for all users, including persons with disabilities, in accordance with Ontario's accessibility standards.</p>
+    </div>
+  </section>
+
+  <section class="content-section" aria-label="Accessibility statement content">
+    <div class="content-inner">
+
+      <h2>Our Commitment</h2>
+      <p>Toriven Health (Toriven Health Inc.) is committed to ensuring equal access to our website and digital services for all individuals, including persons with disabilities. We are working to meet and maintain compliance with the <strong>Accessibility for Ontarians with Disabilities Act, 2005 (AODA)</strong> and the <strong>Integrated Accessibility Standards Regulation (IASR)</strong> under Ontario Regulation 191/11.</p>
+      <p>Our target standard for web accessibility is <strong>Web Content Accessibility Guidelines (WCAG) 2.0 Level AA</strong>, as required under the IASR for information and communications standards. We are additionally building toward <strong>WCAG 2.1 Level AA</strong> as best practice beyond the legal minimum.</p>
+
+      <div class="highlight-box" role="note">
+        <p>Toriven Health is a pre-launch organization. Our website is currently in development. We are building with accessibility as a design requirement, not an afterthought, and will conduct a formal accessibility audit prior to clinical launch.</p>
+      </div>
+
+      <h2>Applicable Standards</h2>
+      <p>This website is being developed with reference to the following standards and legislation:</p>
+      <ul>
+        <li><strong>Accessibility for Ontarians with Disabilities Act, 2005 (AODA)</strong></li>
+        <li><strong>Integrated Accessibility Standards Regulation (O. Reg. 191/11)</strong> — Information and Communications Standards, Customer Service Standards</li>
+        <li><strong>Web Content Accessibility Guidelines (WCAG) 2.0, Level AA</strong> — published by the World Wide Web Consortium (W3C)</li>
+        <li><strong>Ontario Human Rights Code</strong> — with respect to equal treatment in services</li>
+      </ul>
+
+      <h2>Current Status</h2>
+      <p>Toriven Health has not yet launched clinical services. During the pre-launch period, our website is informational only. We are actively working to ensure the following accessibility features are in place at launch:</p>
+      <ul>
+        <li>Semantic HTML structure with appropriate heading hierarchy</li>
+        <li>Sufficient colour contrast ratios meeting WCAG 2.0 Level AA (minimum 4.5:1 for normal text)</li>
+        <li>Descriptive link text that is meaningful out of context</li>
+        <li>Alt text for all informational images</li>
+        <li>Keyboard navigability for all interactive elements</li>
+        <li>No content that relies solely on colour to convey meaning</li>
+        <li>Consistent navigation structure across all pages</li>
+        <li>Resizable text support without loss of content or functionality</li>
+      </ul>
+
+      <h2>Known Limitations</h2>
+      <p>As a pre-launch website under active development, some pages may not yet fully meet WCAG 2.0 Level AA. We are committed to identifying and resolving these gaps before and after our clinical launch. A formal third-party accessibility audit is planned prior to opening.</p>
+
+      <h2>Multi-Year Accessibility Plan</h2>
+      <p>In accordance with the IASR, Toriven Health is committed to developing and maintaining a multi-year accessibility plan. Our current commitments include:</p>
+      <ul>
+        <li><strong>Pre-launch (2026):</strong> Internal accessibility review of all patient-facing web pages against WCAG 2.0 AA criteria</li>
+        <li><strong>At launch (2026):</strong> Publish updated accessibility statement with formal audit results; ensure all new content published after launch meets WCAG 2.0 AA</li>
+        <li><strong>Post-launch (ongoing):</strong> Annual review of website accessibility; address reported barriers within a reasonable timeframe; train staff on accessible content creation</li>
+      </ul>
+
+      <h2>Accessible Formats and Communication Supports</h2>
+      <p>Upon request, Toriven Health will make reasonable efforts to provide information in accessible formats or with appropriate communication supports. Requests can be submitted using the contact information below. We will respond to accessibility format requests in a timely manner and at no additional charge.</p>
+
+      <h2>Feedback and Contact</h2>
+      <p>We welcome feedback on the accessibility of our website. If you encounter a barrier, experience difficulty accessing any content, or would like to request an accessible format, please contact us:</p>
+
+      <div class="contact-box">
+        <h3>Accessibility Feedback</h3>
+        <p><strong>Organization:</strong> Toriven Health Inc.</p>
+        <p><strong>Email:</strong> Available at clinical launch — contact us via our <a href="contact.html">Contact page</a></p>
+        <p><strong>Location:</strong> Serving all of Ontario — Virtual-First</p>
+        <p style="margin-top:14px;font-size:.86rem;color:var(--gray)">We will acknowledge accessibility feedback within 5 business days and provide a substantive response within 15 business days where feasible.</p>
+      </div>
+
+      <hr class="divider" />
+
+      <p class="doc-meta"><strong>Document version:</strong> 1.0 &nbsp;|&nbsp; <strong>Last reviewed:</strong> March 2026 &nbsp;|&nbsp; <strong>Next scheduled review:</strong> At clinical launch, and annually thereafter.</p>
+      <p class="doc-meta" style="margin-top:8px">This statement applies to the Toriven Health website at torivenhealth.com and all associated pages operated by Toriven Health Inc.</p>
+
+    </div>
+  </section>
+
+  <div class="crisis-bar" role="note" aria-label="Crisis support information">
+    <p><span aria-hidden="true">🆘</span> <strong>If you are in crisis:</strong> Call or text <span class="crisis-num">9-8-8</span> (Suicide Crisis Helpline, Canada-wide, 24/7) or go to your nearest emergency department.</p>
+  </div>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo" aria-label="Toriven Health — return to homepage">Toriven<span style="color:var(--green)">Health</span></a>
+      <p>Comprehensive virtual allied health care for children, teens, and adults across Ontario. Regulated clinicians. Evidence-based practice. Neurodiversity-affirming.</p>
+      <div class="footer-badges" aria-label="Certifications">
+        <span class="f-badge">PHIPA Compliant</span>
+        <span class="f-badge">Regulated Clinicians</span>
+        <span class="f-badge">Ontario-Wide</span>
+      </div>
+    </div>
+
+    <!-- Services column: plain div so no UA nav interference -->
+    <div class="footer-col" role="navigation" aria-label="Services navigation">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="./services/autism-assessment.html">Autism Assessment</a></li>
+        <li><a href="./services/adhd-assessment.html">ADHD &amp; LD Assessment</a></li>
+        <li><a href="./services/neuropsychological.html">Full Battery Assessment</a></li>
+        <li><a href="./services/speech-language.html">Speech-Language</a></li>
+        <li><a href="./services/occupational-therapy.html">Occupational Therapy</a></li>
+        <li><a href="./services/">Feeding &amp; Nutrition</a></li>
+        <li><a href="./services/cbt-dbt.html">CBT &amp; Trauma Therapy</a></li>
+        <li><a href="./services/">Psychiatry (Summer 2026)</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick links column: plain div so no UA nav interference -->
+    <div class="footer-col" role="navigation" aria-label="Quick links navigation">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="./services/specialized-programs.html">Specialized Programs</a></li>
+        <li><a href="contact.html">Patient Portal</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="accessibility.html">AODA Accessibility</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p><span aria-hidden="true">📍</span> Serving all of Ontario — Virtual-First</p>
+      <p><span aria-hidden="true">✉️</span> Email available at launch</p>
+    </div>
+  </div>
+
+  <!-- footer-bottom: plain div to avoid UA nav white background -->
+  <div class="footer-bottom">
+    <span>© 2026 Toriven Health. All rights reserved.</span>
+    <div class="footer-bottom-links" role="navigation" aria-label="Legal links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="accessibility.html">AODA Accessibility</a>
+    </div>
+  </div>
+
+  <!-- FOOTER COMPLIANCE NOTICES -->
+  <div class="footer-compliance" role="note" aria-label="Legal and compliance notices">
+    <p><span aria-hidden="true">🚫</span> <strong>Not Yet Open:</strong> Toriven Health is not yet open and is not currently accepting clients, patients, or referrals. Anticipated launch is late spring or summer 2026, subject to change.</p>
+    <p><span aria-hidden="true">📋</span> <strong>Informational Only:</strong> This website is for general informational purposes only. Nothing on this website constitutes medical advice, clinical guidance, diagnosis, or treatment. Consult a regulated health professional for health concerns.</p>
+    <p><span aria-hidden="true">🔒</span> <strong>PHIPA:</strong> PHIPA-compliant secure systems will be used for clinical communication and patient records at launch. Do not send personal health information through social media or general web channels.</p>
+    <p><span aria-hidden="true">💳</span> <strong>Private Pay:</strong> Services will be private pay. Not covered by OHIP. Insurance reimbursement depends on individual plans. Clients are responsible for confirming insurance coverage. Receipts are provided for reimbursement.</p>
+    <p><span aria-hidden="true">⚖️</span> <strong>No Therapeutic Relationship:</strong> Visiting this website, contacting us, or following us on social media does not establish a therapeutic, clinical, or professional relationship of any kind. A therapeutic relationship is only formed after formal intake, clinical acceptance, and completion of required consent documentation.</p>
+    <p><span aria-hidden="true">🆘</span> <strong>Crisis Support:</strong> Toriven Health is not a crisis service. If you are in immediate distress, contact <strong>9-8-8</strong> (Canada Suicide Crisis Helpline) or your nearest emergency department.</p>
+  </div>
+
+  <div class="footer-disclaimer">
+    <p>Educational content on this website is for informational purposes only and does not constitute clinical advice. Diagnosis and treatment decisions are made only after a full clinical assessment by a regulated clinician. TorivenHealth&#8482; is a trade name of Toriven Health Inc., a federally incorporated company.</p>
+  </div>
+</footer>
+
+
+
+
+<script>
+(function() {
+  var item = document.querySelector('.nav-has-dropdown');
+  if (!item) return;
+
+  var trigger = item.querySelector('.nav-services-trigger');
+  var dropdown = item.querySelector('.nav-dropdown');
+  var closeTimer;
+
+  function openDropdown() {
+    clearTimeout(closeTimer);
+    dropdown.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeDropdown() {
+    closeTimer = setTimeout(function() {
+      dropdown.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }, 150);
+  }
+
+  // Hover → show dropdown
+  trigger.addEventListener('mouseenter', openDropdown);
+  trigger.addEventListener('mouseleave', closeDropdown);
+
+  dropdown.addEventListener('mouseenter', function() {
+    clearTimeout(closeTimer);
+  });
+
+  dropdown.addEventListener('mouseleave', closeDropdown);
+
+  // ❗ IMPORTANT: Click par page open hone do
+  trigger.addEventListener('click', function(e) {
+    // e.preventDefault();  ❌ is line ko remove rakho
+    // Browser automatically services.html open karega
+  });
+
+})();
+</script>
+
+<script>
+function showTeam(tab, el) {
+  document.getElementById('pane-mgmt').style.display = tab === 'mgmt' ? 'block' : 'none';
+  document.getElementById('pane-clin').style.display = tab === 'clin' ? 'block' : 'none';
+  document.querySelectorAll('.team-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }});
+}, {threshold: 0.08});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+function toggleMobileNav(btn) {
+  var nav = document.getElementById('mobile-nav');
+  var isOpen = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  btn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+}
+document.addEventListener('click', function(e) {
+  var nav = document.getElementById('mobile-nav');
+  var btn = document.querySelector('.nav-hamburger');
+  if (nav && btn && nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open navigation menu');
+  }
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var nav = document.getElementById('mobile-nav');
+    var btn = document.querySelector('.nav-hamburger');
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open navigation menu');
+      btn.focus();
+    }
+  }
+});
+</script>
+
+<!-- CTA POPUP OVERLAY -->
+<div class="th-popup-overlay" id="th-popup-overlay" role="dialog" aria-modal="true" aria-labelledby="th-popup-title" aria-describedby="th-popup-desc">
+  <div class="th-popup">
+    <button class="th-popup-close" onclick="thClosePopup()" aria-label="Close">&#x2715;</button>
+    <span class="th-popup-icon" aria-hidden="true">&#x1F331;</span>
+    <div class="th-popup-badge"><span class="th-popup-badge-dot" aria-hidden="true"></span> Coming Late Spring / Summer 2026</div>
+    <h2 id="th-popup-title">You&#x2019;re ahead of the <em>curve.</em></h2>
+    <p class="th-popup-body" id="th-popup-desc">We&#x2019;re putting the finishing touches on something we&#x2019;re genuinely proud of. <strong>Toriven Health opens late spring / early summer 2026</strong> &#x2014; and when we do, we&#x2019;d love for you to be among the first to know.<br><br><strong>Follow us on social media for launch updates</strong> &#x2014; we&#x2019;ll announce our opening there first.</p>
+    <div class="th-popup-actions">
+      <a href="contact.html" class="th-popup-btn-primary" onclick="thClosePopup()">See What&#x2019;s Coming &#x2192;</a>
+      <button class="th-popup-btn-secondary" onclick="thClosePopup()">Close</button>
+    </div>
+    <p class="th-popup-note">No appointments available yet &#x2014; not accepting clients or referrals at this time.</p>
+  </div>
+</div>
+<script>
+/* ── CTA POPUP ── */
+function thOpenPopup(e) {
+  if (e) { e.preventDefault(); }
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay) {
+    overlay.classList.add('open');
+    overlay.querySelector('.th-popup-close').focus();
+    document.body.style.overflow = 'hidden';
+  }
+}
+function thClosePopup() {
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay) {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+// Close on overlay background click
+document.addEventListener('click', function(e) {
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay && e.target === overlay) { thClosePopup(); }
+});
+// Close on Escape
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { thClosePopup(); }
+});
+// Wire CTA buttons to popup EXCEPT on contact.html, footer links, nav dropdown links
+(function() {
+  var isContactPage = window.location.pathname.indexOf('contact.html') !== -1;
+  if (isContactPage) return;
+  document.querySelectorAll('a[href]').forEach(function(el) {
+    var href = el.getAttribute('href') || '';
+    if (href.indexOf('contact.html') === -1) return;
+    var isFooter = el.closest('footer') !== null;
+    var isPopup = el.closest('#th-popup-overlay') !== null;
+    var isDropdown = el.closest('.nav-dropdown') !== null;
+    var isMobileNav = el.closest('.mobile-nav') !== null || el.closest('.th-mobile-nav') !== null;
+    var isContactPage = window.location.pathname.indexOf('contact') !== -1;
+    if (!isFooter && !isPopup && !isDropdown && !isMobileNav && !isContactPage) {
+      el.addEventListener('click', function(e) { thOpenPopup(e); });
+    }
+  });
+})();
+</script>
+</body>
+</html>

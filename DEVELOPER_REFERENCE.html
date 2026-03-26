@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Toriven Health — Site Architecture & Developer Reference</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:#1a2b3c;background:#f6f9fb;line-height:1.6;font-size:15px}
+.page-header{background:linear-gradient(135deg,#0D1B2A,#1a3350);color:#fff;padding:40px 5%;border-bottom:4px solid #00C47A}
+.page-header h1{font-size:1.8rem;font-weight:800;margin-bottom:8px}
+.page-header p{color:rgba(255,255,255,.75);font-size:.95rem;max-width:680px}
+.meta{display:flex;gap:20px;margin-top:16px;flex-wrap:wrap}
+.meta-item{background:rgba(0,196,122,.15);border:1px solid rgba(0,196,122,.3);color:#7FFFD4;padding:4px 12px;border-radius:6px;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.main{max-width:1200px;margin:0 auto;padding:40px 5%}
+.section{margin-bottom:48px}
+.section-title{font-size:1.1rem;font-weight:800;color:#0D1B2A;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid #00C47A;display:flex;align-items:center;gap:10px}
+.section-title .count{background:#00C47A;color:#fff;font-size:.72rem;padding:2px 8px;border-radius:100px;font-weight:700}
+
+/* Concern boxes */
+.concern{background:#fff;border:1px solid #e2ebf0;border-radius:12px;padding:20px 24px;margin-bottom:12px}
+.concern-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:8px}
+.concern-badge{font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:100px;white-space:nowrap;flex-shrink:0;margin-top:2px}
+.badge-fixed{background:#e6faf3;color:#006B44;border:1px solid #b0e8d0}
+.badge-pending{background:#fff4e5;color:#7A3C00;border:1px solid #f0d9a0}
+.badge-info{background:#e8f0fe;color:#1a56a0;border:1px solid #b0c8f0}
+.concern-title{font-weight:700;font-size:.95rem;color:#0D1B2A}
+.concern-desc{font-size:.87rem;color:#3D5166;line-height:1.65;margin-left:0}
+.concern-code{margin-top:8px;background:#f6f9fb;border-left:3px solid #e2ebf0;padding:8px 12px;border-radius:0 6px 6px 0;font-family:monospace;font-size:.82rem;color:#3D5166;line-height:1.7}
+.concern-code .good{color:#006B44}
+.concern-code .bad{color:#c0392b;text-decoration:line-through}
+
+/* File tree */
+.tree{background:#0D1B2A;border-radius:12px;padding:24px;font-family:monospace;font-size:.85rem;line-height:1.8;overflow-x:auto}
+.tree-root{color:#00C47A;font-weight:700}
+.tree-folder{color:#7FFFD4;font-weight:600}
+.tree-file{color:rgba(255,255,255,.7)}
+.tree-file.hub{color:#FFD166;font-weight:600}
+.tree-file.pending{color:rgba(255,255,255,.35);font-style:italic}
+.tree-comment{color:rgba(255,255,255,.3);font-style:italic}
+.tree-indent1{padding-left:20px}
+.tree-indent2{padding-left:40px}
+.tree-indent3{padding-left:60px}
+
+/* Link map */
+.link-table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;border:1px solid #e2ebf0}
+.link-table th{background:#0D1B2A;color:#fff;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:10px 14px;text-align:left}
+.link-table td{padding:10px 14px;font-size:.84rem;border-bottom:1px solid #e2ebf0;color:#3D5166;vertical-align:top}
+.link-table tr:last-child td{border-bottom:none}
+.link-table tr:hover td{background:#f6f9fb}
+.link-table td:first-child{font-family:monospace;font-size:.8rem;color:#0D1B2A;font-weight:600;white-space:nowrap}
+.link-table td code{background:#f6f9fb;border:1px solid #e2ebf0;padding:1px 6px;border-radius:4px;font-size:.78rem;font-family:monospace}
+.status-done{color:#006B44;font-weight:700}
+.status-pending{color:#7A3C00;font-weight:700}
+
+/* Hub recommendation */
+.hub-box{background:#fff;border:1px solid #e2ebf0;border-radius:12px;overflow:hidden;margin-bottom:12px}
+.hub-head{background:#f6f9fb;padding:14px 20px;border-bottom:1px solid #e2ebf0;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.hub-head h4{font-size:.95rem;font-weight:800;color:#0D1B2A}
+.hub-rec{font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:100px}
+.rec-create{background:#e6faf3;color:#006B44;border:1px solid #b0e8d0}
+.rec-wire{background:#e8f0fe;color:#1a56a0;border:1px solid #b0c8f0}
+.rec-ok{background:#f0f0f0;color:#555;border:1px solid #ddd}
+.hub-body{padding:16px 20px}
+.hub-body ul{list-style:none;display:flex;flex-direction:column;gap:4px}
+.hub-body ul li{font-size:.85rem;color:#3D5166;display:flex;align-items:center;gap:8px}
+.hub-body ul li::before{content:'→';color:#00C47A;font-weight:700;flex-shrink:0}
+.hub-body ul li code{font-family:monospace;font-size:.78rem;background:#f6f9fb;border:1px solid #e2ebf0;padding:1px 6px;border-radius:4px}
+
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:768px){.grid2{grid-template-columns:1fr}}
+.note{background:#fffbf2;border:1px solid #f0d9a0;border-radius:8px;padding:12px 16px;font-size:.85rem;color:#7a5820;line-height:1.6;margin-top:12px}
+.note strong{color:#5c3d0a}
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Toriven Health — Site Architecture & Developer Reference</h1>
+  <p>This document covers the complete file structure, interlinking map, known issues addressed, hub page recommendations, and outstanding items for the development team.</p>
+  <div class="meta">
+    <span class="meta-item">Version 1.0</span>
+    <span class="meta-item">March 2026</span>
+    <span class="meta-item">59 Pages</span>
+    <span class="meta-item">WCAG 2.1 AA Compliant</span>
+    <span class="meta-item">AODA Compliant</span>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- ── SECTION 1: DEV CONCERNS ── -->
+  <div class="section">
+    <div class="section-title">Development Team Concerns — Status <span class="count">7 items</span></div>
+
+    <div class="concern">
+      <div class="concern-head">
+        <span class="concern-badge badge-fixed">✓ Fixed</span>
+        <span class="concern-title">Relative paths broken in subdirectory pages</span>
+      </div>
+      <div class="concern-desc">Pages inside <code>services/</code> and <code>locations/</code> were linking to <code>index.html</code> instead of <code>../index.html</code>. All 48 subfolder pages have been corrected. Nav links, footer links, logo links, and CTA buttons all use correct relative paths.</div>
+      <div class="concern-code">
+        <span class="bad">href="index.html"</span> &nbsp;← wrong from inside services/<br>
+        <span class="good">href="../index.html"</span> &nbsp;← correct
+      </div>
+    </div>
+
+    <div class="concern">
+      <div class="concern-head">
+        <span class="concern-badge badge-fixed">✓ Fixed</span>
+        <span class="concern-title">Footer rendering as single column (UA stylesheet override)</span>
+      </div>
+      <div class="concern-desc">Browser user-agent stylesheets were applying a white background and overriding grid layout on <code>&lt;nav&gt;</code> elements used as footer columns. All footers are now 100% inline-styled with no class dependencies — immune to any page-level CSS interference.</div>
+    </div>
+
+    <div class="concern">
+      <div class="concern-head">
+        <span class="concern-badge badge-fixed">✓ Fixed</span>
+        <span class="concern-title">Inconsistent nav and footer across pages</span>
+      </div>
+      <div class="concern-desc">Each page had its own nav and footer with different structure, link order, button labels, and column counts. All 55 pages now share identical nav and footer HTML/CSS. WCAG SC 3.2.3 (Consistent Navigation) is met across the full site.</div>
+    </div>
+
+    <div class="concern">
+      <div class="concern-head">
+        <span class="concern-badge badge-fixed">✓ Fixed</span>
+        <span class="concern-title">Terms of Use references removed on legal advice</span>
+      </div>
+      <div class="concern-desc">Lawyer advised not to use Terms of Use at this stage. All references removed from every page — nav, footer columns, footer-bottom legal links, and inline mentions. Confirmed absent across all 55 pages.</div>
+    </div>
+
+    <div class="concern">
+      <div class="concern-head">
+        <span class="concern-badge badge-fixed">✓ Fixed</span>
+        <span class="concern-title">Vendor names exposed in content</span>
+      </div>
+      <div class="concern-desc">Financial Access page named Medicard, Stripe, and Juvonno explicitly including external links to their domains. All replaced with generic language: "our approved healthcare financing partner", "our digital payment plan provider", "our secure client portal". External vendor URLs replaced with internal <code>contact.html</code>.</div>
+    </div>
+
+    <div class="concern">
+      <div class="concern-head">
+        <span class="concern-badge badge-fixed">✓ Fixed</span>
+        <span class="concern-title">CTA section alignment inconsistency</span>
+      </div>
+      <div class="concern-desc">Pre-Assessment Clinical Consultation block in green CTA sections had <code>text-align:left</code> hardcoded while the primary CTA was centred. Fixed to <code>text-align:center</code> on all affected pages. Block was also sitting outside the container div — corrected.</div>
+    </div>
+
+    <div class="concern">
+      <div class="concern-head">
+        <span class="concern-badge badge-fixed">✓ Fixed</span>
+        <span class="concern-title">CTA buttons — pre-launch popup added site-wide</span>
+      </div>
+      <div class="concern-desc">All CTA buttons (Book Free Consultation, Patient Portal) now trigger a popup overlay instead of navigating to a dead-end page. The popup explains Toriven Health is launching late spring / summer 2026 and directs visitors to contact.html for more detail. Injected across all 59 pages. Contact page itself is exempt — buttons there behave normally. Footer links are also exempt.</div>
+      <div class="concern-code">
+        <span class="good">Popup fires on: nav CTAs, hero CTAs, section CTAs, in-page booking buttons</span><br>
+        <span class="good">Popup exempt: footer links, contact.html page itself</span><br>
+        <span class="good">Accessible: Escape closes, overlay click closes, focus managed, aria-modal, aria-labelledby</span>
+      </div>
+    </div>
+
+    <div class="concern">
+      <div class="concern-head">
+        <span class="concern-badge badge-pending">⏳ Pending</span>
+        <span class="concern-title">™ trademark symbol — intentionally deferred</span>
+      </div>
+      <div class="concern-desc">Trademark symbol removed from all pages pending trademark registration confirmation. When ready, a single script will add <code>&lt;span aria-hidden="true"&gt;™&lt;/span&gt;</code> to the logo on every page simultaneously — screen-reader silent, visually present. No content changes required.</div>
+    </div>
+  </div>
+
+  <!-- ── SECTION 2: FILE STRUCTURE ── -->
+  <div class="section">
+    <div class="section-title">Complete File Structure</div>
+    <div class="tree">
+      <div class="tree-root">toriven-health/ (root)</div>
+      <div class="tree-indent1"><span class="tree-file hub">index.html</span> <span class="tree-comment">← Home page</span></div>
+      <div class="tree-indent1"><span class="tree-file hub">about.html</span></div>
+      <div class="tree-indent1"><span class="tree-file hub">careers.html</span></div>
+      <div class="tree-indent1"><span class="tree-file hub">accessibility.html</span></div>
+      <div class="tree-indent1"><span class="tree-file hub">financial-access.html</span></div>
+      <div class="tree-indent1"><span class="tree-file hub">services.html</span> <span class="tree-comment">← Services hub</span></div>
+      <div class="tree-indent1"><span class="tree-file hub">contact.html</span> <span class="tree-comment">← Contact / pre-launch page</span></div>
+      <div class="tree-indent1"><span class="tree-file pending">privacy-policy.html</span> <span class="tree-comment">← Not yet uploaded</span></div>
+      <div class="tree-indent1"><span class="tree-file pending">programs.html</span> <span class="tree-comment">← Not yet uploaded</span></div>
+      <div class="tree-indent1"><span class="tree-file hub">blog.html</span> <span class="tree-comment">← Blog listing hub</span></div>
+      <div class="tree-indent1">&nbsp;</div>
+
+      <div class="tree-indent1"><span class="tree-folder">services/</span></div>
+      <div class="tree-indent2"><span class="tree-comment">── Assessments ──</span></div>
+      <div class="tree-indent2"><span class="tree-file">autism-assessment.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">adhd-assessment.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">asd-adhd-combined.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">asd-adhd-ld.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">comprehensive-assessment.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">psychoeducational.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">mood-anxiety.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">trauma-ptsd.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">cbt-behavioural.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">neuropsychological.html</span></div>
+      <div class="tree-indent2"><span class="tree-comment">── Therapy ──</span></div>
+      <div class="tree-indent2"><span class="tree-file">therapy-counselling.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">anxiety-depression.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">trauma-ptsd-therapy.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">individual-therapy.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">family-therapy.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">cbt-dbt.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">relationship-anxiety.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">work-stress-burnout.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">return-to-work.html</span></div>
+      <div class="tree-indent2"><span class="tree-comment">── OT & SLP ──</span></div>
+      <div class="tree-indent2"><span class="tree-file hub">occupational-therapy.html</span> <span class="tree-comment">← OT hub</span></div>
+      <div class="tree-indent2"><span class="tree-file">ot-sensory-4-12.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">early-childhood-4-6.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">school-age-6-12.html</span></div>
+      <div class="tree-indent2"><span class="tree-file hub">speech-language.html</span> <span class="tree-comment">← SLP hub</span></div>
+      <div class="tree-indent2"><span class="tree-comment">── Education & School ──</span></div>
+      <div class="tree-indent2"><span class="tree-file hub">education-school-support.html</span> <span class="tree-comment">← Education hub</span></div>
+      <div class="tree-indent2"><span class="tree-file">dyslexia-literacy.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">learning-remediation.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">iep-advocacy.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">post-secondary-transition.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">university-disability-services.html</span></div>
+      <div class="tree-indent2"><span class="tree-comment">── Communication & Social ──</span></div>
+      <div class="tree-indent2"><span class="tree-file hub">communication-social.html</span> <span class="tree-comment">← Comm hub</span></div>
+      <div class="tree-indent2"><span class="tree-file">communication-groups.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">teen-communication.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">adult-communication.html</span></div>
+      <div class="tree-indent2"><span class="tree-comment">── Specialized Programs ──</span></div>
+      <div class="tree-indent2"><span class="tree-file hub">specialized-programs.html</span> <span class="tree-comment">← Programs hub</span></div>
+      <div class="tree-indent2"><span class="tree-file">womens-mental-health.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">2slgbtq-mental-health.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">veterans-first-responders.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">parent-coaching.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">school-collaboration.html</span></div>
+      <div class="tree-indent2"><span class="tree-comment">── ABA & Academic ──</span></div>
+      <div class="tree-indent2"><span class="tree-file">executive-function.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">homework-academic-skills.html</span></div>
+      <div class="tree-indent1">&nbsp;</div>
+
+      <div class="tree-indent1">&nbsp;</div>
+      <div class="tree-indent1"><span class="tree-folder">blog/</span></div>
+      <div class="tree-indent2"><span class="tree-file">access-challenges-ontario.html</span> <span class="tree-comment">← Post 1 — live</span></div>
+      <div class="tree-indent2"><span class="tree-file pending">one-patient-five-clinicians.html</span> <span class="tree-comment">← Post 2 — in progress</span></div>
+      <div class="tree-indent2"><span class="tree-file pending">canadian-tax-benefits-families.html</span> <span class="tree-comment">← Post 3 — in progress</span></div>
+      <div class="tree-indent1">&nbsp;</div>
+      <div class="tree-indent1"><span class="tree-folder">locations/</span></div>
+      <div class="tree-indent2"><span class="tree-file">toronto.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">hamilton.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">brampton.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">ottawa.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">kingston.html</span></div>
+      <div class="tree-indent2"><span class="tree-file">thunder-bay.html</span></div>
+    </div>
+    <div class="note"><strong>Legend:</strong> Yellow = hub/index page for that section &nbsp;|&nbsp; White = standard page &nbsp;|&nbsp; Grey italic = page not yet provided/uploaded</div>
+  </div>
+
+  <!-- ── SECTION 3: NAV LINKING MAP ── -->
+  <div class="section">
+    <div class="section-title">Navigation Bar — Link Targets</div>
+    <table class="link-table">
+      <tr><th>Nav Item</th><th>Links To</th><th>Notes</th></tr>
+      <tr><td>Toriven Health logo</td><td><code>../index.html</code> (subfolders) / <code>index.html</code> (root)</td><td>aria-label="Toriven Health — return to homepage"</td></tr>
+      <tr><td>Home</td><td><code>index.html</code></td><td>aria-current="page" on home page only</td></tr>
+      <tr><td>About</td><td><code>about.html</code></td><td>aria-current="page" on about page only</td></tr>
+      <tr><td>Services</td><td><code>services.html</code></td><td>Services hub page. Dropdown to sub-pages is optional enhancement</td></tr>
+      <tr><td>Careers</td><td><code>careers.html</code></td><td></td></tr>
+      <tr><td>Blog</td><td><code>blog.html</code></td><td>Live. Links to <code>blog/access-challenges-ontario.html</code> for Post 1</td></tr>
+      <tr><td>Contact</td><td><code>contact.html</code></td><td>Live. Pre-launch page with timeline, regulatory notices, social links</td></tr>
+      <tr><td>Patient Portal</td><td><code>contact.html</code></td><td>Points to contact.html pre-launch. CTA popup fires on click. Update to portal URL at launch.</td></tr>
+      <tr><td>Book Free Consultation</td><td><code>contact.html</code></td><td>Temporary — update to booking URL at launch</td></tr>
+    </table>
+  </div>
+
+  <!-- ── SECTION 4: FOOTER LINKING MAP ── -->
+  <div class="section">
+    <div class="section-title">Footer — Link Targets</div>
+    <div class="grid2">
+      <div>
+        <table class="link-table">
+          <tr><th colspan="2">Services Column</th></tr>
+          <tr><td>Autism Assessment</td><td><code>services/autism-assessment.html</code></td></tr>
+          <tr><td>ADHD & LD Assessment</td><td><code>services/adhd-assessment.html</code></td></tr>
+          <tr><td>Neuropsychology</td><td><code>services/neuropsychological.html</code></td></tr>
+          <tr><td>Speech-Language</td><td><code>services/speech-language.html</code></td></tr>
+          <tr><td>Occupational Therapy</td><td><code>services/occupational-therapy.html</code></td></tr>
+          <tr><td>Feeding & Nutrition</td><td><code>services/</code> <em>page pending</em></td></tr>
+          <tr><td>CBT & Trauma Therapy</td><td><code>services/cbt-dbt.html</code></td></tr>
+          <tr><td>Psychiatry (Summer 2026)</td><td><code>services/</code> <em>page pending</em></td></tr>
+        </table>
+      </div>
+      <div>
+        <table class="link-table">
+          <tr><th colspan="2">Quick Links Column</th></tr>
+          <tr><td>Home</td><td><code>index.html</code></td></tr>
+          <tr><td>About Us</td><td><code>about.html</code></td></tr>
+          <tr><td>Specialized Programs</td><td><code>services/specialized-programs.html</code></td></tr>
+          <tr><td>Patient Portal</td><td><code>contact.html</code> (temp)</td></tr>
+          <tr><td>Blog</td><td><code>blog.html</code> (pending)</td></tr>
+          <tr><td>Contact</td><td><code>contact.html</code> (pending)</td></tr>
+          <tr><td>Privacy Policy</td><td><code>privacy-policy.html</code> (pending)</td></tr>
+          <tr><td>AODA Accessibility</td><td><code>accessibility.html</code></td></tr>
+        </table>
+      </div>
+    </div>
+    <div style="margin-top:12px">
+      <table class="link-table">
+        <tr><th colspan="2">Footer Bottom — Legal Links</th></tr>
+        <tr><td>Privacy Policy</td><td><code>privacy-policy.html</code> — page not yet provided, link placeholder active</td></tr>
+        <tr><td>AODA Accessibility</td><td><code>accessibility.html</code> — live and linked correctly</td></tr>
+        <tr><td>Terms of Use</td><td>Removed on legal advice — do not reinstate without lawyer sign-off</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ── SECTION 5: HUB PAGE RECOMMENDATIONS ── -->
+  <div class="section">
+    <div class="section-title">Hub Page Recommendations — OT, Autism & SLP</div>
+
+    <div class="hub-box">
+      <div class="hub-head">
+        <h4>Occupational Therapy Hub</h4>
+        <span class="hub-rec rec-wire">Wire existing page as hub</span>
+      </div>
+      <div class="hub-body">
+        <p style="font-size:.87rem;color:#3D5166;margin-bottom:12px">The existing <code>services/occupational-therapy.html</code> (Children & Teens overview) should act as the OT hub. Add a "Specialist Programs" navigation section at the bottom linking to the three sub-pages. No content changes — addition only.</p>
+        <ul>
+          <li><code>services/occupational-therapy.html</code> ← Hub (already exists)</li>
+          <li><code>services/ot-sensory-4-12.html</code> ← OT & Sensory Integration, Ages 4–12</li>
+          <li><code>services/early-childhood-4-6.html</code> ← Early Childhood Program, Ages 4–6</li>
+          <li><code>services/school-age-6-12.html</code> ← School-Age Program, Ages 6–12</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hub-box">
+      <div class="hub-head">
+        <h4>Autism / ASD Assessment Hub</h4>
+        <span class="hub-rec rec-wire">Wire existing page as hub</span>
+      </div>
+      <div class="hub-body">
+        <p style="font-size:.87rem;color:#3D5166;margin-bottom:12px">The existing <code>services/autism-assessment.html</code> should act as the Autism hub, linking to related combined assessment pages below it.</p>
+        <ul>
+          <li><code>services/autism-assessment.html</code> ← Hub (already exists)</li>
+          <li><code>services/asd-adhd-combined.html</code> ← ASD + ADHD Combined</li>
+          <li><code>services/asd-adhd-ld.html</code> ← ASD + ADHD + LD</li>
+          <li><code>services/comprehensive-assessment.html</code> ← Comprehensive Assessment</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hub-box">
+      <div class="hub-head">
+        <h4>Blog</h4>
+        <span class="hub-rec rec-wire">Structure in place</span>
+      </div>
+      <div class="hub-body">
+        <p style="font-size:.87rem;color:#3D5166;margin-bottom:12px"><code>blog.html</code> is the listing hub. Each post lives in the <code>blog/</code> subfolder. To add a new post: create the file in <code>blog/</code> and add a card to <code>blog.html</code>. No structural changes needed.</p>
+        <ul>
+          <li><code>blog.html</code> ← Hub (live)</li>
+          <li><code>blog/access-challenges-ontario.html</code> ← Post 1 (live)</li>
+          <li><code>blog/one-patient-five-clinicians.html</code> ← Post 2 (in progress)</li>
+          <li><code>blog/canadian-tax-benefits-families.html</code> ← Post 3 (in progress)</li>
+        </ul>
+        <div class="note" style="margin-top:12px"><strong>Note:</strong> Blog pages use a shorter footer compliance block (3 notices instead of 6) — this is intentional for editorial pages. Do not add the full 6-notice block to blog pages.</div>
+      </div>
+    </div>
+
+    <div class="hub-box">
+      <div class="hub-head">
+        <h4>Speech-Language Pathology Hub</h4>
+        <span class="hub-rec rec-ok">Single page — no sub-pages yet</span>
+      </div>
+      <div class="hub-body">
+        <p style="font-size:.87rem;color:#3D5166;margin-bottom:12px"><code>services/speech-language.html</code> currently stands alone. If SLP sub-pages are added (e.g. early language, AAC, fluency), this page becomes the hub at that point. No action needed now.</p>
+        <ul>
+          <li><code>services/speech-language.html</code> ← Current SLP page (standalone)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="hub-box">
+      <div class="hub-head">
+        <h4>Locations Hub</h4>
+        <span class="hub-rec rec-create">Create new hub page</span>
+      </div>
+      <div class="hub-body">
+        <p style="font-size:.87rem;color:#3D5166;margin-bottom:12px">Six city pages exist under <code>locations/</code> with no hub. A <code>locations.html</code> root page should be created listing all cities with links, for SEO and navigation. Not yet uploaded — flag for creation.</p>
+        <ul>
+          <li><code>locations/toronto.html</code></li>
+          <li><code>locations/hamilton.html</code></li>
+          <li><code>locations/brampton.html</code></li>
+          <li><code>locations/ottawa.html</code></li>
+          <li><code>locations/kingston.html</code></li>
+          <li><code>locations/thunder-bay.html</code></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SECTION 6: OUTSTANDING ITEMS ── -->
+  <div class="section">
+    <div class="section-title">Outstanding Pages — Not Yet Provided</div>
+    <table class="link-table">
+      <tr><th>Page</th><th>Filename</th><th>Referenced From</th><th>Priority</th></tr>
+      <tr><td>Contact / Pre-Launch</td><td><code>contact.html</code></td><td>All CTA buttons site-wide — now live</td><td style="color:#006B44;font-weight:700">✓ Done</td></tr>
+      <tr><td>Privacy Policy</td><td><code>privacy-policy.html</code></td><td>Every page footer</td><td style="color:#c0392b;font-weight:700">Critical</td></tr>
+      <tr><td>Blog Post 2</td><td><code>blog/one-patient-five-clinicians.html</code></td><td>blog.html coming soon card</td><td style="color:#7A3C00;font-weight:700">In progress</td></tr>
+      <tr><td>Blog Post 3</td><td><code>blog/canadian-tax-benefits-families.html</code></td><td>blog.html coming soon card</td><td style="color:#7A3C00;font-weight:700">In progress</td></tr>
+      <tr><td>Specialized Programs Hub</td><td><code>programs.html</code></td><td>Footer Quick Links</td><td style="color:#7A3C00;font-weight:700">High</td></tr>
+      <tr><td>Locations Hub</td><td><code>locations.html</code></td><td>Not yet linked — needs creating</td><td style="color:#3D5166;font-weight:700">Medium</td></tr>
+      <tr><td>Feeding & Nutrition service page</td><td><code>services/feeding-nutrition.html</code></td><td>Footer Services column</td><td style="color:#3D5166;font-weight:700">Medium</td></tr>
+      <tr><td>Psychiatry service page</td><td><code>services/psychiatry.html</code></td><td>Footer Services column</td><td style="color:#3D5166;font-weight:700">Medium</td></tr>
+    </table>
+  </div>
+
+  <!-- ── SECTION 7: AODA SUMMARY FOR DEVS ── -->
+  <div class="section">
+    <div class="section-title">AODA / WCAG Compliance — What Was Done</div>
+    <table class="link-table">
+      <tr><th>Item</th><th>Standard</th><th>Applied To</th></tr>
+      <tr><td>Skip navigation link</td><td>WCAG 2.0 SC 2.4.1</td><td>All 55 pages</td></tr>
+      <tr><td>&lt;main id="main-content"&gt; landmark</td><td>WCAG 2.0 SC 1.3.1</td><td>All 55 pages</td></tr>
+      <tr><td>footer role="contentinfo"</td><td>WCAG 2.0 SC 1.3.1</td><td>All 55 pages</td></tr>
+      <tr><td>:focus-visible + :focus focus rings</td><td>WCAG 2.0 SC 2.4.7 / 2.1 SC 2.4.11</td><td>All 55 pages</td></tr>
+      <tr><td>Hamburger menu with ARIA</td><td>WCAG 2.0 SC 2.1.1</td><td>All 55 pages</td></tr>
+      <tr><td>aria-hidden on decorative emoji</td><td>WCAG 2.0 SC 1.1.1</td><td>All 55 pages</td></tr>
+      <tr><td>Colour contrast — green text (#006B44)</td><td>WCAG 2.0 SC 1.4.3 AA (4.5:1)</td><td>All 55 pages</td></tr>
+      <tr><td>Footer compliance text contrast (.72 opacity)</td><td>WCAG 2.0 SC 1.4.3 AA</td><td>All 55 pages</td></tr>
+      <tr><td>min-height:44px touch targets</td><td>WCAG 2.1 SC 2.5.5</td><td>All 55 pages</td></tr>
+      <tr><td>Badge border contrast (opacity .6)</td><td>WCAG 2.1 SC 1.4.11</td><td>All 55 pages</td></tr>
+      <tr><td>prefers-reduced-motion</td><td>WCAG 2.1 SC 2.3.3</td><td>All 55 pages</td></tr>
+      <tr><td>Consistent nav and footer</td><td>WCAG 2.0 SC 3.2.3</td><td>All 55 pages</td></tr>
+      <tr><td>aria-current="page" on active nav links</td><td>WCAG 2.0 SC 2.4.4</td><td>All 55 pages</td></tr>
+      <tr><td>Correct relative paths in subfolders</td><td>WCAG 2.0 SC 2.4.4</td><td>All 48 subfolder pages</td></tr>
+      <tr><td>CTA popup — aria-modal, aria-labelledby, focus management, Escape key</td><td>WCAG 2.0 SC 2.1.1 / 4.1.2</td><td>All 59 pages</td></tr>
+    </table>
+  </div>
+
+</div>
+</body>
+</html>

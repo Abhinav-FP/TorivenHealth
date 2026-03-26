@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>CBT &amp; DBT Counselling Ontario | Toriven Health</title>
+<meta name="description" content="Evidence-informed CBT and DBT counselling for children, teens, and adults across Ontario. Regulated clinicians. Virtual-first. Practical tools for everyday life. Toriven Health."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<style>
+
+body{font-family:'DM Sans',sans-serif;color:#1a2b3c;background:#fff;line-height:1.65;overflow-x:hidden}
+:root{
+  --green:#00C47A;--green-dark:#009960;--green-glow:rgba(0,196,122,0.18);
+  --navy:#0D1B2A;--slate:#3D5166;--gray:#6B7C8F;
+  --border:#e2ebf0;--lgreen:#E6FAF3;--lgray:#F6F9FB;
+  --serif:'Fraunces',Georgia,serif;
+  --shadow:0 4px 28px rgba(13,27,42,.08);--shadow-lg:0 12px 48px rgba(13,27,42,.14);
+  --warm:#FFF9F5;--warm-border:#f0e6dc;
+}
+.container{max-width:1160px;margin:0 auto;padding:0 5%}
+.label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--green)}
+
+/* BREADCRUMB */
+.breadcrumb{font-size:.8rem;color:var(--gray);display:flex;align-items:center;gap:6px;margin-bottom:20px}
+.breadcrumb a{color:var(--gray)}
+.breadcrumb a:hover{color:var(--green)}
+.breadcrumb span{opacity:.5}
+
+/* HERO */
+.hero{background:linear-gradient(150deg,#071220 0%,#0d1f30 45%,#0a2a1e 100%);position:relative;overflow:hidden;padding:96px 5% 88px;color:#fff}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 70% 40%,rgba(0,196,122,.13) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 20% 80%,rgba(0,100,200,.08) 0%,transparent 60%)}
+.hero-orb{position:absolute;right:-120px;top:-80px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,196,122,.12) 0%,transparent 70%);pointer-events:none}
+.hero-inner{position:relative;max-width:1160px;margin:0 auto}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,196,122,.14);border:1px solid rgba(0,196,122,.3);color:var(--green);padding:6px 16px;border-radius:100px;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:26px}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero-page-title{font-family:var(--serif);font-size:clamp(1rem,1.8vw,1.2rem);font-weight:600;color:rgba(255,255,255,.55);letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:900;line-height:1.1;letter-spacing:-.03em;margin-bottom:22px}
+.hero h1 em{color:var(--green);font-style:italic}
+.hero-sub{font-size:clamp(1rem,1.8vw,1.15rem);color:rgba(255,255,255,.78);max-width:540px;margin-bottom:16px;line-height:1.75}
+.hero-who{font-size:.9rem;color:rgba(255,255,255,.55);border-left:3px solid rgba(0,196,122,.45);padding-left:16px;margin-bottom:36px;line-height:1.7;font-style:italic}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px}
+.pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.85);padding:6px 14px;border-radius:100px;font-size:.78rem;font-weight:500}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:16px}
+.cta-primary{background:var(--green);color:#fff;padding:15px 32px;border-radius:10px;font-weight:700;font-size:.97rem;box-shadow:0 4px 24px rgba(0,196,122,.4);transition:background .2s,transform .15s;display:inline-block}
+.cta-primary:hover{background:var(--green-dark);transform:translateY(-2px)}
+.cta-secondary{background:rgba(255,255,255,.08);color:#fff;border:2px solid rgba(255,255,255,.25);padding:13px 28px;border-radius:10px;font-weight:600;font-size:.97rem;transition:all .2s;display:inline-block}
+.cta-secondary:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.5)}
+.hero-note{font-size:.8rem;color:rgba(255,255,255,.38)}
+.hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:32px 28px;backdrop-filter:blur(8px)}
+.hero-card-title{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:4px}
+.hero-card-subtitle{font-size:.8rem;color:rgba(255,255,255,.38);margin-bottom:20px;font-style:italic}
+.hero-card-item{display:flex;align-items:flex-start;gap:12px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.hero-card-item:last-child{border-bottom:none;padding-bottom:0}
+.hci-icon{font-size:1.3rem;flex-shrink:0;margin-top:1px}
+.hci-text strong{display:block;font-size:.88rem;font-weight:700;color:rgba(255,255,255,.9);margin-bottom:3px}
+.hci-text span{font-size:.8rem;color:rgba(255,255,255,.5);line-height:1.5;font-style:italic}
+
+/* TRUST BAR */
+.trust-bar{background:var(--lgreen);border-bottom:1px solid #c5edd8;padding:13px 5%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:24px}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:.8rem;font-weight:600;color:var(--slate)}
+.trust-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0}
+
+/* ETHICS */
+.ethics-wrap{max-width:1160px;margin:40px auto 0;padding:0 5%}
+.ethics-box{background:var(--lgreen);border-radius:12px;border-left:4px solid var(--green);padding:20px 26px;display:flex;gap:14px;align-items:flex-start}
+.ethics-icon{font-size:1.5rem;flex-shrink:0;margin-top:2px}
+.ethics-box h4{font-size:.9rem;font-weight:700;color:var(--navy);margin-bottom:5px}
+.ethics-box p{font-size:.84rem;color:var(--slate);line-height:1.6}
+
+/* SECTIONS */
+section{padding:80px 5%}
+.section-header{margin-bottom:52px}
+.section-header.center{text-align:center}
+.section-header.center .section-sub{margin:10px auto 0}
+.section-title{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:900;line-height:1.15;letter-spacing:-.03em;color:var(--navy)}
+.section-title span{color:var(--green)}
+.section-sub{font-size:1rem;color:var(--gray);max-width:580px;margin-top:10px;line-height:1.7}
+
+/* WHEN THERAPY MAY HELP */
+.signs-section{background:var(--lgray)}
+.signs-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sign-card{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 20px;transition:border-color .25s,box-shadow .25s}
+.sign-card:hover{border-color:var(--green);box-shadow:0 4px 20px var(--green-glow)}
+.sign-card-icon{width:40px;height:40px;border-radius:10px;background:var(--lgreen);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.sign-card p{font-size:.9rem;color:var(--slate);line-height:1.6}
+.sign-card p strong{color:var(--navy);display:block;margin-bottom:3px;font-size:.92rem}
+.signs-note{text-align:center;margin-top:32px;font-size:.88rem;color:var(--gray);line-height:1.7;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+
+/* APPROACH COMPARE (CBT vs DBT) */
+.compare-section{background:#fff}
+.compare-intro{max-width:640px;margin:0 auto 48px;text-align:center}
+.compare-intro p{font-size:1rem;color:var(--gray);line-height:1.7;margin-top:10px}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.compare-card{border-radius:20px;padding:36px 32px;position:relative;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.compare-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.compare-card.cbt{background:linear-gradient(150deg,#f0faf5 0%,#e0f7ed 100%);border:1px solid #c5edd8}
+.compare-card.dbt{background:linear-gradient(150deg,var(--warm) 0%,#fef0e6 100%);border:1px solid var(--warm-border)}
+.compare-card-badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;border-radius:100px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px}
+.compare-card.cbt .compare-card-badge{background:rgba(0,196,122,.15);color:var(--green-dark)}
+.compare-card.dbt .compare-card-badge{background:rgba(220,120,50,.12);color:#b86830}
+.compare-card h3{font-family:var(--serif);font-size:1.35rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.compare-card .card-subtitle{font-size:.88rem;color:var(--gray);margin-bottom:20px;font-style:italic}
+.compare-card h4{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--slate);margin-bottom:12px}
+.helpful-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+.helpful-tag{padding:5px 12px;border-radius:100px;font-size:.76rem;font-weight:600}
+.compare-card.cbt .helpful-tag{background:rgba(0,196,122,.1);color:var(--green-dark);border:1px solid rgba(0,196,122,.2)}
+.compare-card.dbt .helpful-tag{background:rgba(220,120,50,.08);color:#a05e2c;border:1px solid rgba(220,120,50,.18)}
+.compare-focus{font-size:.88rem;color:var(--slate);line-height:1.7}
+.compare-focus strong{color:var(--navy)}
+.compare-skills{display:flex;flex-direction:column;gap:8px;margin-top:16px}
+.compare-skill{display:flex;gap:10px;align-items:center;font-size:.86rem;color:var(--slate)}
+.compare-skill-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.compare-card.cbt .compare-skill-dot{background:var(--green)}
+.compare-card.dbt .compare-skill-dot{background:#d4793e}
+.compare-note{text-align:center;margin-top:32px;background:var(--lgreen);border-radius:12px;padding:20px 28px;font-size:.88rem;color:var(--slate);line-height:1.65}
+.compare-note strong{color:var(--navy)}
+
+/* AGE STAGES */
+.stages-section{background:var(--lgray)}
+.age-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+.age-tab{padding:10px 22px;border-radius:100px;font-size:.85rem;font-weight:600;cursor:pointer;border:2px solid var(--border);color:var(--slate);background:#fff;transition:all .2s}
+.age-tab.active,.age-tab:hover{background:var(--green);border-color:var(--green);color:#fff}
+.age-panel{display:none}
+.age-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:32px;animation:fadeUp .35s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.panel-headline{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--navy);margin-bottom:10px;line-height:1.25}
+.panel-intro{font-size:.95rem;color:var(--gray);margin-bottom:24px;line-height:1.7}
+.detail-list{display:flex;flex-direction:column;gap:10px}
+.detail-item{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:10px;padding:13px 16px;transition:border-color .2s,box-shadow .2s}
+.detail-item:hover{border-color:var(--green);box-shadow:0 4px 16px var(--green-glow)}
+.detail-check{width:20px;height:20px;border-radius:50%;background:var(--lgreen);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;font-size:.7rem;color:var(--green);font-weight:700}
+.detail-item p{font-size:.88rem;color:var(--slate);line-height:1.55}
+.age-illustration{background:linear-gradient(135deg,var(--lgreen),#d0f5e8);border-radius:20px;padding:32px;height:100%;min-height:320px;display:flex;flex-direction:column;justify-content:space-between}
+.age-emoji{font-size:3.5rem;margin-bottom:16px}
+.pull-quote{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--navy);line-height:1.6;border-left:3px solid var(--green);padding-left:16px;margin-top:auto}
+
+/* FIRST SESSION */
+.first-session-section{background:#fff}
+.fs-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.fs-steps{display:flex;flex-direction:column;gap:16px;margin-top:28px}
+.fs-step{display:flex;gap:16px;padding:20px;background:var(--lgray);border-radius:12px;border:1px solid var(--border);transition:border-color .2s,box-shadow .2s}
+.fs-step:hover{border-color:var(--green);box-shadow:0 4px 20px var(--green-glow)}
+.fs-step-num{width:36px;height:36px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--serif);font-size:.95rem;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fs-step-text h4{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.fs-step-text p{font-size:.86rem;color:var(--gray);line-height:1.6}
+.fs-callout{background:var(--navy);color:#fff;border-radius:16px;padding:28px 26px}
+.fs-callout .label{color:var(--green);margin-bottom:10px;display:block}
+.fs-callout h4{font-family:var(--serif);font-size:1.15rem;font-weight:700;margin-bottom:8px;color:#fff}
+.fs-callout p{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.65}
+.fs-reassurance{margin-top:20px;background:var(--lgreen);border-radius:12px;padding:20px 22px}
+.fs-reassurance p{font-size:.85rem;color:var(--slate);line-height:1.65}
+.fs-reassurance strong{color:var(--navy)}
+
+/* GROUP PROGRAMS */
+.group-banner{background:var(--lgray);border:1px solid var(--border);border-radius:16px;padding:32px 36px;display:flex;gap:24px;align-items:center;margin-top:48px}
+.group-banner-icon{font-size:2.4rem;flex-shrink:0}
+.group-banner-text h4{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.group-banner-text p{font-size:.88rem;color:var(--gray);line-height:1.65}
+
+/* PRICING */
+.pricing-section{background:var(--lgray)}
+.pricing-intro{max-width:620px;margin:0 auto 52px;text-align:center}
+.pricing-card-wrap{max-width:560px;margin:0 auto}
+.pricing-card{background:#fff;border-radius:20px;border:1px solid var(--border);overflow:hidden;box-shadow:var(--shadow-lg)}
+.pricing-card-header{background:var(--navy);color:#fff;padding:28px 32px;text-align:center}
+.pricing-card-header h3{font-family:var(--serif);font-size:1.4rem;font-weight:700;margin-bottom:4px}
+.pricing-card-header p{font-size:.85rem;color:rgba(255,255,255,.6)}
+.pricing-card-body{padding:32px;text-align:center}
+.pricing-amount{font-family:var(--serif);font-size:2.4rem;font-weight:900;color:var(--navy);margin-bottom:4px}
+.pricing-amount span{font-size:1rem;font-weight:500;color:var(--gray)}
+.pricing-detail{font-size:.88rem;color:var(--gray);margin-bottom:24px}
+.pricing-includes{text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+.pricing-inc-item{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:var(--slate)}
+.pricing-inc-check{color:var(--green);font-weight:700;font-size:.85rem;flex-shrink:0;margin-top:2px}
+.pricing-card-cta{display:block;background:var(--green);color:#fff;padding:15px 32px;border-radius:10px;font-weight:700;font-size:.97rem;text-align:center;box-shadow:0 4px 24px rgba(0,196,122,.4);transition:background .2s,transform .15s}
+.pricing-card-cta:hover{background:var(--green-dark);transform:translateY(-2px)}
+.pricing-note{background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-top:32px;display:flex;gap:14px;align-items:flex-start;max-width:560px;margin-left:auto;margin-right:auto}
+.pricing-note-icon{font-size:1.4rem;flex-shrink:0}
+.pricing-note p{font-size:.85rem;color:var(--slate);line-height:1.65}
+.pricing-note p strong{color:var(--navy)}
+
+/* CTA SECTION */
+.cta-section{background:linear-gradient(135deg,var(--green) 0%,#009960 100%);color:#fff;text-align:center;padding:80px 5%}
+.cta-section h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:900;margin-bottom:14px;letter-spacing:-.03em}
+.cta-section p{font-size:1.05rem;opacity:.9;max-width:520px;margin:0 auto 36px;line-height:1.7}
+.cta-white{background:#fff;color:var(--green-dark);padding:16px 42px;border-radius:10px;font-weight:800;font-size:1rem;display:inline-block;transition:transform .15s,box-shadow .2s;box-shadow:0 4px 20px rgba(0,0,0,.15)}
+.cta-white:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
+.cta-note{margin-top:16px;font-size:.82rem;opacity:.7}
+
+/* CRISIS */
+.crisis-bar{background:#0d1f30;color:rgba(255,255,255,.7);text-align:center;padding:16px 5%;font-size:.83rem}
+.crisis-bar strong{color:#fff}
+.crisis-bar a{color:var(--green);font-weight:600}
+
+/* MOBILE CTA */
+.sticky-mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:#fff;border-top:1px solid var(--border);padding:12px 16px;box-shadow:0 -4px 20px rgba(0,0,0,.1)}
+.sticky-mobile-cta a{display:block;background:var(--green);color:#fff;text-align:center;padding:14px;border-radius:10px;font-weight:700;font-size:.95rem}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-card{display:none}
+  .compare-grid{grid-template-columns:1fr}
+  .fs-grid{grid-template-columns:1fr;gap:32px}
+  
+}
+@media(max-width:700px){
+  .age-panel.active{grid-template-columns:1fr}
+  .age-illustration{display:none}
+  .signs-grid{grid-template-columns:1fr}   
+  section{padding:60px 5%}
+  .sticky-mobile-cta{display:block}
+  body{padding-bottom:80px}
+  .group-banner{flex-direction:column;text-align:center}
+}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}
+.reveal-d2{transition-delay:.2s}
+.reveal-d3{transition-delay:.3s}
+.reveal-d4{transition-delay:.4s}
+
+</style>
+</head>
+
+<body>
+
+<!-- SKIP LINK -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <!-- Logo as a link (WCAG 2.4.4) -->
+  <a href="../index.html" class="logo" aria-label="Toriven Health — return to homepage">Toriven<span>Health</span></a>
+
+  <!-- Desktop nav links -->
+  <div class="nav-links" id="desktop-nav">
+    <a href="../index.html" >Home</a>
+    <a href="../about.html">About</a>
+    <div class="nav-has-dropdown">
+      <a href="../services.html" class="nav-services-trigger" aria-haspopup="true" aria-expanded="false" id="services-menu-btn" type="button">Services</a>
+      <div class="nav-dropdown" role="menu" aria-labelledby="services-menu-btn">
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">For Children &amp; Teens</div>
+          <a href="../services/autism-assessment.html" role="menuitem">Autism &amp; ASD Assessment</a>
+          <a href="../services/adhd-assessment.html" role="menuitem">ADHD &amp; Learning Assessment</a>
+          <a href="../services/speech-language.html" role="menuitem">Speech-Language Therapy</a>
+          <a href="../services/occupational-therapy.html" role="menuitem">Occupational Therapy</a>
+          <a href="../services/education-school-support.html" role="menuitem">Education &amp; School Support</a>
+          <a href="../services/communication-social.html" role="menuitem">Communication &amp; Social Skills</a>
+        </div>
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">For Adults</div>
+          <a href="../services/therapy-counselling.html" role="menuitem">Therapy &amp; Counselling</a>
+          <a href="../services/anxiety-depression.html" role="menuitem">Anxiety &amp; Depression</a>
+          <a href="../services/trauma-ptsd-therapy.html" role="menuitem">Trauma &amp; PTSD</a>
+          <a href="../services/work-stress-burnout.html" role="menuitem">Work Stress &amp; Burnout</a>
+          <a href="../services/return-to-work.html" role="menuitem">Return to Work</a>
+          <a href="../services/individual-therapy.html" role="menuitem">Individual Therapy</a>
+        </div>
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">Specialized Programs</div>
+          <a href="../services/womens-mental-health.html" role="menuitem">Women&rsquo;s Mental Health</a>
+          <a href="../services/2slgbtq-mental-health.html" role="menuitem">2SLGBTQ+ Affirming Care</a>
+          <a href="../services/veterans-first-responders.html" role="menuitem">Veterans &amp; First Responders</a>
+          <a href="../services/parent-coaching.html" role="menuitem">Parent Coaching &amp; Support</a>
+          <a href="../services/specialized-programs.html" role="menuitem">View All Programs &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <a href="../careers.html">Careers</a>
+    <a href="../blog.html"  aria-current="page">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Desktop CTA buttons -->
+  <div class="nav-cta-group">
+    <a href="contact.html" class="btn-nav-portal">Patient Portal</a>
+    <a href="contact.html" class="btn-nav-cta">Book Free Consultation</a>
+  </div>
+
+  <!-- Hamburger button (mobile only) -->
+  <button class="nav-hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu" onclick="toggleMobileNav(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile navigation menu -->
+<div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a>
+  <a href="../about.html">About</a>
+  <a href="../services.html">Services</a>
+  <a href="../career.html">Careers</a>
+  <a href="../blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-nav-ctas">
+    <a href="contact.html" class="btn-nav-portal">Patient Portal</a>
+    <a href="contact.html" class="btn-nav-cta">Book Free Consultation</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+
+<section class="hero">
+  <div class="hero-orb"></div>
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a><span>/</span><a href="../services.html">Services</a><span>/</span><a href="therapy-counselling.html">Therapy &amp; Counselling</a><span>/</span>
+      <span style="color:var(--green)">CBT &amp; DBT Counselling</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge"><span class="hero-badge-dot"></span>Evidence-Informed &nbsp;&middot;&nbsp; Skills-Focused &nbsp;&middot;&nbsp; All Ages &nbsp;&middot;&nbsp; PHIPA-Compliant</div>
+        <p class="hero-page-title">CBT &amp; DBT Counselling</p>
+        <h1>Calmer Mind.<br><em>Stronger Skills.</em></h1>
+        <p class="hero-sub">Everyone struggles at times &mdash; thoughts that won&rsquo;t slow down, emotions that feel overwhelming, or patterns that keep repeating despite your best efforts. Therapy can help you understand those patterns and develop practical skills to respond differently.</p>
+        <p class="hero-who">Our clinicians use Cognitive Behavioural Therapy (CBT) and Dialectical Behaviour Therapy (DBT) to help children, teens, and adults build skills for managing thoughts, regulating emotions, and navigating everyday challenges. We provide a warm, respectful environment where you can explore difficulties and develop tools that support meaningful change.</p>
+        <div class="hero-pills"><span class="pill">Children (6&ndash;12)</span><span class="pill">Teens (13&ndash;17)</span><span class="pill">Adults (18+)</span><span class="pill">Caregivers</span><span class="pill">Virtual-First</span><span class="pill">Delivered by Regulated Clinicians</span></div>
+        <div class="hero-ctas">
+          <a href="contact.html" class="cta-primary">Book Free Consultation</a>
+          <a href="#pricing" class="cta-secondary">See Fees &amp; Access</a>
+        </div>
+        <p style="font-size:.76rem;color:rgba(255,255,255,.45);margin-top:8px;font-style:italic">🕐 Opening late spring / summer 2026 — not yet accepting patients</p>
+        <p class="hero-note">No referral needed. No obligation. Call-back option available.</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-title">What brings people to therapy&hellip;</div>
+        <div class="hero-card-subtitle">People describe it in different ways</div>
+        <div class="hero-card-item">
+          <div class="hci-icon">&#x1F331;</div>
+          <div class="hci-text"><strong>Parents &amp; Caregivers</strong><span>&ldquo;We&rsquo;ve tried everything at home and nothing seems to be working&rdquo;</span></div>
+        </div><div class="hero-card-item">
+          <div class="hci-icon">&#x1F3A7;</div>
+          <div class="hci-text"><strong>Teenagers</strong><span>&ldquo;I know what I&rsquo;m doing isn&rsquo;t helping &mdash; I just don&rsquo;t know what else to do&rdquo;</span></div>
+        </div><div class="hero-card-item">
+          <div class="hci-icon">&#x1F9D1;</div>
+          <div class="hci-text"><strong>Adults</strong><span>&ldquo;I keep falling into the same patterns and I want to learn a different way&rdquo;</span></div>
+        </div><div class="hero-card-item">
+          <div class="hci-icon">&#x1F91D;</div>
+          <div class="hci-text"><strong>Couples &amp; Families</strong><span>&ldquo;We need better tools for communicating when things get difficult&rdquo;</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar"><div class="trust-item"><span class="trust-dot" aria-hidden="true"></span>Regulated Clinicians</div><div class="trust-item"><span class="trust-dot" aria-hidden="true"></span>CBT &amp; DBT Approaches</div><div class="trust-item"><span class="trust-dot" aria-hidden="true"></span>Children, Teens &amp; Adults</div><div class="trust-item"><span class="trust-dot" aria-hidden="true"></span>Virtual-First Across Ontario</div><div class="trust-item"><span class="trust-dot" aria-hidden="true"></span>PHIPA-Compliant</div><div class="trust-item"><span class="trust-dot" aria-hidden="true"></span>Private Pay &middot; Receipts Provided</div></div>
+
+<!-- ETHICS BOX -->
+<div class="ethics-wrap">
+  <div class="ethics-box reveal">
+    <div><p style="font-size:.88rem;color:var(--slate);line-height:1.65">Therapy services are provided by regulated mental health professionals governed by their respective Ontario regulatory colleges.</p></div>
+  </div>
+</div>
+
+<!-- WHEN THERAPY MAY HELP -->
+<section class="signs-section">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="label">When Therapy Might Help</div>
+      <h2 class="section-title">Recognizing the <span>Patterns</span></h2>
+      <p class="section-sub">CBT or DBT counselling may be helpful if you or someone you care about is experiencing any of the following. These are common starting points &mdash; not requirements.</p>
+    </div>
+    <div class="signs-grid">
+      <div class="sign-card reveal">
+        <div class="sign-card-icon">&#x1F4AD;</div>
+        <div><p><strong>Persistent Worry or Overthinking</strong>Thoughts that cycle and repeat, making it hard to feel settled or make decisions with confidence.</p></div>
+      </div>
+      <div class="sign-card reveal reveal-d1">
+        <div class="sign-card-icon">&#x1F30A;</div>
+        <div><p><strong>Difficulty Managing Strong Emotions</strong>Emotions that arrive quickly and feel overwhelming, sometimes leading to reactions you later regret.</p></div>
+      </div>
+      <div class="sign-card reveal reveal-d2">
+        <div class="sign-card-icon">&#x1F503;</div>
+        <div><p><strong>Repeating Patterns</strong>The same cycles in relationships, behaviour, or decision-making &mdash; despite wanting things to be different.</p></div>
+      </div>
+      <div class="sign-card reveal reveal-d3">
+        <div class="sign-card-icon">&#x1F6AB;</div>
+        <div><p><strong>Avoidance of Everyday Situations</strong>Pulling away from activities, conversations, or responsibilities that once felt manageable.</p></div>
+      </div>
+      <div class="sign-card reveal reveal-d4">
+        <div class="sign-card-icon">&#x1F50B;</div>
+        <div><p><strong>Stress, Burnout, or Exhaustion</strong>Feeling emotionally drained, disconnected, or running on empty despite trying to keep up.</p></div>
+      </div>
+      <div class="sign-card reveal reveal-d4">
+        <div class="sign-card-icon">&#x1F512;</div>
+        <div><p><strong>Feeling Stuck</strong>Knowing what you want to change but not having the tools or support to make it happen.</p></div>
+      </div>
+      <div class="sign-card reveal reveal-d5">
+        <div class="sign-card-icon">🤝</div>
+        <div><p><strong>Relationship Patterns</strong>Recognising reactive, avoidant, or people-pleasing patterns in relationships &mdash; and building the communication and emotional regulation skills to respond differently with a partner, family member, or colleague.</p></div>
+      </div>
+    </div>
+    <p class="signs-note reveal">Therapy focuses on understanding these patterns and learning practical strategies that can support healthier responses. Progress looks different for everyone.</p>
+  </div>
+</section>
+
+<!-- CBT vs DBT -->
+<section class="compare-section">
+  <div class="container">
+    <div class="compare-intro reveal">
+      <div class="label">Understanding the Approaches</div>
+      <h2 class="section-title">CBT vs DBT: <span>Two Toolkits,<br>One Goal</span></h2>
+      <p>Both CBT and DBT are evidence-informed, skills-focused therapies. Your clinician may use one approach, or combine elements of both, depending on your goals and the patterns you identify together.</p>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-card cbt reveal">
+        <div class="compare-card-badge">&#x1F9E0; CBT</div>
+        <h3>The Thinking Toolkit</h3>
+        <p class="card-subtitle">Understanding the connection between thoughts, feelings, and actions</p>
+        <h4>Often Helpful For</h4>
+        <div class="helpful-tags">
+          <span class="helpful-tag">Anxiety</span>
+          <span class="helpful-tag">Negative Self-Talk</span>
+          <span class="helpful-tag">Perfectionism</span>
+          <span class="helpful-tag">Depression</span>
+          <span class="helpful-tag">Stress &amp; Worry Cycles</span>
+        </div>
+        <p class="compare-focus">CBT focuses on the relationship between <strong>Thoughts &rarr; Feelings &rarr; Actions</strong>. Together we identify common thinking patterns and explore ways to interpret situations more realistically and constructively.</p>
+      </div>
+      <div class="compare-card dbt reveal reveal-d1">
+        <div class="compare-card-badge">&#x1F497; DBT</div>
+        <h3>The Emotion Toolkit</h3>
+        <p class="card-subtitle">Building skills for emotional regulation, acceptance, and connection</p>
+        <h4>Often Helpful For</h4>
+        <div class="helpful-tags">
+          <span class="helpful-tag">Intense Emotional Reactions</span>
+          <span class="helpful-tag">Relationship Conflict</span>
+          <span class="helpful-tag">Impulsivity</span>
+          <span class="helpful-tag">Difficulty Regulating Emotions</span>
+        </div>
+        <p class="compare-focus">DBT builds on CBT principles and adds skills that support emotional regulation and acceptance. Common DBT skills include:</p>
+        <div class="compare-skills">
+          <div class="compare-skill"><div class="compare-skill-dot"></div>Distress Tolerance</div>
+          <div class="compare-skill"><div class="compare-skill-dot"></div>Emotion Regulation</div>
+          <div class="compare-skill"><div class="compare-skill-dot"></div>Mindfulness</div>
+          <div class="compare-skill"><div class="compare-skill-dot"></div>Interpersonal Effectiveness</div>
+        </div>
+      </div>
+    </div>
+    <div class="compare-note reveal">
+      <strong>Your clinician will help you decide.</strong> Many people benefit from elements of both approaches. There is no wrong starting point &mdash; therapy is adapted to your needs as we learn what works for you.
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT AT EVERY STAGE -->
+<section class="stages-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="label">Support at Every Stage</div>
+      <h2 class="section-title">Therapy Adapted to <span>Your Life Stage</span></h2>
+      <p class="section-sub">Therapy approaches are adapted to match developmental needs and life stages. Here&rsquo;s what therapy typically looks like for each group.</p>
+    </div>
+    <div class="age-tabs reveal">
+      <button class="age-tab active" onclick="showAge('child',this)">Children (6&ndash;12)</button>
+      <button class="age-tab" onclick="showAge('teen',this)">Teens (13&ndash;17)</button>
+      <button class="age-tab" onclick="showAge('adult',this)">Adults (18+)</button>
+    </div>
+    <div class="age-panels">
+
+    <!-- CHILDREN -->
+    <div class="age-panel active" id="panel-child">
+      <div>
+        <div class="panel-headline">Children (6&ndash;12): Meeting Them Where They Are</div>
+        <p class="panel-intro">Sessions may include visual tools, play-based activities, and simple language to help children understand emotions and behaviour. Parents and caregivers are important partners &mdash; strategies discussed in therapy can often be practiced at home.</p>
+        <div class="detail-list">
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Separation anxiety and school refusal</p></div>
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Emotional outbursts and difficulty managing frustration</p></div>
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Difficulty with transitions, routine changes, or new situations</p></div>
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Worry patterns that affect sleep, school, or social confidence</p></div>
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Caregiver coaching to support skills practice at home</p></div>
+        </div>
+      </div>
+      <div class="age-illustration">
+        <div class="age-emoji">&#x1F9D2;</div>
+        <div>
+          <div class="label" style="margin-bottom:10px">Children (6&ndash;12)</div>
+          <div class="pull-quote">&ldquo;Children communicate through behaviour. Therapy helps translate what they&rsquo;re experiencing into language they &mdash; and their caregivers &mdash; can work with together.&rdquo;</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEENS -->
+    <div class="age-panel" id="panel-teen">
+      <div>
+        <div class="panel-headline">Teens (13&ndash;17): Collaborative, Respectful, and Real</div>
+        <p class="panel-intro">A collaborative environment that respects independence while supporting emotional growth. We balance safety with the teen&rsquo;s need for a confidential space to speak openly.</p>
+        <div class="detail-list">
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Academic pressure and performance anxiety</p></div>
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Social challenges and peer relationship difficulties</p></div>
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Emotional regulation and managing intense feelings</p></div>
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Impulsivity and conflict at home or school</p></div>
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Building confidence and identity in a safe, non-judgmental space</p></div>
+        </div>
+      </div>
+      <div class="age-illustration">
+        <div class="age-emoji">&#x1F3A7;</div>
+        <div>
+          <div class="label" style="margin-bottom:10px">Teens (13&ndash;17)</div>
+          <div class="pull-quote">&ldquo;Teenagers deserve a space where they feel genuinely heard &mdash; not lectured. Therapy works best when it meets them where they are, with honesty and without judgment.&rdquo;</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADULTS -->
+    <div class="age-panel" id="panel-adult">
+      <div>
+        <div class="panel-headline">Adults (18+): Understanding Patterns, Building New Ones</div>
+        <p class="panel-intro">Therapy focuses on understanding patterns in thinking, emotions, and behaviour and developing strategies that support meaningful change across work, relationships, and daily life.</p>
+        <div class="detail-list">
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Work stress, burnout, and difficulty setting boundaries</p></div>
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Relationship challenges and communication patterns</p></div>
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Parenting stress and family dynamics</p></div>
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Persistent anxiety, mood concerns, or emotional exhaustion</p></div>
+          <div class="detail-item"><div class="detail-check">&#x2713;</div><p>Breaking cycles that feel entrenched or automatic</p></div>
+        </div>
+      </div>
+      <div class="age-illustration">
+        <div class="age-emoji">&#x1F9D1;</div>
+        <div>
+          <div class="label" style="margin-bottom:10px">Adults (18+)</div>
+          <div class="pull-quote">&ldquo;Most adults who come to therapy already know their patterns. What they need are practical tools &mdash; and a space where they can practice using them without judgment.&rdquo;</div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FIRST SESSION -->
+<section class="first-session-section">
+  <div class="container">
+    <div class="fs-grid">
+      <div class="reveal">
+        <div class="label">What to Expect</div>
+        <h2 class="section-title">Your First Session <span>Is About You</span></h2>
+        <p class="section-sub" style="max-width:100%">Your first session focuses on understanding your experiences and goals. There is no pressure to share more than you are comfortable discussing.</p>
+        <div class="fs-steps">
+          <div class="fs-step">
+            <div class="fs-step-num">1</div>
+            <div class="fs-step-text"><h4>We Listen</h4><p>We discuss what has been happening recently and what prompted you to reach out.</p></div>
+          </div>
+          <div class="fs-step">
+            <div class="fs-step-num">2</div>
+            <div class="fs-step-text"><h4>We Explore Patterns Together</h4><p>We begin to identify patterns that may be contributing to the difficulty &mdash; at your pace.</p></div>
+          </div>
+          <div class="fs-step">
+            <div class="fs-step-num">3</div>
+            <div class="fs-step-text"><h4>We Set Goals</h4><p>We identify therapy goals and discuss what meaningful change might look like for you.</p></div>
+          </div>
+          <div class="fs-step">
+            <div class="fs-step-num">4</div>
+            <div class="fs-step-text"><h4>We Plan Next Steps</h4><p>We discuss possible strategies, frequency, and what to expect going forward.</p></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="reveal reveal-d1">
+          <div class="fs-callout">
+            <span class="label">Group Skills Programs</span>
+            <h4>Learn Together, Grow Together</h4>
+            <p>Some CBT and DBT skills may also be offered through structured group programs. These programs focus on learning practical emotional regulation and coping skills in a supportive group environment. Group options may vary depending on clinician availability and program schedules.</p>
+          </div>
+        </div>
+        <div class="fs-reassurance reveal reveal-d2">
+          <p><strong>You set the pace.</strong> Therapy is collaborative. You are always in control of what you share and when. Our role is to provide a safe, supportive environment and practical tools &mdash; not to push you faster than feels right.</p>
+        </div>
+        <div style="margin-top:16px;background:var(--lgreen);border-radius:12px;padding:20px 22px" class="reveal reveal-d3">
+          <p style="font-size:.85rem;color:var(--slate);line-height:1.65"><strong style="color:var(--navy)">Virtual-First Across Ontario.</strong> Sessions are delivered virtually, allowing you to attend from the comfort and privacy of your own space. In-person options are available where clinically indicated.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="pricing">
+  <div class="container">
+    <div class="pricing-intro reveal">
+      <div class="label">Fees &amp; Access</div>
+      <h2 class="section-title">Transparent <span>Pricing</span></h2>
+      <p class="section-sub">Clear, upfront pricing with no hidden fees. We believe you should know exactly what to expect before you begin.</p>
+    </div>
+    <div class="pricing-card-wrap reveal">
+      <div class="pricing-card">
+        <div class="pricing-card-header">
+          <h3>Individual Counselling Session</h3>
+          <p>CBT &amp; DBT &middot; All Ages</p>
+        </div>
+        <div class="pricing-card-body">
+          <div class="pricing-amount">$150 &ndash; $280 <span>/ 60 min</span></div>
+          <p class="pricing-detail">Fee depends on clinician specialisation and experience. Your intake coordinator will confirm the exact rate for your clinician before your first appointment.</p>
+          
+          <div class="pricing-includes">
+            <div class="pricing-inc-item"><span class="pricing-inc-check">&#x2713;</span><span>Evidence-informed CBT or DBT therapy</span></div>
+            <div class="pricing-inc-item"><span class="pricing-inc-check">&#x2713;</span><span>Personalized strategies and skills practice</span></div>
+            <div class="pricing-inc-item"><span class="pricing-inc-check">&#x2713;</span><span>Secure, PHIPA-compliant virtual platform</span></div>
+            <div class="pricing-inc-item"><span class="pricing-inc-check">&#x2713;</span><span>Detailed receipts for insurance reimbursement</span></div>
+            <div class="pricing-inc-item"><span class="pricing-inc-check">&#x2713;</span><span>Receipts provided for insurer reimbursement</span></div>
+          </div>
+          <a href="contact.html" class="pricing-card-cta">Book Free Consultation</a>
+        </div>
+      </div>
+    </div>
+    <div class="pricing-note reveal" style="margin-top:32px">
+      <div class="pricing-note-icon">&#x1F4C4;</div>
+      <p>Private pay. Not covered by OHIP. Receipts provided for insurer reimbursement.</p>
+    </div>
+    <div class="reveal" id="book" style="text-align:center;margin-top:40px;padding:40px 32px;background:var(--navy);border-radius:16px;color:#fff">
+      <h3 style="font-family:var(--serif);font-size:1.5rem;font-weight:700;margin-bottom:10px">Change Begins With a Conversation.</h3>
+      <p style="font-size:.92rem;color:rgba(255,255,255,.7);max-width:460px;margin:0 auto 24px;line-height:1.65">Start with a no-cost, no-commitment introductory call to meet a clinician and discuss whether CBT, DBT, or another approach may be appropriate for your situation.</p>
+      <a href="contact.html" class="cta-white">Book Free Consultation</a>
+      <p style="color:rgba(255,255,255,.5);margin-top:8px;font-size:.82rem">No referral needed. No obligation. Call-back option available.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>You Don&rsquo;t Have to Figure This Out Alone.</h2>
+    <p>Many people tell us they wish they had started therapy sooner. You don&rsquo;t need to have the right words, or be sure about anything, to begin. Start with a free, confidential conversation.</p>
+    <a href="contact.html" class="cta-white">Book Free Consultation</a>
+    <p class="cta-note">No referral needed. No obligation. Call-back option available.</p>
+  </div>
+</section>
+
+<!-- CRISIS BAR -->
+<div class="crisis-bar">
+  <strong>If you or someone you care for is in immediate distress:</strong> Contact the <a href="tel:988">9-8-8 Suicide Crisis Helpline</a> (call or text 9-8-8) or go to your nearest Emergency Department. This service is not a crisis service.
+</div>
+
+<!-- FOOTER -->
+
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo" aria-label="Toriven Health — return to homepage">Toriven<span style="color:var(--green)">Health</span></a>
+      <p>Comprehensive virtual allied health care for children, teens, and adults across Ontario. Regulated clinicians. Evidence-based practice. Neurodiversity-affirming.</p>
+      <div class="footer-badges" aria-label="Certifications">
+        <span class="f-badge">PHIPA Compliant</span>
+        <span class="f-badge">Regulated Clinicians</span>
+        <span class="f-badge">Ontario-Wide</span>
+      </div>
+    </div>
+
+    <!-- Services column: plain div so no UA nav interference -->
+    <div class="footer-col" role="navigation" aria-label="Services navigation">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="../services/autism-assessment.html">Autism Assessment</a></li>
+        <li><a href="../services/adhd-assessment.html">ADHD &amp; LD Assessment</a></li>
+        <li><a href="../services/neuropsychological.html">Full Battery Assessment</a></li>
+        <li><a href="../services/speech-language.html">Speech-Language</a></li>
+        <li><a href="../services/occupational-therapy.html">Occupational Therapy</a></li>
+        <li><a href="../services/">Feeding &amp; Nutrition</a></li>
+        <li><a href="../services/cbt-dbt.html">CBT &amp; Trauma Therapy</a></li>
+        <li><a href="../services/">Psychiatry (Summer 2026)</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick links column: plain div so no UA nav interference -->
+    <div class="footer-col" role="navigation" aria-label="Quick links navigation">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../services/specialized-programs.html">Specialized Programs</a></li>
+        <li><a href="../contact.html">Patient Portal</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="../accessibility.html">AODA Accessibility</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p><span aria-hidden="true">📍</span> Serving all of Ontario — Virtual-First</p>
+      <p><span aria-hidden="true">✉️</span> Email available at launch</p>
+    </div>
+  </div>
+
+  <!-- footer-bottom: plain div to avoid UA nav white background -->
+  <div class="footer-bottom">
+    <span>© 2026 Toriven Health. All rights reserved.</span>
+    <div class="footer-bottom-links" role="navigation" aria-label="Legal links">
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../accessibility.html">AODA Accessibility</a>
+    </div>
+  </div>
+
+  <!-- FOOTER COMPLIANCE NOTICES -->
+  <div class="footer-compliance" role="note" aria-label="Legal and compliance notices">
+    <p><span aria-hidden="true">🚫</span> <strong>Not Yet Open:</strong> Toriven Health is not yet open and is not currently accepting clients, patients, or referrals. Anticipated launch is late spring or summer 2026, subject to change.</p>
+    <p><span aria-hidden="true">📋</span> <strong>Informational Only:</strong> This website is for general informational purposes only. Nothing on this website constitutes medical advice, clinical guidance, diagnosis, or treatment. Consult a regulated health professional for health concerns.</p>
+    <p><span aria-hidden="true">🔒</span> <strong>PHIPA:</strong> PHIPA-compliant secure systems will be used for clinical communication and patient records at launch. Do not send personal health information through social media or general web channels.</p>
+    <p><span aria-hidden="true">💳</span> <strong>Private Pay:</strong> Services will be private pay. Not covered by OHIP. Insurance reimbursement depends on individual plans. Clients are responsible for confirming insurance coverage. Receipts are provided for reimbursement.</p>
+    <p><span aria-hidden="true">⚖️</span> <strong>No Therapeutic Relationship:</strong> Visiting this website, contacting us, or following us on social media does not establish a therapeutic, clinical, or professional relationship of any kind. A therapeutic relationship is only formed after formal intake, clinical acceptance, and completion of required consent documentation.</p>
+    <p><span aria-hidden="true">🆘</span> <strong>Crisis Support:</strong> Toriven Health is not a crisis service. If you are in immediate distress, contact <strong>9-8-8</strong> (Canada Suicide Crisis Helpline) or your nearest emergency department.</p>
+  </div>
+
+  <div class="footer-disclaimer">
+    <p>Educational content on this website is for informational purposes only and does not constitute clinical advice. Diagnosis and treatment decisions are made only after a full clinical assessment by a regulated clinician. TorivenHealth&#8482; is a trade name of Toriven Health Inc., a federally incorporated company.</p>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-mobile-cta"><a href="contact.html">Book Free Consultation</a></div>
+
+<script>
+function showAge(age, btn) {
+  document.querySelectorAll('.age-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.age-tab').forEach(b => b.classList.remove('active'));
+  const panel = document.getElementById('panel-' + age);
+  if (panel) panel.classList.add('active');
+  if (btn) btn.classList.add('active');
+}
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+</script>
+
+
+<script>
+(function() {
+  var item = document.querySelector('.nav-has-dropdown');
+  if (!item) return;
+
+  var trigger = item.querySelector('.nav-services-trigger');
+  var dropdown = item.querySelector('.nav-dropdown');
+  var closeTimer;
+
+  function openDropdown() {
+    clearTimeout(closeTimer);
+    dropdown.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeDropdown() {
+    closeTimer = setTimeout(function() {
+      dropdown.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }, 150);
+  }
+
+  // Hover → show dropdown
+  trigger.addEventListener('mouseenter', openDropdown);
+  trigger.addEventListener('mouseleave', closeDropdown);
+
+  dropdown.addEventListener('mouseenter', function() {
+    clearTimeout(closeTimer);
+  });
+
+  dropdown.addEventListener('mouseleave', closeDropdown);
+
+  // ❗ IMPORTANT: Click par page open hone do
+  trigger.addEventListener('click', function(e) {
+    // e.preventDefault();  ❌ is line ko remove rakho
+    // Browser automatically services.html open karega
+  });
+
+})();
+</script>
+
+<script>
+function showTeam(tab, el) {
+  document.getElementById('pane-mgmt').style.display = tab === 'mgmt' ? 'block' : 'none';
+  document.getElementById('pane-clin').style.display = tab === 'clin' ? 'block' : 'none';
+  document.querySelectorAll('.team-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }});
+}, {threshold: 0.08});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+function toggleMobileNav(btn) {
+  var nav = document.getElementById('mobile-nav');
+  var isOpen = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  btn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+}
+document.addEventListener('click', function(e) {
+  var nav = document.getElementById('mobile-nav');
+  var btn = document.querySelector('.nav-hamburger');
+  if (nav && btn && nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open navigation menu');
+  }
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var nav = document.getElementById('mobile-nav');
+    var btn = document.querySelector('.nav-hamburger');
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open navigation menu');
+      btn.focus();
+    }
+  }
+});
+</script>
+
+<!-- CTA POPUP OVERLAY -->
+<div class="th-popup-overlay" id="th-popup-overlay" role="dialog" aria-modal="true" aria-labelledby="th-popup-title" aria-describedby="th-popup-desc">
+  <div class="th-popup">
+    <button class="th-popup-close" onclick="thClosePopup()" aria-label="Close">&#x2715;</button>
+    <span class="th-popup-icon" aria-hidden="true">&#x1F331;</span>
+    <div class="th-popup-badge"><span class="th-popup-badge-dot" aria-hidden="true"></span> Coming Late Spring / Summer 2026</div>
+    <h2 id="th-popup-title">You&#x2019;re ahead of the <em>curve.</em></h2>
+    <p class="th-popup-body" id="th-popup-desc">We&#x2019;re putting the finishing touches on something we&#x2019;re genuinely proud of. <strong>Toriven Health opens late spring / early summer 2026</strong> &#x2014; and when we do, we&#x2019;d love for you to be among the first to know.<br><br><strong>Follow us on social media for launch updates</strong> &#x2014; we&#x2019;ll announce our opening there first.</p>
+    <div class="th-popup-actions">
+      <a href="../contact.html" class="th-popup-btn-primary" onclick="thClosePopup()">See What&#x2019;s Coming &#x2192;</a>
+      <button class="th-popup-btn-secondary" onclick="thClosePopup()">Close</button>
+    </div>
+    <p class="th-popup-note">No appointments available yet &#x2014; not accepting clients or referrals at this time.</p>
+  </div>
+</div>
+<script>
+/* ── CTA POPUP ── */
+function thOpenPopup(e) {
+  if (e) { e.preventDefault(); }
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay) {
+    overlay.classList.add('open');
+    overlay.querySelector('.th-popup-close').focus();
+    document.body.style.overflow = 'hidden';
+  }
+}
+function thClosePopup() {
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay) {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+// Close on overlay background click
+document.addEventListener('click', function(e) {
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay && e.target === overlay) { thClosePopup(); }
+});
+// Close on Escape
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { thClosePopup(); }
+});
+// Wire CTA buttons to popup EXCEPT on contact.html, footer links, nav dropdown links
+(function() {
+  var isContactPage = window.location.pathname.indexOf('contact.html') !== -1;
+  if (isContactPage) return;
+  document.querySelectorAll('a[href]').forEach(function(el) {
+    var href = el.getAttribute('href') || '';
+    if (href.indexOf('contact.html') === -1) return;
+    var isFooter = el.closest('footer') !== null;
+    var isPopup = el.closest('#th-popup-overlay') !== null;
+    var isDropdown = el.closest('.nav-dropdown') !== null;
+    var isMobileNav = el.closest('.mobile-nav') !== null || el.closest('.th-mobile-nav') !== null;
+    var isContactPage = window.location.pathname.indexOf('contact') !== -1;
+    if (!isFooter && !isPopup && !isDropdown && !isMobileNav && !isContactPage) {
+      el.addEventListener('click', function(e) { thOpenPopup(e); });
+    }
+  });
+})();
+</script>
+</body>
+</html>

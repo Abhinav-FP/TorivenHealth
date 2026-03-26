@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Toriven Health — Launching Late Spring / Summer 2026</title>
+  <meta name="description" content="Toriven Health is a virtual-first multidisciplinary allied health clinic launching in Ontario in late spring or summer 2026. This website is for informational purposes only. Follow us for updates." />
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <style>   
+    /* ── HERO ── */
+    .hero{background:linear-gradient(135deg,#0D1B2A 0%,#1a3350 60%,#0f2840 100%);color:var(--white);padding:96px 5% 88px;text-align:center;position:relative;overflow:hidden}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,rgba(0,196,122,.15) 0%,transparent 60%)}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,196,122,.15);border:1px solid rgba(0,196,122,.35);color:var(--green);padding:6px 16px;border-radius:100px;font-size:.82rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:28px;position:relative}
+    .hero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:900;line-height:1.15;max-width:700px;margin:0 auto 20px;letter-spacing:-1px;position:relative}
+    .hero h1 em{color:var(--green);font-style:normal}
+    .hero-sub{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,.75);max-width:580px;margin:0 auto 16px;position:relative;line-height:1.7}
+    .hero-note{font-size:.84rem;color:rgba(255,255,255,.42);margin-top:8px;position:relative}
+
+    /* ── SHARED ── */
+    .section-label{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:12px}
+    .section-title{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:900;line-height:1.2;letter-spacing:-.5px}
+    .section-title span{color:var(--green)}
+    .section-sub{font-size:1rem;color:var(--gray);margin-top:10px;line-height:1.72;}
+
+    /* ── LAUNCH COUNTDOWN SECTION ── */
+    .launch-section{background:var(--light);padding:72px 5%}
+    .launch-inner{max-width:860px;margin:0 auto;text-align:center}
+    .launch-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:48px 44px;margin-top:36px;box-shadow:var(--shadow)}
+    .launch-icon{font-size:3rem;margin-bottom:16px}
+    .launch-card h2{font-size:1.6rem;font-weight:900;color:var(--navy);margin-bottom:12px;letter-spacing:-.3px}
+    .launch-card h2 em{color:var(--green);font-style:normal}
+    .launch-card p{font-size:.97rem;color:var(--slate);line-height:1.78;max-width:580px;margin:0 auto 12px}
+    .launch-timeline{display:flex;justify-content:center;gap:0;margin:32px auto;max-width:560px}
+    .tl-step{flex:1;text-align:center;position:relative}
+    .tl-step:not(:last-child)::after{content:'';position:absolute;top:20px;left:60%;width:80%;height:2px;background:linear-gradient(to right,var(--green),var(--border))}
+    .tl-dot{width:40px;height:40px;border-radius:50%;background:var(--green-light);border:2px solid var(--green);display:flex;align-items:center;justify-content:center;font-size:1rem;margin:0 auto 10px;position:relative;z-index:1}
+    .tl-step.done .tl-dot{background:var(--green);color:var(--white)}
+    .tl-label{font-size:.76rem;font-weight:700;color:var(--slate);line-height:1.4}
+    .tl-sub{font-size:.7rem;color:var(--gray);margin-top:2px}
+
+    /* ── REGULATORY NOTICE ── */
+    .notice-section{background:var(--white);padding:72px 5%}
+    .notice-inner{max-width:860px;margin:0 auto}
+    .notice-block{border:1.5px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:16px}
+    .notice-block:last-child{margin-bottom:0}
+    .notice-head{display:flex;align-items:center;gap:14px;padding:20px 24px;background:var(--light);border-bottom:1px solid var(--border)}
+    .notice-icon{font-size:1.3rem;flex-shrink:0}
+    .notice-head h3{font-size:.93rem;font-weight:800;color:var(--navy)}
+    .notice-body{padding:20px 24px}
+    .notice-body p{font-size:.9rem;color:var(--slate);line-height:1.75}
+    .notice-body strong{color:var(--navy)}
+
+    /* ── SOCIAL ── */
+    .social-section{background:linear-gradient(135deg,#0D1B2A 0%,#1a3350 100%);padding:80px 5%;text-align:center;color:var(--white)}
+    .social-section .section-label{color:var(--green)}
+    .social-section .section-title{color:var(--white)}
+    .social-section .section-sub{color:rgba(255,255,255,.65);margin:10px auto 0;max-width:520px}
+    .social-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:44px}
+    .social-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:28px 32px;min-width:200px;display:flex;flex-direction:column;align-items:center;gap:12px;transition:background .2s,border-color .2s,transform .2s;cursor:pointer}
+    .social-card:hover{background:rgba(0,196,122,.12);border-color:rgba(0,196,122,.35);transform:translateY(-3px)}
+    .social-card .s-icon{font-size:2rem}
+    .social-card h4{font-size:.95rem;font-weight:800;color:var(--white)}
+    .social-card p{font-size:.82rem;color:rgba(255,255,255,.5);text-align:center;line-height:1.5}
+    .social-card .s-handle{font-size:.8rem;font-weight:700;color:var(--green);margin-top:2px}
+    .social-disclaimer{margin-top:36px;max-width:600px;margin-left:auto;margin-right:auto;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:18px 22px}
+    .social-disclaimer p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.7}
+
+    /* ── WHAT'S COMING ── */
+    .coming-section{background:var(--light);padding:72px 5%}
+    .coming-inner{max-width:1100px;margin:0 auto}
+    .coming-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin-top:40px}
+    .coming-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px 22px;transition:box-shadow .2s,border-color .2s}
+    .coming-card:hover{box-shadow:var(--shadow-md);border-color:var(--green)}
+    .coming-card .c-icon{font-size:1.6rem;margin-bottom:10px}
+    .coming-card h4{font-size:.95rem;font-weight:800;color:var(--navy);margin-bottom:6px}
+    .coming-card p{font-size:.86rem;color:var(--gray);line-height:1.6}
+
+    
+</style>
+</head>
+
+<body>
+
+<!-- SKIP LINK -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<nav aria-label="Main navigation">
+  <!-- Logo as a link (WCAG 2.4.4) -->
+  <a href="index.html" class="logo" aria-label="Toriven Health — return to homepage">Toriven<span>Health</span></a>
+
+  <!-- Desktop nav links -->
+  <div class="nav-links" id="desktop-nav">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about.html">About</a>
+    <div class="nav-has-dropdown">
+      <a href="services.html" class="nav-services-trigger" aria-haspopup="true" aria-expanded="false" id="services-menu-btn" type="button">Services</a>
+      <div class="nav-dropdown" role="menu" aria-labelledby="services-menu-btn">
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">For Children &amp; Teens</div>
+          <a href="services/autism-assessment.html" role="menuitem">Autism &amp; ASD Assessment</a>
+          <a href="services/adhd-assessment.html" role="menuitem">ADHD &amp; Learning Assessment</a>
+          <a href="services/speech-language.html" role="menuitem">Speech-Language Therapy</a>
+          <a href="services/occupational-therapy.html" role="menuitem">Occupational Therapy</a>
+          <a href="services/education-school-support.html" role="menuitem">Education &amp; School Support</a>
+          <a href="services/communication-social.html" role="menuitem">Communication &amp; Social Skills</a>
+        </div>
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">For Adults</div>
+          <a href="services/therapy-counselling.html" role="menuitem">Therapy &amp; Counselling</a>
+          <a href="services/anxiety-depression.html" role="menuitem">Anxiety &amp; Depression</a>
+          <a href="services/trauma-ptsd-therapy.html" role="menuitem">Trauma &amp; PTSD</a>
+          <a href="services/work-stress-burnout.html" role="menuitem">Work Stress &amp; Burnout</a>
+          <a href="services/return-to-work.html" role="menuitem">Return to Work</a>
+          <a href="services/individual-therapy.html" role="menuitem">Individual Therapy</a>
+        </div>
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">Specialized Programs</div>
+          <a href="./services/womens-mental-health.html" role="menuitem">Women&rsquo;s Mental Health</a>
+          <a href="services/2slgbtq-mental-health.html" role="menuitem">2SLGBTQ+ Affirming Care</a>
+          <a href="services/veterans-first-responders.html" role="menuitem">Veterans &amp; First Responders</a>
+          <a href="services/parent-coaching.html" role="menuitem">Parent Coaching &amp; Support</a>
+          <a href="services/specialized-programs.html" role="menuitem">View All Programs &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <a href="careers.html">Careers</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Desktop CTA buttons -->
+  <div class="nav-cta-group">
+    <a href="contact.html" class="btn-nav-portal">Patient Portal</a>
+    <a href="contact.html" class="btn-nav-cta">Book Free Consultation</a>
+  </div>
+
+  <!-- Hamburger button (mobile only) -->
+  <button class="nav-hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu" onclick="toggleMobileNav(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile navigation menu -->
+<div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="career.html">Careers</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-nav-ctas">
+    <a href="contact.html" class="btn-nav-portal">Patient Portal</a>
+    <a href="contact.html" class="btn-nav-cta">Book Free Consultation</a>
+  </div>
+</div>
+ 
+<main id="main-content">
+
+<section class="hero">
+  <div class="hero-badge">🕐 Launching Late Spring / Summer 2026</div>
+  <h1>We're getting ready.<br><em>Almost there.</em></h1>
+  <p class="hero-sub">Toriven Health is building Ontario's virtual-first multidisciplinary allied health clinic. We are not yet open — but we're close, and we'd love for you to follow our journey.</p>
+  <p class="hero-note">No appointments are available at this time. We are not accepting clients or referrals yet.</p>
+</section>
+
+<!-- LAUNCH TIMELINE -->
+<section class="launch-section">
+  <div class="launch-inner">
+    <div style="text-align:center">
+      <div class="section-label">Our Timeline</div>
+      <h2 class="section-title">Where we are in the <span>launch process.</span></h2>
+      <p class="section-sub" style="max-width:560px;margin:10px auto 0">We are in active preparation for our Ontario-wide virtual launch. Here's where things stand today.</p>
+    </div>
+
+    <div class="launch-card">
+      <div class="launch-icon">🏗️</div>
+      <h2>We are <em>not yet open.</em></h2>
+      <p>Toriven Health is currently in its pre-launch phase. Clinical systems, intake processes, and the full clinical team are being finalized ahead of our scheduled opening.</p>
+      <p>We anticipate being ready to accept clients in <strong>late spring or summer 2026.</strong> Follow us on social media to be among the first to know when we open and when appointments become available.</p>
+
+      <div class="launch-timeline">
+        <div class="tl-step done">
+          <div class="tl-dot">✓</div>
+          <div class="tl-label">Founded</div>
+          <div class="tl-sub">Clinical vision set</div>
+        </div>
+        <div class="tl-step done">
+          <div class="tl-dot">✓</div>
+          <div class="tl-label">Platform Built</div>
+          <div class="tl-sub">Systems in place</div>
+        </div>
+        <div class="tl-step done">
+          <div class="tl-dot">✓</div>
+          <div class="tl-label">Team Forming</div>
+          <div class="tl-sub">Clinicians joining</div>
+        </div>
+        <div class="tl-step">
+          <div class="tl-dot">🚀</div>
+          <div class="tl-label">Launch</div>
+          <div class="tl-sub">Spring / Summer 2026</div>
+        </div>
+      </div>
+
+      <p style="font-size:.85rem;color:var(--gray);margin-top:0">Until then, this website is here to help you understand who we are, what we will offer, and whether we might be a good fit for your family or yourself — when the time comes.</p>
+    
+  <p style="font-size:.76rem;color:rgba(255,255,255,.45);margin-top:8px;font-style:italic">🕐 Opening late spring / summer 2026 — not yet accepting patients</p>
+</div>
+  </div>
+</section>
+
+<!-- REGULATORY NOTICES -->
+<section class="notice-section">
+  <div class="notice-inner">
+    <div style="text-align:center;margin-bottom:36px">
+      <div class="section-label">Important Notices</div>
+      <h2 class="section-title">Please read before <span>reaching out.</span></h2>
+      <p class="section-sub" style="max-width:560px;margin:10px auto 0">These notices exist to protect you and to meet our obligations under Ontario's regulatory and privacy framework.</p>
+    </div>
+
+    <div class="notice-block">
+      <div class="notice-head">
+        <span class="notice-icon">🚫</span>
+        <h3>We Are Not Yet Open — No Clinical Services Are Available</h3>
+      </div>
+      <div class="notice-body">
+        <p>Toriven Health is a <strong>pre-launch organization</strong>. We are not currently open to clients, patients, or referrals. No clinical assessments, therapy, consultations, or any other professional health services are available at this time. Our anticipated launch is <strong>late spring or summer 2026</strong>, subject to change. Do not attempt to seek clinical care through this website or through our social media channels.</p>
+      </div>
+    </div>
+
+    <div class="notice-block">
+      <div class="notice-head">
+        <span class="notice-icon">📋</span>
+        <h3>This Website Is for Informational Purposes Only</h3>
+      </div>
+      <div class="notice-body">
+        <p>The content on this website — including all descriptions of services, programs, clinical approaches, and team information — is provided for <strong>general informational purposes only</strong>. Nothing on this website constitutes medical advice, clinical guidance, a diagnosis, a treatment recommendation, or a substitute for consultation with a regulated health professional. This website is not a clinical tool and should not be used as one. If you require health information or care, please consult a qualified, regulated health professional in your area.</p>
+      </div>
+    </div>
+
+    <div class="notice-block">
+      <div class="notice-head">
+        <span class="notice-icon">⚖️</span>
+        <h3>No Therapeutic or Clinical Relationship Is Established</h3>
+      </div>
+      <div class="notice-body">
+        <p>Visiting this website, browsing our content, following us on social media, sending us a message, or contacting us by any means <strong>does not establish a therapeutic relationship, a clinician–patient relationship, or any professional relationship</strong> of any kind between you and Toriven Health or any of its clinicians. A therapeutic or clinical relationship with Toriven Health can only be established after: formal intake has been completed, a clinical match has been accepted in writing, and all required consent documentation has been signed by the relevant parties. Until those steps are complete, no clinical obligation exists.</p>
+      </div>
+    </div>
+
+    <div class="notice-block">
+      <div class="notice-head">
+        <span class="notice-icon">🔒</span>
+        <h3>Privacy & Personal Information</h3>
+      </div>
+      <div class="notice-body">
+        <p>At this stage, Toriven Health does not collect personal health information through this website. <strong>Please do not send personal health information</strong> — including details about diagnoses, symptoms, medications, or clinical history — through any website contact mechanism, social media message, or general email. If you do choose to send us a general message via social media or any channel we may make available, be aware that <strong>those channels are not PHIPA-designated secure systems</strong> and are not appropriate for personal health information. Our PHIPA-compliant clinical intake systems will be available at launch.</p>
+      </div>
+    </div>
+
+    <div class="notice-block">
+      <div class="notice-head">
+        <span class="notice-icon">🆘</span>
+        <h3>If You Are in Crisis — Please Do Not Contact Us</h3>
+      </div>
+      <div class="notice-body">
+        <p>Toriven Health is <strong>not a crisis service</strong> and we are not yet operational. We cannot provide any form of emergency support, crisis counselling, or urgent clinical response. <strong>If you or someone you know is in immediate distress or danger, please contact:</strong></p>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px">
+          <div style="display:flex;gap:12px;align-items:center;background:var(--light);border:1px solid var(--border);border-radius:10px;padding:13px 18px">
+            <span style="font-size:1.2rem">📞</span>
+            <div>
+              <div style="font-weight:800;color:var(--navy);font-size:.92rem">9-8-8 — Canada Suicide Crisis Helpline</div>
+              <div style="font-size:.83rem;color:var(--gray)">Call or text 9-8-8 · Available 24 hours a day, 7 days a week, across Canada</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:12px;align-items:center;background:var(--light);border:1px solid var(--border);border-radius:10px;padding:13px 18px">
+            <span style="font-size:1.2rem">🏥</span>
+            <div>
+              <div style="font-weight:800;color:var(--navy);font-size:.92rem">Your Nearest Emergency Department</div>
+              <div style="font-size:.83rem;color:var(--gray)">Go to your nearest hospital emergency department for immediate mental health or medical crisis support</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOLLOW US ON SOCIAL -->
+<section class="social-section">
+  <div class="section-label">Stay Connected</div>
+  <h2 class="section-title">Follow us for <span>launch updates.</span></h2>
+  <p class="section-sub">The best way to know when we open, meet our team, and understand what Toriven Health will offer is to follow us on social media. We'll announce our opening date there first.</p>
+
+  <div class="social-grid">
+    <a href="#" class="social-card">
+      <div class="s-icon">📘</div>
+      <h4>Facebook</h4>
+      <p>Updates, news, and educational content</p>
+      <div class="s-handle">@TorivenHealth</div>
+    </a>
+    <a href="#" class="social-card">
+      <div class="s-icon">📸</div>
+      <h4>Instagram</h4>
+      <p>Behind the scenes and team updates</p>
+      <div class="s-handle">@TorivenHealth</div>
+    </a>
+    <a href="#" class="social-card">
+      <div class="s-icon">💼</div>
+      <h4>LinkedIn</h4>
+      <p>Professional updates and career opportunities</p>
+      <div class="s-handle">Toriven Health</div>
+    </a>
+    <a href="#" class="social-card">
+      <div class="s-icon">🐦</div>
+      <h4>X (Twitter)</h4>
+      <p>Announcements and launch news</p>
+      <div class="s-handle">@TorivenHealth</div>
+    </a>
+  </div>
+
+  <div class="social-disclaimer">
+    <p>⚠️ <strong style="color:rgba(255,255,255,.65)">Please note:</strong> Social media channels are not monitored for clinical inquiries, urgent requests, or personal health information. Do not send sensitive personal or health information through any social media platform. Following or messaging us on social media does not establish any clinical, professional, or therapeutic relationship.</p>
+  </div>
+</section>
+
+<!-- WHAT'S COMING -->
+<section class="coming-section">
+  <div class="coming-inner">
+    <div style="text-align:center">
+      <div class="section-label">What to Expect at Launch</div>
+      <h2 class="section-title">What Toriven Health will <span>offer.</span></h2>
+      <p class="section-sub" style="max-width:580px;margin:10px auto 0">When we open in 2026, here is what families and individuals across Ontario will be able to access.</p>
+    </div>
+    <div class="coming-grid">
+      <div class="coming-card">
+        <div class="c-icon">🧠</div>
+        <h4>Psychological Assessments</h4>
+        <p>ADHD, autism, psychoeducational, and neuropsychological assessments for children, teens, and adults.</p>
+      </div>
+      <div class="coming-card">
+        <div class="c-icon">💬</div>
+        <h4>Therapy & Counselling</h4>
+        <p>CBT, trauma-focused therapy, DBT-informed, and more — for individuals and families across all ages.</p>
+      </div>
+      <div class="coming-card">
+        <div class="c-icon">🗣️</div>
+        <h4>Speech-Language Pathology</h4>
+        <p>Assessment and therapy for language, articulation, fluency, literacy, feeding, and communication.</p>
+      </div>
+      <div class="coming-card">
+        <div class="c-icon">🤲</div>
+        <h4>Occupational Therapy</h4>
+        <p>Sensory processing, fine motor, daily living skills, and school participation for children and teens.</p>
+      </div>
+      <div class="coming-card">
+        <div class="c-icon">📋</div>
+        <h4>Executive Function Programs</h4>
+        <p>Group and individual programs supporting planning, organization, and independent learning.</p>
+      </div>
+      <div class="coming-card">
+        <div class="c-icon">🏫</div>
+        <h4>School & Academic Support</h4>
+        <p>IEP navigation, dyslexia remediation, homework support, and post-secondary transition planning.</p>
+      </div>
+      <div class="coming-card">
+        <div class="c-icon">🌸</div>
+        <h4>Women's Mental Health</h4>
+        <p>Specialized support for perinatal mental health, trauma, hormonal mood shifts, and life transitions.</p>
+      </div>
+      <div class="coming-card">
+        <div class="c-icon">💼</div>
+        <h4>Workplace & Life Transitions</h4>
+        <p>Return-to-work planning, communication confidence, and executive functioning in the workplace.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="services.html" style="display:inline-block;background:var(--green);color:var(--white);padding:14px 32px;border-radius:10px;font-weight:700;font-size:.95rem;transition:background .2s,transform .15s;box-shadow:0 4px 20px rgba(0,196,122,.3)">Explore All Services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo" aria-label="Toriven Health — return to homepage">Toriven<span style="color:var(--green)">Health</span></a>
+      <p>Comprehensive virtual allied health care for children, teens, and adults across Ontario. Regulated clinicians. Evidence-based practice. Neurodiversity-affirming.</p>
+      <div class="footer-badges" aria-label="Certifications">
+        <span class="f-badge">PHIPA Compliant</span>
+        <span class="f-badge">Regulated Clinicians</span>
+        <span class="f-badge">Ontario-Wide</span>
+      </div>
+    </div>
+
+    <!-- Services column: plain div so no UA nav interference -->
+    <div class="footer-col" role="navigation" aria-label="Services navigation">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="./services/autism-assessment.html">Autism Assessment</a></li>
+        <li><a href="./services/adhd-assessment.html">ADHD &amp; LD Assessment</a></li>
+        <li><a href="./services/neuropsychological.html">Full Battery Assessment</a></li>
+        <li><a href="./services/speech-language.html">Speech-Language</a></li>
+        <li><a href="./services/occupational-therapy.html">Occupational Therapy</a></li>
+        <li><a href="./services/">Feeding &amp; Nutrition</a></li>
+        <li><a href="./services/cbt-dbt.html">CBT &amp; Trauma Therapy</a></li>
+        <li><a href="./services/">Psychiatry (Summer 2026)</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick links column: plain div so no UA nav interference -->
+    <div class="footer-col" role="navigation" aria-label="Quick links navigation">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="./services/specialized-programs.html">Specialized Programs</a></li>
+        <li><a href="contact.html">Patient Portal</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="accessibility.html">AODA Accessibility</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p><span aria-hidden="true">📍</span> Serving all of Ontario — Virtual-First</p>
+      <p><span aria-hidden="true">✉️</span> Email available at launch</p>
+    </div>
+  </div>
+
+  <!-- footer-bottom: plain div to avoid UA nav white background -->
+  <div class="footer-bottom">
+    <span>© 2026 Toriven Health. All rights reserved.</span>
+    <div class="footer-bottom-links" role="navigation" aria-label="Legal links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="accessibility.html">AODA Accessibility</a>
+    </div>
+  </div>
+
+  <!-- FOOTER COMPLIANCE NOTICES -->
+  <div class="footer-compliance" role="note" aria-label="Legal and compliance notices">
+    <p><span aria-hidden="true">🚫</span> <strong>Not Yet Open:</strong> Toriven Health is not yet open and is not currently accepting clients, patients, or referrals. Anticipated launch is late spring or summer 2026, subject to change.</p>
+    <p><span aria-hidden="true">📋</span> <strong>Informational Only:</strong> This website is for general informational purposes only. Nothing on this website constitutes medical advice, clinical guidance, diagnosis, or treatment. Consult a regulated health professional for health concerns.</p>
+    <p><span aria-hidden="true">🔒</span> <strong>PHIPA:</strong> PHIPA-compliant secure systems will be used for clinical communication and patient records at launch. Do not send personal health information through social media or general web channels.</p>
+    <p><span aria-hidden="true">💳</span> <strong>Private Pay:</strong> Services will be private pay. Not covered by OHIP. Insurance reimbursement depends on individual plans. Clients are responsible for confirming insurance coverage. Receipts are provided for reimbursement.</p>
+    <p><span aria-hidden="true">⚖️</span> <strong>No Therapeutic Relationship:</strong> Visiting this website, contacting us, or following us on social media does not establish a therapeutic, clinical, or professional relationship of any kind. A therapeutic relationship is only formed after formal intake, clinical acceptance, and completion of required consent documentation.</p>
+    <p><span aria-hidden="true">🆘</span> <strong>Crisis Support:</strong> Toriven Health is not a crisis service. If you are in immediate distress, contact <strong>9-8-8</strong> (Canada Suicide Crisis Helpline) or your nearest emergency department.</p>
+  </div>
+
+  <div class="footer-disclaimer">
+    <p>Educational content on this website is for informational purposes only and does not constitute clinical advice. Diagnosis and treatment decisions are made only after a full clinical assessment by a regulated clinician. TorivenHealth&#8482; is a trade name of Toriven Health Inc., a federally incorporated company.</p>
+  </div>
+</footer>
+
+
+
+
+<script>
+(function() {
+  var item = document.querySelector('.nav-has-dropdown');
+  if (!item) return;
+
+  var trigger = item.querySelector('.nav-services-trigger');
+  var dropdown = item.querySelector('.nav-dropdown');
+  var closeTimer;
+
+  function openDropdown() {
+    clearTimeout(closeTimer);
+    dropdown.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeDropdown() {
+    closeTimer = setTimeout(function() {
+      dropdown.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }, 150);
+  }
+
+  // Hover → show dropdown
+  trigger.addEventListener('mouseenter', openDropdown);
+  trigger.addEventListener('mouseleave', closeDropdown);
+
+  dropdown.addEventListener('mouseenter', function() {
+    clearTimeout(closeTimer);
+  });
+
+  dropdown.addEventListener('mouseleave', closeDropdown);
+
+  // ❗ IMPORTANT: Click par page open hone do
+  trigger.addEventListener('click', function(e) {
+    // e.preventDefault();  ❌ is line ko remove rakho
+    // Browser automatically services.html open karega
+  });
+
+})();
+</script>
+
+<script>
+function showTeam(tab, el) {
+  document.getElementById('pane-mgmt').style.display = tab === 'mgmt' ? 'block' : 'none';
+  document.getElementById('pane-clin').style.display = tab === 'clin' ? 'block' : 'none';
+  document.querySelectorAll('.team-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }});
+}, {threshold: 0.08});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+function toggleMobileNav(btn) {
+  var nav = document.getElementById('mobile-nav');
+  var isOpen = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  btn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+}
+document.addEventListener('click', function(e) {
+  var nav = document.getElementById('mobile-nav');
+  var btn = document.querySelector('.nav-hamburger');
+  if (nav && btn && nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open navigation menu');
+  }
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var nav = document.getElementById('mobile-nav');
+    var btn = document.querySelector('.nav-hamburger');
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open navigation menu');
+      btn.focus();
+    }
+  }
+});
+</script>
+
+<!-- CTA POPUP OVERLAY -->
+<div class="th-popup-overlay" id="th-popup-overlay" role="dialog" aria-modal="true" aria-labelledby="th-popup-title" aria-describedby="th-popup-desc">
+  <div class="th-popup">
+    <button class="th-popup-close" onclick="thClosePopup()" aria-label="Close">&#x2715;</button>
+    <span class="th-popup-icon" aria-hidden="true">&#x1F331;</span>
+    <div class="th-popup-badge"><span class="th-popup-badge-dot" aria-hidden="true"></span> Coming Late Spring / Summer 2026</div>
+    <h2 id="th-popup-title">You&#x2019;re ahead of the <em>curve.</em></h2>
+    <p class="th-popup-body" id="th-popup-desc">We&#x2019;re putting the finishing touches on something we&#x2019;re genuinely proud of. <strong>Toriven Health opens late spring / early summer 2026</strong> &#x2014; and when we do, we&#x2019;d love for you to be among the first to know.<br><br><strong>Follow us on social media for launch updates</strong> &#x2014; we&#x2019;ll announce our opening there first.</p>
+    <div class="th-popup-actions">
+      <a href="contact.html" class="th-popup-btn-primary" onclick="thClosePopup()">See What&#x2019;s Coming &#x2192;</a>
+      <button class="th-popup-btn-secondary" onclick="thClosePopup()">Close</button>
+    </div>
+    <p class="th-popup-note">No appointments available yet &#x2014; not accepting clients or referrals at this time.</p>
+  </div>
+</div>
+<script>
+/* ── CTA POPUP ── */
+function thOpenPopup(e) {
+  if (e) { e.preventDefault(); }
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay) {
+    overlay.classList.add('open');
+    overlay.querySelector('.th-popup-close').focus();
+    document.body.style.overflow = 'hidden';
+  }
+}
+function thClosePopup() {
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay) {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+// Close on overlay background click
+document.addEventListener('click', function(e) {
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay && e.target === overlay) { thClosePopup(); }
+});
+// Close on Escape
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { thClosePopup(); }
+});
+// Wire CTA buttons to popup EXCEPT on contact.html, footer links, nav dropdown links
+(function() {
+  var isContactPage = window.location.pathname.indexOf('contact.html') !== -1;
+  if (isContactPage) return;
+  document.querySelectorAll('a[href]').forEach(function(el) {
+    var href = el.getAttribute('href') || '';
+    if (href.indexOf('contact.html') === -1) return;
+    var isFooter = el.closest('footer') !== null;
+    var isPopup = el.closest('#th-popup-overlay') !== null;
+    var isDropdown = el.closest('.nav-dropdown') !== null;
+    var isMobileNav = el.closest('.mobile-nav') !== null || el.closest('.th-mobile-nav') !== null;
+    var isContactPage = window.location.pathname.indexOf('contact') !== -1;
+    if (!isFooter && !isPopup && !isDropdown && !isMobileNav && !isContactPage) {
+      el.addEventListener('click', function(e) { thOpenPopup(e); });
+    }
+  });
+})();
+</script>
+</body>
+</html>

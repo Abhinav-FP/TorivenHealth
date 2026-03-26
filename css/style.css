@@ -1,0 +1,187 @@
+  :root {
+      --green:#00C47A;--green-dark:#009960;--green-accessible:#006B44;--green-light:#E6FAF3;
+      --navy:#0D1B2A;--slate:#3D5166;--gray:#6B7C8F;
+      --light:#F7FAFB;--white:#ffffff;--border:#E2EBF0;
+      --font:'Segoe UI',system-ui,-apple-system,sans-serif;
+      --shadow:0 4px 24px rgba(13,27,42,.08);--shadow-md:0 8px 40px rgba(13,27,42,.12);
+    }
+html{scroll-behavior:smooth}
+    /* ── SKIP LINK (WCAG 2.4.1) ── */
+    .skip-link{position:absolute;top:-100%;left:0;background:var(--navy);color:var(--white);padding:12px 20px;font-weight:700;font-size:1rem;z-index:9999;border-radius:0 0 8px 0;text-decoration:none}
+    .skip-link:focus{top:0}
+
+    /* ── GLOBAL FOCUS INDICATOR (WCAG 2.4.7 / 2.1 SC 2.4.11) ── */
+    /* :focus covers switch-access & AT that don't trigger :focus-visible */
+    :focus{outline:3px solid var(--green-accessible);outline-offset:3px;border-radius:4px}
+    :focus-visible{outline:3px solid var(--green-accessible);outline-offset:3px;border-radius:4px}
+    /* Remove :focus ring for mouse users who also get :focus-visible */
+    :focus:not(:focus-visible){outline:none}
+    a:focus,button:focus{outline:3px solid var(--green-accessible);outline-offset:3px;border-radius:4px}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--green-accessible);outline-offset:3px;border-radius:4px}
+img{max-width:100%}
+    /* ── SCREEN READER ONLY UTILITY ── */
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:var(--font);color:var(--navy);background:var(--white);line-height:1.65}
+    a{color:inherit;text-decoration:none;background:transparent}
+
+
+/* ── SKIP LINK ── */
+.skip-link{
+  position:absolute;
+  top:-100%;
+  left:0;
+  background:var(--navy);
+  color:var(--white);
+  padding:12px 20px;
+  font-weight:700;
+  font-size:1rem;
+  z-index:9999;
+  border-radius:0 0 8px 0;
+  text-decoration:none;
+}
+.skip-link:focus{
+  top:0;
+}
+
+/* ── GLOBAL RESET ── */
+*,*::before,*::after{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:var(--font);
+  color:var(--navy);
+  background:var(--white);
+  line-height:1.65;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* ── NAVIGATION ── */
+/* ── NAV ── */
+/* min-height instead of height — text spacing override won't clip content (WCAG 2.1 SC 1.4.12) */
+nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:0 5%;display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.logo{font-size:1.4rem;font-weight:800;color:var(--navy);letter-spacing:-.5px;text-decoration:none}
+.logo span{color:var(--green)}
+.nav-links{display:flex;align-items:center;gap:2rem;font-size:.95rem;font-weight:500}
+.nav-links a{color:var(--slate);transition:color .2s;padding:6px 0}
+.nav-links a:hover{color:var(--green)}
+.nav-cta-group{display:flex;gap:12px;align-items:center}
+.btn-nav-cta{background:var(--green);color:var(--white);padding:10px 22px;border-radius:8px;font-weight:700;font-size:.9rem;transition:background .2s,transform .15s;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
+.btn-nav-cta:hover{background:var(--green-dark);transform:translateY(-1px)}
+.btn-nav-portal{background:var(--green);color:var(--white);padding:10px 22px;border-radius:8px;font-weight:700;font-size:.9rem;transition:background .2s,transform .15s;white-space:nowrap;min-height:44px;display:inline-flex;align-items:center}
+.btn-nav-portal:hover{background:var(--green-dark);transform:translateY(-1px)}
+
+/* ── HAMBURGER ── */
+.nav-hamburger{display:none;background:none;border:2px solid var(--border);border-radius:8px;padding:8px 10px;cursor:pointer;flex-direction:column;gap:5px;min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.nav-hamburger span{display:block;width:20px;height:2px;background:var(--navy);border-radius:2px;transition:transform .3s,opacity .3s}
+.nav-hamburger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-hamburger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-nav{display:none;position:absolute;top:68px;left:0;right:0;background:rgba(255,255,255,.98);border-bottom:1px solid var(--border);padding:16px 5% 24px;flex-direction:column;gap:4px;z-index:99;min-top:68px}
+.mobile-nav.open{display:flex}
+.mobile-nav a{color:var(--slate);font-size:1rem;font-weight:500;padding:12px 0;border-bottom:1px solid var(--border);display:block;min-height:44px;display:flex;align-items:center}
+.mobile-nav a:last-child{border-bottom:none}
+.mobile-nav a:hover{color:var(--green)}
+.mobile-nav-ctas{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.mobile-nav-ctas a{flex:1;text-align:center;min-width:140px}
+
+/*footer */
+/* ── FOOTER ── */
+/* Force transparent bg on ALL elements inside footer to defeat browser UA stylesheet */
+footer,footer *{box-sizing:border-box}
+footer nav,footer ul,footer li{background:transparent !important}
+footer{background:var(--navy);color:rgba(255,255,255,.8);padding:60px 5% 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:48px;margin-bottom:40px}
+.footer-brand .logo{color:var(--white);margin-bottom:14px;display:block;font-size:1.3rem}
+.footer-brand p{font-size:.88rem;line-height:1.7;margin-bottom:16px;color:rgba(255,255,255,.8)}
+.footer-badges{display:flex;gap:8px;flex-wrap:wrap}
+.f-badge{background:rgba(0,196,122,.15);border:1px solid rgba(0,196,122,.6);color:#7FFFD4;font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:6px;text-transform:uppercase;letter-spacing:.04em}
+/* footer-col: plain div-like block, heading on top, list below */
+.footer-col{background:transparent !important;display:block}
+.footer-col h4{color:var(--white);font-size:.88rem;font-weight:800;margin-bottom:14px;text-transform:uppercase;letter-spacing:.06em;display:block}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:2px;padding:0;margin:0}
+.footer-col ul li{background:transparent !important;display:block}
+.footer-col ul li a{font-size:.88rem;color:rgba(255,255,255,.75);transition:color .2s;padding:6px 0;display:block;background:transparent;text-decoration:none;line-height:1.4}
+.footer-col ul li a:hover{color:#00C47A}
+.footer-contact p{font-size:.88rem;margin-bottom:10px;color:rgba(255,255,255,.8)}
+.footer-contact a{color:#00C47A}
+/* footer-bottom: use div not nav to avoid UA nav styles */
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding:24px 0;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;font-size:.8rem;color:rgba(255,255,255,.6);background:transparent}
+.footer-bottom-links{display:flex;gap:16px;flex-wrap:wrap;background:transparent}
+.footer-bottom a,.footer-bottom-links a{color:rgba(255,255,255,.6);transition:color .2s;display:inline-block;background:transparent;text-decoration:none}
+.footer-bottom a:hover,.footer-bottom-links a:hover{color:#00C47A}
+.footer-compliance{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;display:grid;grid-template-columns:1fr;gap:10px}
+.footer-compliance p{font-size:.76rem;color:rgba(255,255,255,.72);line-height:1.65;margin:0}
+.footer-compliance p strong{color:rgba(255,255,255,.9)}
+.footer-disclaimer{background:rgba(0,0,0,.3);margin:20px -5% 0;padding:16px 5%}
+.footer-disclaimer p{font-size:.74rem;color:rgba(255,255,255,.75);line-height:1.7;margin:0}
+
+/*popup*/
+/* ── RESPONSIVE: TABLET 768px ── */
+    @media(max-width:900px){
+      .footer-grid{grid-template-columns:1fr 1fr}      
+    }
+
+    /* ── RESPONSIVE: MOBILE 600px ── */
+    @media(max-width:600px){
+      nav{padding:0 4%}
+      .nav-links{display:none}
+      .nav-cta-group{display:none}
+      .nav-hamburger{display:flex}
+      .footer-grid{grid-template-columns:1fr}
+      
+    }
+
+    @media(max-width:640px){
+      .footer-compliance{grid-template-columns:1fr}}
+
+    /* ── REDUCED MOTION ── */
+    @media(prefers-reduced-motion:reduce){
+      *{transition:none!important;animation:none!important}
+    }
+  
+/* ── CTA POPUP OVERLAY ── */
+.th-popup-overlay{display:none;position:fixed;inset:0;background:rgba(13,27,42,.72);z-index:9999;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.th-popup-overlay.open{display:flex}
+.th-popup{background:#fff;border-radius:20px;padding:40px 36px;max-width:480px;width:100%;text-align:center;position:relative;box-shadow:0 24px 64px rgba(13,27,42,.25);animation:popupIn .25s ease}
+@keyframes popupIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.th-popup-close{position:absolute;top:14px;right:16px;background:none;border:none;cursor:pointer;font-size:1.4rem;color:#6B7C8F;min-width:44px;min-height:44px;display:flex;align-items:center;justify-content:center;border-radius:8px;line-height:1}
+.th-popup-close:hover{background:#F7FAFB;color:#0D1B2A}
+.th-popup-icon{font-size:2.8rem;margin-bottom:16px;display:block}
+.th-popup h2{font-size:1.35rem;font-weight:900;color:#0D1B2A;margin-bottom:10px;letter-spacing:-.02em;line-height:1.25}
+.th-popup h2 em{color:#00C47A;font-style:normal}
+.th-popup-body{font-size:.95rem;color:#3D5166;line-height:1.72;margin-bottom:24px}
+.th-popup-body strong{color:#0D1B2A}
+.th-popup-badge{display:inline-flex;align-items:center;gap:7px;background:#E6FAF3;border:1px solid #b0e8d0;color:#006B44;padding:6px 14px;border-radius:100px;font-size:.78rem;font-weight:700;margin-bottom:20px}
+.th-popup-badge-dot{width:7px;height:7px;border-radius:50%;background:#00C47A;animation:popupPulse 1.8s ease-in-out infinite}
+@keyframes popupPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.75)}}
+.th-popup-actions{display:flex;flex-direction:column;gap:10px}
+.th-popup-btn-primary{background:#00C47A;color:#fff;padding:14px 28px;border-radius:10px;font-weight:800;font-size:.95rem;text-decoration:none;display:flex;align-items:center;justify-content:center;min-height:44px;transition:background .2s,transform .15s;border:none;cursor:pointer;width:100%}
+.th-popup-btn-primary:hover{background:#009960;transform:translateY(-1px)}
+.th-popup-btn-secondary{background:transparent;color:#006B44;padding:12px 28px;border-radius:10px;font-weight:700;font-size:.88rem;text-decoration:none;display:flex;align-items:center;justify-content:center;min-height:44px;border:2px solid #E2EBF0;transition:all .2s;cursor:pointer;width:100%}
+.th-popup-btn-secondary:hover{border-color:#00C47A;background:#E6FAF3}
+.th-popup-note{font-size:.75rem;color:#9AAAB8;margin-top:12px;line-height:1.5}
+@media(max-width:480px){.th-popup{padding:32px 24px}.th-popup h2{font-size:1.2rem}}
+@media(prefers-reduced-motion:reduce){.th-popup{animation:none}.th-popup-badge-dot{animation:none}}
+/* ── SERVICES DROPDOWN ── */
+    .nav-has-dropdown{position:relative}
+    .nav-dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:0 12px 40px rgba(13,27,42,.14);padding:12px;min-width:640px;display:none;grid-template-columns:1fr 1fr 1fr;gap:4px;z-index:200;padding-top:20px;margin-top:-12px}
+    .nav-dropdown.open{display:grid}
+    .nav-dropdown-col{padding:8px 4px}
+    .nav-dropdown-col-title{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em;color:var(--green-accessible);padding:4px 10px;margin-bottom:4px}
+    .nav-dropdown a{display:flex;padding:8px 10px;border-radius:8px;font-size:.88rem;color:var(--slate);font-weight:500;transition:background .15s,color .15s;white-space:nowrap;min-height:36px;align-items:center;text-decoration:none}
+    .nav-dropdown a:hover{background:var(--green-light);color:var(--green-accessible)}
+    .nav-services-trigger{display:flex;align-items:center;gap:5px;cursor:pointer;background:none;border:none;font-size:.95rem;font-weight:500;color:var(--slate);padding:6px 0;font-family:inherit}
+    .nav-services-trigger:hover{color:var(--green)}
+    .nav-services-trigger::after{content:'▾';font-size:1.2rem;color:var(--gray);transition:transform .2s;margin-left:2px}
+    .nav-services-trigger.open::after{transform:rotate(-180deg)}
+  @media(max-width:900px){.nav-dropdown{min-width:480px;grid-template-columns:1fr 1fr} }
+    @media(max-width:600px){.nav-dropdown{display:none !important}}

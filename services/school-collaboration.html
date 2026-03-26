@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>School Collaboration & Consultation Services Ontario | Toriven Health</title>
+<meta name="description" content="Clinician-to-school collaboration and consultation services for families and educators across Ontario. When home, school, and clinicians are aligned, children make faster, more sustainable progress. Virtual-first. Regulated clinicians. No referral needed."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<style>
+ 
+body{font-family:'DM Sans',sans-serif;color:#1a2b3c;background:#fff;line-height:1.65;overflow-x:hidden}
+
+:root{
+  --green:#00C47A;--green-dark:#009960;--green-glow:rgba(0,196,122,.18);
+  --navy:#0D1B2A;--slate:#3D5166;--gray:#6B7C8F;
+  --border:#e2ebf0;--lgreen:#E6FAF3;--lgray:#F6F9FB;
+  --serif:'Fraunces',Georgia,serif;
+  --shadow:0 4px 28px rgba(13,27,42,.08);--shadow-lg:0 12px 48px rgba(13,27,42,.14);
+}
+.container{max-width:1160px;margin:0 auto;padding:0 5%}
+.label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--green)}
+
+/* HERO PAGE TITLE */
+.hero-page-title{font-family:var(--serif);font-size:clamp(1rem,1.8vw,1.2rem);font-weight:600;color:rgba(255,255,255,.55);letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+
+/* BREADCRUMB */
+.breadcrumb{font-size:.8rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,.5)}.breadcrumb a:hover{color:var(--green)}.breadcrumb span{opacity:.5}
+
+/* HERO */
+.hero{background:linear-gradient(155deg,#0a0d14 0%,#0d1a28 45%,#0f1a20 100%);position:relative;overflow:hidden;padding:88px 5% 80px;color:#fff}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 60% at 80% 30%,rgba(0,196,122,.09) 0%,transparent 65%),radial-gradient(ellipse 50% 50% at 15% 85%,rgba(0,80,120,.15) 0%,transparent 60%)}
+.hero-stripe{position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(to bottom,var(--green),rgba(0,196,122,.2))}
+.hero-inner{position:relative;max-width:1160px;margin:0 auto}
+.hero-grid{display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,196,122,.14);border:1px solid rgba(0,196,122,.3);color:var(--green);padding:6px 16px;border-radius:100px;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:26px}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+h1{font-family:var(--serif);font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:900;line-height:1.1;letter-spacing:-.03em;margin-bottom:22px}
+h1 em{color:var(--green);font-style:italic}
+.hero-sub{font-size:clamp(.95rem,1.8vw,1.1rem);color:rgba(255,255,255,.78);max-width:540px;margin-bottom:18px;line-height:1.78}
+.hero-who{font-size:.9rem;color:rgba(255,255,255,.52);border-left:3px solid rgba(0,196,122,.45);padding-left:16px;margin-bottom:28px;line-height:1.7;font-style:italic}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.82);padding:6px 14px;border-radius:100px;font-size:.78rem;font-weight:500}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:12px}
+.cta-primary{background:var(--green);color:#fff;padding:15px 32px;border-radius:10px;font-weight:700;font-size:.97rem;box-shadow:0 4px 24px rgba(0,196,122,.4);transition:background .2s,transform .15s;display:inline-block}
+.cta-primary:hover{background:var(--green-dark);transform:translateY(-2px)}
+.cta-secondary{background:rgba(255,255,255,.08);color:#fff;border:2px solid rgba(255,255,255,.22);padding:13px 28px;border-radius:10px;font-weight:600;font-size:.97rem;transition:all .2s;display:inline-block}
+.cta-secondary:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.5)}
+.hero-note{font-size:.8rem;color:rgba(255,255,255,.36)}
+.hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:30px 26px;backdrop-filter:blur(8px)}
+.hero-card-title{font-family:var(--serif);font-size:1rem;font-weight:700;color:rgba(255,255,255,.88);margin-bottom:4px}
+.hero-card-subtitle{font-size:.78rem;color:rgba(255,255,255,.36);margin-bottom:18px;font-style:italic}
+.hero-card-item{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.hero-card-item:last-child{border-bottom:none;padding-bottom:0}
+.hci-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+.hci-text strong{display:block;font-size:.86rem;font-weight:700;color:rgba(255,255,255,.88);margin-bottom:2px}
+.hci-text span{font-size:.78rem;color:rgba(255,255,255,.48);line-height:1.5;font-style:italic}
+
+/* TRUST BAR */
+.trust-bar{background:var(--lgreen);border-bottom:1px solid #c5edd8;padding:13px 5%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:24px}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:.8rem;font-weight:600;color:var(--slate)}
+.trust-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0}
+
+/* SECTIONS */
+section{padding:80px 5%}
+.section-header{margin-bottom:48px}
+.section-header.center{text-align:center}
+.section-header.center .section-sub{margin:10px auto 0}
+.section-title{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:900;line-height:1.15;letter-spacing:-.03em;color:var(--navy)}
+.section-title span{color:var(--green)}
+.section-sub{font-size:1rem;color:var(--gray);max-width:580px;margin-top:10px;line-height:1.7}
+
+/* CONSENT CONTROL SECTION */
+.consent-section{background:var(--navy);color:#fff;padding:70px 5%}
+.consent-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.consent-intro .section-title{color:#fff}
+.consent-intro p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.75;margin-top:14px}
+.consent-controls{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.consent-item{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;transition:background .25s,border-color .25s}
+.consent-item:hover{background:rgba(0,196,122,.1);border-color:rgba(0,196,122,.3)}
+.consent-num{width:34px;height:34px;border-radius:10px;background:rgba(0,196,122,.15);border:1px solid rgba(0,196,122,.3);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:.95rem;font-weight:900;color:var(--green);flex-shrink:0}
+.consent-item h4{font-size:.9rem;font-weight:700;color:#fff;margin-bottom:3px}
+.consent-item p{font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.55}
+
+/* WHY IT MATTERS */
+.why-matters-section{background:var(--lgray)}
+.wm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.wm-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px 24px;transition:border-color .25s,box-shadow .25s,transform .25s}
+.wm-card:hover{border-color:var(--green);box-shadow:var(--shadow-lg);transform:translateY(-4px)}
+.wm-icon{font-size:1.8rem;margin-bottom:14px}
+.wm-card h3{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.wm-card p{font-size:.86rem;color:var(--gray);line-height:1.65}
+
+/* SERVICES */
+.services-section{background:#fff}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.svc-card{border-radius:16px;padding:28px 26px;border:1px solid var(--border);background:var(--lgray);transition:box-shadow .25s,transform .25s,border-color .25s;position:relative;overflow:hidden}
+.svc-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--green)}
+.svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.svc-card.c1::before{background:var(--green)}.svc-card.c2::before{background:#4A7FC0}
+.svc-card.c3::before{background:#D47A3E}.svc-card.c4::before{background:#8B6BAA}
+.svc-card.c5::before{background:#5B9B7A}.svc-card.c6::before{background:#B57B3E}
+.svc-tag{display:inline-block;padding:3px 10px;border-radius:100px;font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+.svc-tag.families{background:var(--lgreen);color:var(--green-dark)}
+.svc-tag.educators{background:#EBF3FC;color:#2E6DA4}
+.svc-tag.both{background:#F3EEF9;color:#7B4FA6}
+.svc-card h3{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:8px;line-height:1.3}
+.svc-card p{font-size:.86rem;color:var(--gray);line-height:1.65}
+.svc-icon{font-size:1.4rem;margin-bottom:12px}
+
+/* BRIDGE */
+.bridge-section{background:linear-gradient(150deg,#071220 0%,#0d1e2e 100%);color:#fff;position:relative;overflow:hidden}
+.bridge-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 80% 20%,rgba(0,196,122,.08) 0%,transparent 60%)}
+.bridge-inner{position:relative}
+.bridge-intro{text-align:center;margin-bottom:56px}
+.bridge-intro .section-title{color:#fff}
+.bridge-intro .section-title span{color:var(--green)}
+.bridge-intro .section-sub{color:rgba(255,255,255,.6);margin:12px auto 0}
+.bridge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:20px}
+.bridge-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:26px 22px;transition:background .25s,border-color .25s,transform .25s}
+.bridge-card:hover{background:rgba(255,255,255,.1);border-color:rgba(0,196,122,.4);transform:translateY(-4px)}
+.bridge-card-tag{display:inline-block;padding:3px 10px;border-radius:100px;font-size:.67rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+.bridge-card-tag.therapy{background:rgba(0,196,122,.15);color:var(--green)}
+.bridge-card-tag.assessment{background:rgba(74,127,192,.18);color:#7ab3e8}
+.bridge-card-tag.coaching{background:rgba(212,122,62,.18);color:#e8a87a}
+.bridge-card h3{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.3}
+.bridge-card p{font-size:.84rem;color:rgba(255,255,255,.58);line-height:1.65;margin-bottom:16px}
+.bridge-card-link{display:inline-flex;align-items:center;gap:6px;font-size:.82rem;font-weight:700;color:var(--green);transition:gap .2s}
+.bridge-card-link:hover{gap:10px}
+.bridge-card-link::after{content:'→'}
+.bridge-who{font-size:.76rem;color:rgba(255,255,255,.32);margin-top:12px;font-style:italic;padding-top:12px;border-top:1px solid rgba(255,255,255,.08);line-height:1.5}
+.bridge-bottom{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.bridge-note{background:rgba(0,196,122,.1);border:1px solid rgba(0,196,122,.25);border-radius:12px;padding:22px 24px}
+.bridge-note p{font-size:.86rem;color:rgba(255,255,255,.72);line-height:1.65}
+.bridge-note strong{color:var(--green)}
+.bridge-cta-block{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:22px 24px;display:flex;flex-direction:column;gap:16px}
+.bridge-cta-block p{font-size:.88rem;color:rgba(255,255,255,.65);line-height:1.6}
+.bridge-cta-block strong{color:#fff}
+.bridge-cta-btn{display:inline-block;background:var(--green);color:#fff;padding:13px 26px;border-radius:10px;font-weight:700;font-size:.9rem;text-align:center;transition:background .2s,transform .15s;box-shadow:0 4px 20px rgba(0,196,122,.35)}
+.bridge-cta-btn:hover{background:var(--green-dark);transform:translateY(-2px)}
+
+/* HESITATION */
+.hesitation-section{background:var(--lgray)}
+.hes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.hes-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px 24px;transition:box-shadow .25s,transform .25s,border-color .25s}
+.hes-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--green)}
+.hes-worry{font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--navy);margin-bottom:12px;padding-bottom:12px;border-bottom:2px solid var(--lgreen);line-height:1.45}
+.hes-card p{font-size:.86rem;color:var(--gray);line-height:1.65}
+
+/* HOW IT WORKS */
+.hiw-section{background:#fff}
+.hiw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.hiw-step{position:relative}
+.hiw-step:not(:last-child)::after{content:'';position:absolute;top:28px;right:-10%;width:20%;height:2px;background:linear-gradient(to right,var(--green),var(--border));opacity:.5}
+.hiw-num{width:56px;height:56px;border-radius:16px;background:var(--lgreen);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.5rem;font-weight:900;color:var(--green);margin-bottom:16px}
+.hiw-step h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.hiw-step p{font-size:.84rem;color:var(--gray);line-height:1.65}
+.hiw-note{margin-top:36px;background:var(--lgray);border-radius:10px;padding:16px 22px;font-size:.82rem;color:var(--gray);text-align:center;border:1px solid var(--border)}
+.hiw-note strong{color:var(--navy)}
+
+/* WHY */
+.why-section{background:var(--lgray)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+.why-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px 22px;text-align:center;transition:box-shadow .25s,transform .25s,border-color .25s}
+.why-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--green)}
+.why-icon{font-size:2rem;margin-bottom:14px;display:block}
+.why-card h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.why-card p{font-size:.83rem;color:var(--gray);line-height:1.6}
+
+/* VIRTUAL */
+.virtual-section{background:#fff}
+.virtual-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.v-card{border-radius:16px;padding:30px 28px}
+.v-card.main{background:var(--navy);color:#fff}
+.v-card.benefits{background:var(--lgray);border:1px solid var(--border)}
+.v-card h3{font-family:var(--serif);font-size:1.15rem;font-weight:700;margin-bottom:8px}
+.v-card.main h3{color:#fff}.v-card.benefits h3{color:var(--navy)}
+.v-card p{font-size:.88rem;line-height:1.65}
+.v-card.main p{color:rgba(255,255,255,.7)}.v-card.benefits p{color:var(--gray)}
+.v-benefits{display:flex;flex-direction:column;gap:14px;margin-top:16px}
+.v-ben{display:flex;gap:12px;align-items:flex-start}
+.v-ben-icon{font-size:1.1rem;flex-shrink:0;margin-top:2px}
+.v-ben div h4{font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:2px}
+.v-ben div p{font-size:.84rem;color:var(--gray);line-height:1.55}
+.v-note{font-size:.8rem;margin-top:16px;font-style:italic;color:rgba(255,255,255,.4)}
+
+/* BOOK */
+.book-section{background:var(--lgray)}
+.book-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.book-left h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;color:var(--navy);line-height:1.2;margin-bottom:14px;letter-spacing:-.03em}
+.book-left p{font-size:.95rem;color:var(--gray);line-height:1.75;margin-bottom:16px}
+.book-card{background:var(--navy);border-radius:20px;padding:36px 32px;color:#fff}
+.book-card-title{font-family:var(--serif);font-size:1.2rem;font-weight:700;margin-bottom:6px}
+.book-card-sub{font-size:.83rem;color:rgba(255,255,255,.5);margin-bottom:24px;font-style:italic}
+.book-includes{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.book-inc{display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:rgba(255,255,255,.75)}
+.book-inc-check{color:var(--green);font-weight:700;font-size:.9rem;flex-shrink:0;margin-top:1px}
+.book-cta{display:block;background:var(--green);color:#fff;padding:15px 32px;border-radius:10px;font-weight:700;font-size:.97rem;text-align:center;box-shadow:0 4px 24px rgba(0,196,122,.4);transition:background .2s,transform .15s}
+.book-cta:hover{background:var(--green-dark);transform:translateY(-2px)}
+.book-note{font-size:.78rem;color:rgba(255,255,255,.35);margin-top:12px;text-align:center}
+
+/* CTA */
+.cta-section{background:linear-gradient(135deg,var(--green) 0%,#009960 100%);color:#fff;text-align:center;padding:80px 5%}
+.cta-section h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:900;margin-bottom:14px;letter-spacing:-.03em}
+.cta-section p{font-size:1.05rem;opacity:.9;max-width:540px;margin:0 auto 36px;line-height:1.7}
+.cta-white{background:#fff;color:var(--green-dark);padding:16px 42px;border-radius:10px;font-weight:800;font-size:1rem;display:inline-block;transition:transform .15s,box-shadow .2s;box-shadow:0 4px 20px rgba(0,0,0,.15)}
+.cta-white:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
+.cta-note{margin-top:16px;font-size:.82rem;opacity:.7}
+
+/* DUAL CTA for educators */
+.dual-cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:16px}
+.cta-white-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);padding:14px 32px;border-radius:10px;font-weight:700;font-size:1rem;display:inline-block;transition:all .2s}
+.cta-white-outline:hover{background:rgba(255,255,255,.12);border-color:#fff}
+
+/* CRISIS */
+.crisis-bar{background:#0d1f30;color:rgba(255,255,255,.65);text-align:center;padding:16px 5%;font-size:.83rem}
+.crisis-bar strong{color:#fff}.crisis-bar a{color:var(--green);font-weight:600}
+
+/* STICKY MOBILE */
+.sticky-mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:#fff;border-top:1px solid var(--border);padding:12px 16px;box-shadow:0 -4px 20px rgba(0,0,0,.1)}
+.sticky-mobile-cta a{display:block;background:var(--green);color:#fff;text-align:center;padding:14px;border-radius:10px;font-weight:700;font-size:.95rem}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}.reveal-d4{transition-delay:.4s}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr}.hero-card{display:none}
+  .bridge-grid{grid-template-columns:1fr 1fr}
+  .bridge-bottom{grid-template-columns:1fr}
+  .virtual-grid{grid-template-columns:1fr}
+  .book-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .hiw-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .consent-grid{grid-template-columns:1fr}
+  .wm-grid{grid-template-columns:1fr 1fr}
+  .svc-grid{grid-template-columns:1fr}
+  .emotional-grid{grid-template-columns:1fr !important}
+}
+@media(max-width:700px){
+  .hes-grid{grid-template-columns:1fr}
+  .bridge-grid{grid-template-columns:1fr}
+  .hiw-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .wm-grid{grid-template-columns:1fr}
+  section{padding:60px 5%}
+  .sticky-mobile-cta{display:block}body{padding-bottom:80px}
+  .hiw-step::after{display:none}
+}
+@media(max-width:480px){.why-grid{grid-template-columns:1fr}}
+
+ 
+</style>
+</head>
+
+<body>
+
+<!-- SKIP LINK -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <!-- Logo as a link (WCAG 2.4.4) -->
+  <a href="../index.html" class="logo" aria-label="Toriven Health — return to homepage">Toriven<span>Health</span></a>
+
+  <!-- Desktop nav links -->
+  <div class="nav-links" id="desktop-nav">
+    <a href="../index.html" >Home</a>
+    <a href="../about.html">About</a>
+    <div class="nav-has-dropdown">
+      <a href="../services.html" class="nav-services-trigger" aria-haspopup="true" aria-expanded="false" id="services-menu-btn" type="button">Services</a>
+      <div class="nav-dropdown" role="menu" aria-labelledby="services-menu-btn">
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">For Children &amp; Teens</div>
+          <a href="../services/autism-assessment.html" role="menuitem">Autism &amp; ASD Assessment</a>
+          <a href="../services/adhd-assessment.html" role="menuitem">ADHD &amp; Learning Assessment</a>
+          <a href="../services/speech-language.html" role="menuitem">Speech-Language Therapy</a>
+          <a href="../services/occupational-therapy.html" role="menuitem">Occupational Therapy</a>
+          <a href="../services/education-school-support.html" role="menuitem">Education &amp; School Support</a>
+          <a href="../services/communication-social.html" role="menuitem">Communication &amp; Social Skills</a>
+        </div>
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">For Adults</div>
+          <a href="../services/therapy-counselling.html" role="menuitem">Therapy &amp; Counselling</a>
+          <a href="../services/anxiety-depression.html" role="menuitem">Anxiety &amp; Depression</a>
+          <a href="../services/trauma-ptsd-therapy.html" role="menuitem">Trauma &amp; PTSD</a>
+          <a href="../services/work-stress-burnout.html" role="menuitem">Work Stress &amp; Burnout</a>
+          <a href="../services/return-to-work.html" role="menuitem">Return to Work</a>
+          <a href="../services/individual-therapy.html" role="menuitem">Individual Therapy</a>
+        </div>
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">Specialized Programs</div>
+          <a href="../services/womens-mental-health.html" role="menuitem">Women&rsquo;s Mental Health</a>
+          <a href="../services/2slgbtq-mental-health.html" role="menuitem">2SLGBTQ+ Affirming Care</a>
+          <a href="../services/veterans-first-responders.html" role="menuitem">Veterans &amp; First Responders</a>
+          <a href="../services/parent-coaching.html" role="menuitem">Parent Coaching &amp; Support</a>
+          <a href="../services/specialized-programs.html" role="menuitem">View All Programs &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <a href="../careers.html">Careers</a>
+    <a href="../blog.html"  aria-current="page">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Desktop CTA buttons -->
+  <div class="nav-cta-group">
+    <a href="contact.html" class="btn-nav-portal">Patient Portal</a>
+    <a href="contact.html" class="btn-nav-cta">Book Free Consultation</a>
+  </div>
+
+  <!-- Hamburger button (mobile only) -->
+  <button class="nav-hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu" onclick="toggleMobileNav(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile navigation menu -->
+<div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a>
+  <a href="../about.html">About</a>
+  <a href="../services.html">Services</a>
+  <a href="../career.html">Careers</a>
+  <a href="../blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-nav-ctas">
+    <a href="contact.html" class="btn-nav-portal">Patient Portal</a>
+    <a href="contact.html" class="btn-nav-cta">Book Free Consultation</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+<section class="hero">
+  <div class="hero-stripe"></div>
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a><span>/</span><a href="../services.html">Services</a><span>/</span><a href="specialized-programs.html">Specialized Programs</a><span>/</span>
+      <span style="color:var(--green)">School Collaboration &amp; Consultation</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span>Consent-First &nbsp;&middot;&nbsp; Family-Led &nbsp;&middot;&nbsp; No Referral Needed &nbsp;&middot;&nbsp; PHIPA-Compliant</div>
+        <p class="hero-page-title">School Collaboration &amp; Consultation Services</p>
+        <h1>When Home, School, and <br><em>Clinicians Speak the Same Language.</em></h1>
+        <p class="hero-sub">Children often make faster, more sustainable progress when the adults supporting them — at home, at school, and in the clinic — are aligned. But getting there requires trust, coordination, and clear boundaries around what is shared and who leads the process.</p>
+        <p class="hero-who">At Toriven Health, school collaboration happens only with your explicit consent, and you decide exactly what is shared, with whom, and why. Our clinicians support you — they do not bypass you.</p>
+        <div class="hero-pills">
+          <span class="pill">IEP &amp; Accommodation Support</span>
+          <span class="pill">ADHD &amp; Learning Strategies</span>
+          <span class="pill">Behavioural Consultation</span>
+          <span class="pill">School Refusal &amp; Anxiety</span>
+          <span class="pill">Educator &amp; Resource Teacher Briefings</span>
+          <span class="pill">Transition Planning</span>
+          <span class="pill">Virtual-First · Ontario-Wide</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="../contact.html" class="cta-primary">Book Free Consultation</a>
+          <a href="#services" class="cta-secondary">Explore Services</a>
+        </div>
+                <p style="font-size:.76rem;color:rgba(255,255,255,.45);margin-top:8px;font-style:italic">🕐 Opening late spring / summer 2026 — not yet accepting patients</p>
+        <p class="hero-note">No referral needed. No obligation. Call-back option available.</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-title">Why families reach out…</div>
+        <div class="hero-card-subtitle">Common situations we're brought into.</div>
+        <div class="hero-card-item">
+          <div class="hci-icon">📋</div>
+          <div class="hci-text">
+            <strong>IEP meetings feel overwhelming</strong>
+            <span>Parents unsure how to advocate, what questions to ask, or whether the plan actually fits their child.</span>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <div class="hci-icon">🔄</div>
+          <div class="hci-text">
+            <strong>Home and school strategies don't match</strong>
+            <span>Different approaches, different language — children receive mixed messages and progress stalls.</span>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <div class="hci-icon">🚪</div>
+          <div class="hci-text">
+            <strong>School refusal that isn't resolving</strong>
+            <span>Ongoing avoidance that the school is managing in isolation, without clinical input on the anxiety driving it.</span>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <div class="hci-icon">📝</div>
+          <div class="hci-text">
+            <strong>A report that needs to be translated</strong>
+            <span>Assessment results sitting in a file — never properly communicated to the teachers who need to act on them.</span>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <div class="hci-icon">🏫</div>
+          <div class="hci-text">
+            <strong>A school transition coming up</strong>
+            <span>Elementary to secondary, or a new school — and the child needs a plan before they arrive, not after.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><div class="trust-dot" aria-hidden="true"></div>Consent-First — Always</div>
+  <div class="trust-item"><div class="trust-dot" aria-hidden="true"></div>You Control What Is Shared</div>
+  <div class="trust-item"><div class="trust-dot" aria-hidden="true"></div>Regulated Clinicians</div>
+  <div class="trust-item"><div class="trust-dot" aria-hidden="true"></div>PHIPA-Compliant &amp; Encrypted</div>
+  <div class="trust-item"><div class="trust-dot" aria-hidden="true"></div>Virtual-First · Ontario-Wide</div>
+</div>
+
+<!-- CONSENT CONTROL SECTION -->
+<div class="consent-section">
+  <div class="container">
+    <div class="consent-grid">
+      <div class="consent-intro reveal">
+        <div class="label" style="color:var(--green);margin-bottom:16px">You Stay in Control</div>
+        <h2 class="section-title" style="color:#fff">We Collaborate With Schools <span>With You — Not Around You</span></h2>
+        <p>Many families hesitate about school collaboration because they worry about losing control of their child's narrative — about who knows what, and how that information might follow their child. That concern is valid, and it shapes how we work.</p>
+        <p style="margin-top:12px;font-size:.95rem;color:rgba(255,255,255,.55);line-height:1.75">School collaboration at Toriven Health only happens when you initiate it, and only on the terms you set. Before any contact with a school is made, you decide:</p>
+      </div>
+      <div class="reveal reveal-d1">
+        <div class="consent-controls">
+          <div class="consent-item">
+            <div class="consent-num">1</div>
+            <div><h4>Who we can speak with</h4><p>Classroom teacher, resource teacher, principal, school psychologist — you specify exactly who is included and who is not.</p></div>
+          </div>
+          <div class="consent-item">
+            <div class="consent-num">2</div>
+            <div><h4>What we are allowed to share</h4><p>You review and approve the information disclosed before any school contact occurs. Nothing is shared beyond what you authorize.</p></div>
+          </div>
+          <div class="consent-item">
+            <div class="consent-num">3</div>
+            <div><h4>Why the collaboration is happening</h4><p>The purpose of contact is clearly defined — IEP planning, strategy alignment, transition support — and stays within that scope.</p></div>
+          </div>
+          <div class="consent-item">
+            <div class="consent-num">4</div>
+            <div><h4>How often we check in</h4><p>Collaboration frequency and format are agreed upon in advance. You are kept informed at every stage — there are no surprise communications.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY IT MATTERS -->
+<section class="why-matters-section">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="label">Why It Makes a Difference</div>
+      <h2 class="section-title">What Changes When Everyone <span>Is Aligned</span></h2>
+      <p class="section-sub" style="margin:10px auto 0">For many children, the biggest gains happen when teachers, caregivers, and clinicians are using the same language, tools, and expectations.</p>
+    </div>
+    <div class="wm-grid">
+      <div class="wm-card reveal">
+        <div class="wm-icon">🎯</div>
+        <h3>Goals Are Shared Across Settings</h3>
+        <p>When home, school, and clinic are working toward the same targets using consistent language, children experience clarity instead of contradiction. Progress becomes cumulative rather than siloed.</p>
+      </div>
+      <div class="wm-card reveal reveal-d1">
+        <div class="wm-icon">🔇</div>
+        <h3>Mixed Messages Are Eliminated</h3>
+        <p>Different strategies in different environments create confusion for children — especially those with ADHD, anxiety, or autism. Aligned approaches reduce the cognitive load and make expectations predictable.</p>
+      </div>
+      <div class="wm-card reveal reveal-d2">
+        <div class="wm-icon">🏃</div>
+        <h3>Progress Happens Faster</h3>
+        <p>Evidence in developmental psychology consistently suggests that interventions generalize more effectively when supported across environments. Clinician-to-school collaboration is one of the most efficient ways to accelerate a child's progress.</p>
+      </div>
+      <div class="wm-card reveal reveal-d3">
+        <div class="wm-icon">🧑‍🏫</div>
+        <h3>Teachers Feel Supported, Not Blamed</h3>
+        <p>Our clinicians approach school teams as collaborators, not critics. Practical, specific recommendations — delivered respectfully — are far more likely to be implemented than general advice delivered at a distance.</p>
+      </div>
+      <div class="wm-card reveal reveal-d4">
+        <div class="wm-icon">🛡️</div>
+        <h3>Issues Are Caught Earlier</h3>
+        <p>When a clinician has visibility into the school environment, emerging difficulties — academic, social, emotional, or behavioural — are identified earlier and addressed before they become entrenched.</p>
+      </div>
+      <div class="wm-card reveal reveal-d1">
+        <div class="wm-icon">💚</div>
+        <h3>Children Feel Understood, Not "Different"</h3>
+        <p>When the adults in a child's world communicate clearly and consistently, children experience less shame and more support. They are more likely to ask for help and less likely to withdraw.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE OFFER -->
+<section class="services-section" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="label">What We Offer</div>
+      <h2 class="section-title">Collaboration &amp; Consultation <span>Services</span></h2>
+      <p class="section-sub">Services available to families, educators, and school teams — independently or in combination.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card c1 reveal">
+        <div class="svc-icon">📋</div>
+        <span class="svc-tag families">For Families</span>
+        <h3>IEP Review &amp; Advocacy Preparation</h3>
+        <p>Before an IEP meeting, a clinician reviews the existing plan with the family — explaining what the goals and accommodations mean in practice, identifying gaps, and preparing parents to ask informed questions and advocate clearly. Families leave meetings with more confidence and more clarity.</p>
+      </div>
+      <div class="svc-card c2 reveal reveal-d1">
+        <div class="svc-icon">🏫</div>
+        <span class="svc-tag both">For Families &amp; Educators</span>
+        <h3>Clinician-to-School Briefing &amp; Strategy Alignment</h3>
+        <p>With written parental consent, a clinician provides a structured briefing to relevant school staff — translating assessment findings, explaining the child's clinical profile, and recommending specific, practical classroom strategies that are consistent with what is being used at home and in therapy.</p>
+      </div>
+      <div class="svc-card c3 reveal reveal-d2">
+        <div class="svc-icon">📝</div>
+        <span class="svc-tag families">For Families</span>
+        <h3>Assessment Report Communication</h3>
+        <p>Psychological and psychoeducational assessment reports are often dense, technical, and difficult for non-clinicians to act on. This service translates the findings into plain language — a summary for families and a set of practical recommendations formatted specifically for school use, including accommodation letters where appropriate.</p>
+      </div>
+      <div class="svc-card c4 reveal">
+        <div class="svc-icon">🧑‍🏫</div>
+        <span class="svc-tag educators">For Educators</span>
+        <h3>Educator Consultation &amp; Professional Support</h3>
+        <p>Teachers and resource teachers working with students who have complex needs can access structured consultation from a regulated clinician. This is not supervision or training — it is focused, practical guidance on specific students or classroom situations, available with appropriate family consent in place.</p>
+      </div>
+      <div class="svc-card c5 reveal reveal-d1">
+        <div class="svc-icon">🔄</div>
+        <span class="svc-tag both">For Families &amp; Educators</span>
+        <h3>School Transition Planning</h3>
+        <p>Transitions — from elementary to secondary school, from a specialized program into a mainstream classroom, or from one school to another — are among the highest-risk periods for children with learning, emotional, or behavioural challenges. Structured transition planning ensures the receiving school is prepared before the child arrives.</p>
+      </div>
+      <div class="svc-card c6 reveal reveal-d2">
+        <div class="svc-icon">🚪</div>
+        <span class="svc-tag families">For Families</span>
+        <h3>School Refusal &amp; Reintegration Support</h3>
+        <p>When a child is avoiding school due to anxiety, social difficulties, or other emotional barriers, a coordinated response between home, school, and clinician is significantly more effective than either working in isolation. This service develops a structured reintegration plan with agreed steps, timelines, and responsibilities across all settings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE BRIDGE -->
+<section class="bridge-section">
+  <div class="container bridge-inner">
+    <div class="bridge-intro reveal">
+      <div class="label" style="color:var(--green);text-align:center;margin-bottom:16px">Connected Clinical Services</div>
+      <h2 class="section-title">School Collaboration Works Best <span>Alongside Clinical Support</span></h2>
+      <p class="section-sub" style="max-width:640px;margin:12px auto 0;color:rgba(255,255,255,.6)">Collaboration is most effective when it runs alongside direct clinical services for the child. These are the services most commonly paired with school collaboration at Toriven Health.</p>
+    </div>
+    <div class="bridge-grid">
+      <div class="bridge-card reveal">
+        <span class="bridge-card-tag assessment">Assessment</span>
+        <h3>ADHD &amp; Psychoeducational Assessment</h3>
+        <p>Structured assessments by regulated clinicians that clarify a child's learning profile, identify ADHD or learning disabilities, and produce reports formatted for school accommodation letters and IEP development.</p>
+        <a href="psychoeducational.html" class="bridge-card-link">Explore Psychoeducational Assessment</a>
+        <div class="bridge-who">Common for: IEP development, school accommodations, ADHD and learning disability documentation</div>
+      </div>
+      <div class="bridge-card reveal reveal-d1">
+        <span class="bridge-card-tag therapy">Therapy</span>
+        <h3>Child &amp; Adolescent Therapy</h3>
+        <p>Direct therapeutic support for children navigating anxiety, emotional dysregulation, school stress, or social difficulties — running in parallel with school collaboration to ensure consistency across clinic, home, and classroom.</p>
+        <a href="occupational-therapy.html" class="bridge-card-link">Explore Child &amp; Adolescent Therapy</a>
+        <div class="bridge-who">Common for: School-related anxiety, social challenges, emotional dysregulation, school refusal</div>
+      </div>
+      <div class="bridge-card reveal reveal-d2">
+        <span class="bridge-card-tag coaching">Coaching</span>
+        <h3>Parent Coaching &amp; Strategy Sessions</h3>
+        <p>When school and clinical strategies are aligned, parent coaching ensures the home environment reflects the same approaches — giving the child a consistent, coherent experience across all settings.</p>
+        <a href="parent-coaching.html" class="bridge-card-link">Explore Parent Coaching</a>
+        <div class="bridge-who">Common for: Families wanting to align home strategies with school and clinical plans</div>
+      </div>
+      <div class="bridge-card reveal">
+        <span class="bridge-card-tag assessment">Assessment</span>
+        <h3>Autism Spectrum Evaluation</h3>
+        <p>Comprehensive assessment for children where autism spectrum traits are suspected — producing documentation that supports school planning, IEP development, and access to appropriate educational supports.</p>
+        <a href="autism-assessment.html" class="bridge-card-link">Explore Autism Assessment</a>
+        <div class="bridge-who">Common for: School support planning, IEP access, diagnosis documentation for educational services</div>
+      </div>
+      <div class="bridge-card reveal reveal-d1">
+        <span class="bridge-card-tag therapy">Therapy</span>
+        <h3>Anxiety &amp; CBT Therapy for Children</h3>
+        <p>Evidence-based anxiety treatment for children, including school-focused anxiety and refusal — with structured communication to school teams (with consent) ensuring classroom accommodations reflect the clinical approach.</p>
+        <a href="anxiety-depression.html" class="bridge-card-link">Explore Anxiety Therapy</a>
+        <div class="bridge-who">Common for: School anxiety, test anxiety, separation anxiety, social anxiety affecting attendance</div>
+      </div>
+      <div class="bridge-card reveal reveal-d2">
+        <span class="bridge-card-tag coaching">Coaching</span>
+        <h3>School Transition &amp; Executive Function Coaching</h3>
+        <p>Structured support for students navigating academic transitions or struggling with executive function skills — organization, time management, task initiation — with strategies shared across home and school settings.</p>
+        <a href="executive-function.html" class="bridge-card-link">Explore Executive Function Coaching</a>
+        <div class="bridge-who">Common for: Secondary school transitions, executive function challenges, academic planning support</div>
+      </div>
+    </div>
+    <div class="bridge-bottom">
+      <div class="bridge-note reveal">
+        <p><strong>Not sure which services are relevant?</strong> Most families come to us without a clear picture of what combination of services their child needs. Your introductory call is designed for exactly this — a clinician will listen carefully and help map out what makes sense for your situation before any commitment is made.</p>
+      </div>
+      <div class="bridge-cta-block reveal reveal-d1">
+        <p><strong>Your next step is simple.</strong><br>One free 15-minute introductory call. No referral required. No clinical intake at this stage — just a conversation to understand your child's situation and your options.</p>
+        <a href="../contact.html" class="bridge-cta-btn">Book Free Consultation</a>
+        <span style="font-size:.78rem;color:rgba(255,255,255,.35);text-align:center">No obligation. No commitment. Call-back available.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HESITATION -->
+<section class="hesitation-section">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="label">Addressing the Hesitation</div>
+      <h2 class="section-title">What Families &amp; Schools <span>Often Worry About</span></h2>
+      <p class="section-sub">These concerns are real and valid. We name them directly — and we design our process to address each one.</p>
+    </div>
+    <div class="hes-grid">
+      <div class="hes-card reveal">
+        <p class="hes-worry">&ldquo;I'm worried about labels — I don't want my child seen as 'the problem kid.'&rdquo;</p>
+        <p>Clinician-to-school communication is focused on strategy, not diagnosis. We do not share clinical labels without your explicit consent, and our school briefings frame your child's needs in terms of what helps them succeed — not what is wrong with them.</p>
+      </div>
+      <div class="hes-card reveal reveal-d1">
+        <p class="hes-worry">&ldquo;I don't know what information will be shared or who will have access to it.&rdquo;</p>
+        <p>You approve every piece of information before it is shared. Nothing reaches the school without written consent from you first. We provide a clear summary of exactly what will be communicated and to whom — so there are no surprises.</p>
+      </div>
+      <div class="hes-card reveal reveal-d2">
+        <p class="hes-worry">&ldquo;We've had bad experiences with school meetings in the past — they felt blaming or dismissive.&rdquo;</p>
+        <p>We understand that past experiences shape trust. When a Toriven clinician participates in or prepares you for a school meeting, their role is to support and advocate for your child — not to present a clinical case to be evaluated. The framing, the language, and the tone are prepared carefully.</p>
+      </div>
+      <div class="hes-card reveal">
+        <p class="hes-worry">&ldquo;I don't want to 'rock the boat' with the teachers — what if it makes things worse?&rdquo;</p>
+        <p>This is one of the most common reasons families delay. In practice, teachers and resource staff almost always respond positively to structured, practical clinical input — it helps them do their jobs more effectively. Our clinicians approach school teams as partners, not as adversaries.</p>
+      </div>
+      <div class="hes-card reveal reveal-d1">
+        <p class="hes-worry">&ldquo;I'm not sure who is supposed to do what — the school, the board, or a clinician.&rdquo;</p>
+        <p>This confusion is extremely common and completely understandable. Part of what we do in early conversations is help families understand how the education system works, what schools are and aren't responsible for, and where a clinical perspective adds the most value. Clarity about roles reduces friction significantly.</p>
+      </div>
+      <div class="hes-card reveal reveal-d2">
+        <p class="hes-worry">&ldquo;I have a report from another provider — can you use that, or does everything start over?&rdquo;</p>
+        <p>Existing assessments and reports can often be reviewed and used as a starting point. We do not automatically require a new assessment if a recent and relevant one already exists. Your introductory call is the right place to discuss what you already have and what, if anything, is still needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EMOTIONAL SUPPORT FOR PARENTS -->
+<section style="background:#fff;padding:80px 5%">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start" class="reveal">
+      <div>
+        <div class="label" style="margin-bottom:16px">When the News Feels Heavy</div>
+        <h2 class="section-title">You Don't Have to Navigate <span>This Alone</span></h2>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.78;margin-top:16px">For many families, learning that a child may be struggling at school or developmentally can bring unexpected emotions. Some parents describe a quiet moment afterward when difficult questions begin to surface:</p>
+        <div style="margin:22px 0;display:flex;flex-direction:column;gap:10px">
+          <div style="background:var(--lgray);border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:12px 16px;font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--slate)">&ldquo;Why did this happen to my child?&rdquo;</div>
+          <div style="background:var(--lgray);border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:12px 16px;font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--slate)">&ldquo;Did I miss something earlier?&rdquo;</div>
+          <div style="background:var(--lgray);border-left:3px solid var(--green);border-radius:0 8px 8px 0;padding:12px 16px;font-family:var(--serif);font-size:.95rem;font-style:italic;color:var(--slate)">&ldquo;What should I do next?&rdquo;</div>
+        </div>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.78">These reactions are completely normal. Many families experience a period of uncertainty, stress, or something that feels like grief as they try to understand what their child needs. When expectations for how childhood might unfold suddenly shift, self-doubt and worry about the future are natural responses — not signs of failure.</p>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.78;margin-top:14px">At Toriven Health, we work with families every day who are moving through exactly this stage. Our clinicians help parents understand what their child may be experiencing, process their own emotions, and build practical confidence in supporting their child — at home, at school, and beyond.</p>
+        <div style="margin-top:24px;background:var(--lgreen);border:1px solid #c5edd8;border-radius:12px;padding:18px 22px">
+          <p style="font-size:.88rem;color:var(--slate);line-height:1.7"><strong style="color:var(--navy)">When parents feel supported and informed, children benefit more.</strong> In many cases, the most meaningful progress happens when parents and clinicians work together — creating consistent support both at home and at school.</p>
+        </div>
+      </div>
+      <div>
+        <div style="background:var(--navy);border-radius:20px;padding:36px 32px;color:#fff">
+          <div class="label" style="color:var(--green);margin-bottom:12px">Why Parent Coaching Matters</div>
+          <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:14px;line-height:1.3">Evidence consistently suggests that when parents feel informed and confident, children benefit more from any intervention.</h3>
+          <p style="font-size:.86rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:20px">Parents are with their child far more hours than any therapist, teacher, or clinician. When parents develop practical strategies for communication, emotional support, and advocacy, therapy becomes more effective and daily life often becomes calmer and more predictable.</p>
+          <p style="font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green);margin-bottom:12px">Parent coaching may include:</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:rgba(255,255,255,.72)">
+              <span style="color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px">→</span>
+              <span>Understanding how learning differences, emotional regulation, or neurodevelopmental profiles affect school experiences</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:rgba(255,255,255,.72)">
+              <span style="color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px">→</span>
+              <span>Strategies for supporting homework, routines, and daily transitions</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:rgba(255,255,255,.72)">
+              <span style="color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px">→</span>
+              <span>Ways to communicate effectively with teachers, resource teachers, and school teams</span>
+            </div>
+            <div style="display:flex;gap:10px;align-items:flex-start;font-size:.86rem;color:rgba(255,255,255,.72)">
+              <span style="color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px">→</span>
+              <span>Building confidence in advocating clearly and effectively for your child's needs</span>
+            </div>
+          </div>
+          <div style="margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1)">
+            <p style="font-size:.84rem;color:rgba(255,255,255,.5);line-height:1.65;font-style:italic">Therapy and parent coaching work best together — helping families create consistent, informed support both at home and in school.</p>
+            <a href="../contact.html" style="display:inline-block;margin-top:16px;background:var(--green);color:#fff;padding:12px 24px;border-radius:8px;font-weight:700;font-size:.88rem;transition:background .2s" onmouseover="this.style.background='#009960'" onmouseout="this.style.background='var(--green)'">Book Free Consultation →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="hiw-section">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="label">The Process</div>
+      <h2 class="section-title">How School Collaboration <span>Works</span></h2>
+      <p class="section-sub">A clear, consent-driven process — with you in control at every step.</p>
+    </div>
+    <div class="hiw-grid">
+      <div class="hiw-step reveal">
+        <div class="hiw-num">1</div>
+        <h3>Introductory Call &amp; Needs Assessment</h3>
+        <p>A brief conversation to understand your child's situation, what school challenges are present, and what kind of collaboration or consultation would be most useful. No clinical advice at this stage.</p>
+      </div>
+      <div class="hiw-step reveal reveal-d1">
+        <div class="hiw-num">2</div>
+        <h3>Consent &amp; Scope Agreement</h3>
+        <p>You specify exactly who may be contacted, what information may be shared, and what the collaboration is for. Nothing proceeds until written consent is in place and you have reviewed and approved the scope.</p>
+      </div>
+      <div class="hiw-step reveal reveal-d2">
+        <div class="hiw-num">3</div>
+        <h3>Clinician Contact &amp; Collaboration</h3>
+        <p>Your clinician contacts the agreed school contacts, provides structured input, and may participate in meetings or IEP sessions on your behalf or alongside you — within the scope you defined.</p>
+      </div>
+      <div class="hiw-step reveal reveal-d3">
+        <div class="hiw-num">4</div>
+        <h3>Follow-Up &amp; Ongoing Alignment</h3>
+        <p>You receive a summary of what was communicated and agreed. Ongoing check-ins between clinic and school can be scheduled at the frequency you choose — or collaboration can be a one-time consultation.</p>
+      </div>
+    </div>
+    <div class="hiw-note reveal">
+      <strong>Important:</strong> Contacting us does not create a clinical relationship. School collaboration services require formal consent agreements before any school contact is made.
+    </div>
+    <div class="hiw-note reveal" style="margin-top:12px;background:#fff;border:1px solid var(--border)">
+      <strong>Fees &amp; Insurance:</strong> Private pay. Not covered by OHIP. Receipts provided for reimbursement. &nbsp;&nbsp;<strong>Credentials:</strong> Services are provided by regulated mental health professionals. Provider credentials are listed clearly during booking.
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section class="why-section">
+  <div class="container">
+    <div class="section-header center reveal">
+      <div class="label">Why Toriven Health</div>
+      <h2 class="section-title">What Sets Our Care <span>Apart</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <span class="why-icon">🏛️</span>
+        <h3>Integrated System of Care</h3>
+        <p>School collaboration, parent coaching, child therapy, and assessment under one roof — coordinated with your consent so your child's care is coherent across every setting.</p>
+      </div>
+      <div class="why-card reveal reveal-d1">
+        <span class="why-icon">🎓</span>
+        <h3>Expert, Regulated Clinicians</h3>
+        <p>Services are delivered by regulated mental health clinicians — credentials are listed clearly during booking.</p>
+      </div>
+      <div class="why-card reveal reveal-d2">
+        <span class="why-icon">🔑</span>
+        <h3>Consent-First, Always</h3>
+        <p>No contact with any school, teacher, or board without your explicit written consent. You define the scope, you review the content, and you remain in control throughout the entire process.</p>
+      </div>
+      <div class="why-card reveal reveal-d3">
+        <span class="why-icon">🔐</span>
+        <h3>Private, Secure, PHIPA-Compliant</h3>
+        <p>Fully encrypted and PHIPA-compliant. Your child's records and clinical information are protected at every stage — shared only as you explicitly authorize.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIRTUAL -->
+<section class="virtual-section">
+  <div class="container">
+    <div class="virtual-grid">
+      <div class="v-card main reveal">
+        <div class="label" style="color:var(--green);margin-bottom:12px">Virtual-First Collaboration</div>
+        <h3>School Collaboration Without the Logistics</h3>
+        <p>Clinician-to-school meetings, IEP participation, and educator consultations are all conducted virtually — making it practical for clinicians to participate in school discussions without travel delays or scheduling barriers that reduce follow-through.</p>
+        <p class="v-note" style="margin-top:16px">Virtual-first delivery across all of Ontario. In-person may be required for certain assessments — determined by your clinician and confirmed before you commit.</p>
+      </div>
+      <div class="v-card benefits reveal reveal-d1">
+        <div class="label" style="margin-bottom:12px">Why Virtual Works for School Collaboration</div>
+        <h3>Practical, Accessible, and More Likely to Happen</h3>
+        <div class="v-benefits">
+          <div class="v-ben">
+            <div class="v-ben-icon">🕐</div>
+            <div><h4>Fits School Scheduling</h4><p>Virtual participation removes the geographic and scheduling barriers that typically prevent clinicians from attending IEP meetings and school consultations.</p></div>
+          </div>
+          <div class="v-ben">
+            <div class="v-ben-icon">📍</div>
+            <div><h4>Anywhere in Ontario</h4><p>Families in smaller communities or rural areas access the same quality of school collaboration support as those in urban centres.</p></div>
+          </div>
+          <div class="v-ben">
+            <div class="v-ben-icon">👨‍👩‍👧</div>
+            <div><h4>Both Parents Can Participate</h4><p>Virtual school meetings make it easier for both caregivers to attend — including those with work constraints or who are in different locations.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSURANCE & EXTENDED HEALTH -->
+<section style="background:var(--lgray);padding:48px 5%">
+  <div class="container" style="max-width:760px">
+    <div style="background:var(--lgreen);border:1px solid #b6ecd8;border-radius:12px;padding:18px 20px">
+      <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green-dark);margin-bottom:6px">Insurance &amp; Extended Health</p>
+      <p style="font-size:.84rem;color:var(--slate);line-height:1.65">Services are private pay and not covered by OHIP. Many extended health benefit plans cover services delivered by regulated clinicians &mdash; please confirm coverage directly with your own insurer before starting. Receipts are provided after each session for reimbursement. Clients are responsible for confirming their own coverage.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="book-section" id="book">
+  <div class="container">
+    <div class="book-grid">
+      <div class="book-left reveal">
+        <div class="label" style="margin-bottom:14px">Take the First Step</div>
+        <h2>The Best Time to Start Is Before Things Reach a Crisis.</h2>
+        <p>School collaboration is significantly more effective when it begins proactively — before a child is significantly behind, before an IEP is already locked in, or before school avoidance becomes entrenched. The free introductory call is the right place to understand what is possible and what makes sense for your child right now.</p>
+        <p>You don&rsquo;t need a complete picture. Bring the situation as it is, and we&rsquo;ll help you figure out the right next step.</p>
+        <p style="font-size:.82rem;color:var(--gray);margin-top:10px">No obligation. Call-back option available.</p>
+      </div>
+      <div class="book-card reveal reveal-d1">
+        <div class="book-card-title">Free Introductory Call</div>
+        <div class="book-card-sub">15 minutes · No clinical advice · No obligation</div>
+        <div class="book-includes">
+          <div class="book-inc"><span class="book-inc-check">✓</span><span>Describe your child's school situation and challenges</span></div>
+          <div class="book-inc"><span class="book-inc-check">✓</span><span>Understand which services may be relevant</span></div>
+          <div class="book-inc"><span class="book-inc-check">✓</span><span>Ask questions about the collaboration process</span></div>
+          <div class="book-inc"><span class="book-inc-check">✓</span><span>Learn about fees and extended health benefit plans reimbursement</span></div>
+          <div class="book-inc"><span class="book-inc-check">✓</span><span>No pressure. No commitment. No referral required.</span></div>
+          <div class="book-inc"><span class="book-inc-check">✓</span><span>Call-back available if you prefer not to speak live</span></div>
+        </div>
+        <a href="../contact.html" class="book-cta">Book Free Consultation</a>
+        <p class="book-note">No referral needed. No obligation. Call-back available.</p>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>When Everyone Is <em style="font-style:italic">On the Same Page</em> — Children Thrive.</h2>
+    <p>School collaboration, parent coaching, and clinical support — coordinated, consent-first, and built around your child's specific needs.</p>
+    <div class="dual-cta">
+      <a href="../contact.html" class="cta-white">Book Free Consultation</a>
+      <a href="../contact.html" class="cta-white-outline">Email Us at Launch</a>
+    </div>
+    <p class="cta-note">No referral needed. No obligation. Educator consultation enquiries welcome.</p>
+  </div>
+</section>
+
+<!-- CRISIS BAR -->
+<div class="crisis-bar">
+  <strong>If your child or a family member is in immediate distress:</strong> Contact the <a href="tel:988">9-8-8 Suicide &amp; Crisis Helpline</a> (call or text 9-8-8) or go to your nearest Emergency Department. This service is not a crisis line.
+</div>
+
+<!-- FOOTER -->
+
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo" aria-label="Toriven Health — return to homepage">Toriven<span style="color:var(--green)">Health</span></a>
+      <p>Comprehensive virtual allied health care for children, teens, and adults across Ontario. Regulated clinicians. Evidence-based practice. Neurodiversity-affirming.</p>
+      <div class="footer-badges" aria-label="Certifications">
+        <span class="f-badge">PHIPA Compliant</span>
+        <span class="f-badge">Regulated Clinicians</span>
+        <span class="f-badge">Ontario-Wide</span>
+      </div>
+    </div>
+
+    <!-- Services column: plain div so no UA nav interference -->
+    <div class="footer-col" role="navigation" aria-label="Services navigation">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="../services/autism-assessment.html">Autism Assessment</a></li>
+        <li><a href="../services/adhd-assessment.html">ADHD &amp; LD Assessment</a></li>
+        <li><a href="../services/neuropsychological.html">Full Battery Assessment</a></li>
+        <li><a href="../services/speech-language.html">Speech-Language</a></li>
+        <li><a href="../services/occupational-therapy.html">Occupational Therapy</a></li>
+        <li><a href="../services/">Feeding &amp; Nutrition</a></li>
+        <li><a href="../services/cbt-dbt.html">CBT &amp; Trauma Therapy</a></li>
+        <li><a href="../services/">Psychiatry (Summer 2026)</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick links column: plain div so no UA nav interference -->
+    <div class="footer-col" role="navigation" aria-label="Quick links navigation">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../services/specialized-programs.html">Specialized Programs</a></li>
+        <li><a href="../contact.html">Patient Portal</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="../accessibility.html">AODA Accessibility</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p><span aria-hidden="true">📍</span> Serving all of Ontario — Virtual-First</p>
+      <p><span aria-hidden="true">✉️</span> Email available at launch</p>
+    </div>
+  </div>
+
+  <!-- footer-bottom: plain div to avoid UA nav white background -->
+  <div class="footer-bottom">
+    <span>© 2026 Toriven Health. All rights reserved.</span>
+    <div class="footer-bottom-links" role="navigation" aria-label="Legal links">
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../accessibility.html">AODA Accessibility</a>
+    </div>
+  </div>
+
+  <!-- FOOTER COMPLIANCE NOTICES -->
+  <div class="footer-compliance" role="note" aria-label="Legal and compliance notices">
+    <p><span aria-hidden="true">🚫</span> <strong>Not Yet Open:</strong> Toriven Health is not yet open and is not currently accepting clients, patients, or referrals. Anticipated launch is late spring or summer 2026, subject to change.</p>
+    <p><span aria-hidden="true">📋</span> <strong>Informational Only:</strong> This website is for general informational purposes only. Nothing on this website constitutes medical advice, clinical guidance, diagnosis, or treatment. Consult a regulated health professional for health concerns.</p>
+    <p><span aria-hidden="true">🔒</span> <strong>PHIPA:</strong> PHIPA-compliant secure systems will be used for clinical communication and patient records at launch. Do not send personal health information through social media or general web channels.</p>
+    <p><span aria-hidden="true">💳</span> <strong>Private Pay:</strong> Services will be private pay. Not covered by OHIP. Insurance reimbursement depends on individual plans. Clients are responsible for confirming insurance coverage. Receipts are provided for reimbursement.</p>
+    <p><span aria-hidden="true">⚖️</span> <strong>No Therapeutic Relationship:</strong> Visiting this website, contacting us, or following us on social media does not establish a therapeutic, clinical, or professional relationship of any kind. A therapeutic relationship is only formed after formal intake, clinical acceptance, and completion of required consent documentation.</p>
+    <p><span aria-hidden="true">🆘</span> <strong>Crisis Support:</strong> Toriven Health is not a crisis service. If you are in immediate distress, contact <strong>9-8-8</strong> (Canada Suicide Crisis Helpline) or your nearest emergency department.</p>
+  </div>
+
+  <div class="footer-disclaimer">
+    <p>Educational content on this website is for informational purposes only and does not constitute clinical advice. Diagnosis and treatment decisions are made only after a full clinical assessment by a regulated clinician. TorivenHealth&#8482; is a trade name of Toriven Health Inc., a federally incorporated company.</p>
+  </div>
+</footer>
+
+<div class="sticky-mobile-cta"><a href="../contact.html">Book Free Consultation</a></div>
+<script>
+function showAge(age, btn) {
+  document.querySelectorAll('.age-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.age-tab').forEach(b => b.classList.remove('active'));
+  const panel = document.getElementById('panel-' + age);
+  if (panel) panel.classList.add('active');
+  if (btn) btn.classList.add('active');
+}
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+</script>
+
+
+<script>
+(function() {
+  var item = document.querySelector('.nav-has-dropdown');
+  if (!item) return;
+
+  var trigger = item.querySelector('.nav-services-trigger');
+  var dropdown = item.querySelector('.nav-dropdown');
+  var closeTimer;
+
+  function openDropdown() {
+    clearTimeout(closeTimer);
+    dropdown.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeDropdown() {
+    closeTimer = setTimeout(function() {
+      dropdown.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }, 150);
+  }
+
+  // Hover → show dropdown
+  trigger.addEventListener('mouseenter', openDropdown);
+  trigger.addEventListener('mouseleave', closeDropdown);
+
+  dropdown.addEventListener('mouseenter', function() {
+    clearTimeout(closeTimer);
+  });
+
+  dropdown.addEventListener('mouseleave', closeDropdown);
+
+  // ❗ IMPORTANT: Click par page open hone do
+  trigger.addEventListener('click', function(e) {
+    // e.preventDefault();  ❌ is line ko remove rakho
+    // Browser automatically services.html open karega
+  });
+
+})();
+</script>
+
+<script>
+function showTeam(tab, el) {
+  document.getElementById('pane-mgmt').style.display = tab === 'mgmt' ? 'block' : 'none';
+  document.getElementById('pane-clin').style.display = tab === 'clin' ? 'block' : 'none';
+  document.querySelectorAll('.team-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }});
+}, {threshold: 0.08});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+function toggleMobileNav(btn) {
+  var nav = document.getElementById('mobile-nav');
+  var isOpen = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  btn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+}
+document.addEventListener('click', function(e) {
+  var nav = document.getElementById('mobile-nav');
+  var btn = document.querySelector('.nav-hamburger');
+  if (nav && btn && nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open navigation menu');
+  }
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var nav = document.getElementById('mobile-nav');
+    var btn = document.querySelector('.nav-hamburger');
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open navigation menu');
+      btn.focus();
+    }
+  }
+});
+</script>
+
+<!-- CTA POPUP OVERLAY -->
+<div class="th-popup-overlay" id="th-popup-overlay" role="dialog" aria-modal="true" aria-labelledby="th-popup-title" aria-describedby="th-popup-desc">
+  <div class="th-popup">
+    <button class="th-popup-close" onclick="thClosePopup()" aria-label="Close">&#x2715;</button>
+    <span class="th-popup-icon" aria-hidden="true">&#x1F331;</span>
+    <div class="th-popup-badge"><span class="th-popup-badge-dot" aria-hidden="true"></span> Coming Late Spring / Summer 2026</div>
+    <h2 id="th-popup-title">You&#x2019;re ahead of the <em>curve.</em></h2>
+    <p class="th-popup-body" id="th-popup-desc">We&#x2019;re putting the finishing touches on something we&#x2019;re genuinely proud of. <strong>Toriven Health opens late spring / early summer 2026</strong> &#x2014; and when we do, we&#x2019;d love for you to be among the first to know.<br><br><strong>Follow us on social media for launch updates</strong> &#x2014; we&#x2019;ll announce our opening there first.</p>
+    <div class="th-popup-actions">
+      <a href="../contact.html" class="th-popup-btn-primary" onclick="thClosePopup()">See What&#x2019;s Coming &#x2192;</a>
+      <button class="th-popup-btn-secondary" onclick="thClosePopup()">Close</button>
+    </div>
+    <p class="th-popup-note">No appointments available yet &#x2014; not accepting clients or referrals at this time.</p>
+  </div>
+</div>
+<script>
+/* ── CTA POPUP ── */
+function thOpenPopup(e) {
+  if (e) { e.preventDefault(); }
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay) {
+    overlay.classList.add('open');
+    overlay.querySelector('.th-popup-close').focus();
+    document.body.style.overflow = 'hidden';
+  }
+}
+function thClosePopup() {
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay) {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+// Close on overlay background click
+document.addEventListener('click', function(e) {
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay && e.target === overlay) { thClosePopup(); }
+});
+// Close on Escape
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { thClosePopup(); }
+});
+// Wire CTA buttons to popup EXCEPT on contact.html, footer links, nav dropdown links
+(function() {
+  var isContactPage = window.location.pathname.indexOf('contact.html') !== -1;
+  if (isContactPage) return;
+  document.querySelectorAll('a[href]').forEach(function(el) {
+    var href = el.getAttribute('href') || '';
+    if (href.indexOf('contact.html') === -1) return;
+    var isFooter = el.closest('footer') !== null;
+    var isPopup = el.closest('#th-popup-overlay') !== null;
+    var isDropdown = el.closest('.nav-dropdown') !== null;
+    var isMobileNav = el.closest('.mobile-nav') !== null || el.closest('.th-mobile-nav') !== null;
+    var isContactPage = window.location.pathname.indexOf('contact') !== -1;
+    if (!isFooter && !isPopup && !isDropdown && !isMobileNav && !isContactPage) {
+      el.addEventListener('click', function(e) { thOpenPopup(e); });
+    }
+  });
+})();
+</script>
+</body>
+</html>

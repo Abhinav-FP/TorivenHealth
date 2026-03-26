@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Adult Communication &amp; Social Interaction Support Ontario (18+) | Toriven Health</title>
+<meta name="description" content="Adult communication support and social interaction therapy across Ontario. Workplace communication, speaking confidence, social anxiety, relationship communication, and neurodivergent support. Regulated clinicians. Virtual-first. No referral needed."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" type="text/css" href="../css/style.css"/>
+<style>
+body{font-family:'DM Sans',sans-serif;color:#1a2b3c;background:#fff;line-height:1.65;overflow-x:hidden}
+
+:root{
+  --green:#00C47A;--green-dark:#009960;--green-glow:rgba(0,196,122,.18);
+  --navy:#0D1B2A;--slate:#3D5166;--gray:#6B7C8F;
+  --border:#e2ebf0;--lgreen:#E6FAF3;--lgray:#F6F9FB;
+  --serif:'Fraunces',Georgia,serif;
+  --shadow:0 4px 28px rgba(13,27,42,.08);--shadow-lg:0 12px 48px rgba(13,27,42,.14);
+}
+.container{max-width:1160px;margin:0 auto;padding:0 5%}
+.label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--green)}
+
+/* TOP HEADER */
+.top-header{background:var(--navy);color:rgba(255,255,255,.65);font-size:.78rem;font-weight:500;border-bottom:1px solid rgba(255,255,255,.08)}
+.top-header-inner{display:flex;align-items:center;justify-content:space-between;height:38px;gap:16px}
+.top-header-left,.top-header-right{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.top-header a{color:var(--green);transition:opacity .2s}.top-header a:hover{opacity:.8}
+.top-divider{opacity:.25}
+@media(max-width:700px){.top-header-right{display:none}.top-header-inner{justify-content:center}}
+
+/* BREADCRUMB */
+.breadcrumb{font-size:.8rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+.breadcrumb a{color:rgba(255,255,255,.5)}.breadcrumb a:hover{color:var(--green)}.breadcrumb span{opacity:.5}
+
+/* HERO */
+.hero{background:linear-gradient(155deg,#0a0d14 0%,#0d1a28 45%,#0f1a20 100%);position:relative;overflow:hidden;padding:88px 5% 80px;color:#fff}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 65% 60% at 80% 30%,rgba(0,196,122,.09) 0%,transparent 65%),radial-gradient(ellipse 50% 50% at 15% 85%,rgba(0,80,120,.15) 0%,transparent 60%)}
+.hero-stripe{position:absolute;left:0;top:0;bottom:0;width:5px;background:linear-gradient(to bottom,var(--green),rgba(0,196,122,.2))}
+.hero-inner{position:relative;max-width:1160px;margin:0 auto}
+.hero-grid{display:grid;grid-template-columns:1fr 400px;gap:60px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,196,122,.14);border:1px solid rgba(0,196,122,.3);color:var(--green);padding:6px 16px;border-radius:100px;font-size:.75rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:26px}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+h1{font-family:var(--serif);font-size:clamp(2.2rem,4.5vw,3.4rem);font-weight:900;line-height:1.1;letter-spacing:-.03em;margin-bottom:22px}
+h1 em{color:var(--green);font-style:italic}
+.hero-sub{font-size:clamp(.95rem,1.8vw,1.1rem);color:rgba(255,255,255,.78);max-width:540px;margin-bottom:18px;line-height:1.78}
+.hero-who{font-size:.9rem;color:rgba(255,255,255,.52);border-left:3px solid rgba(0,196,122,.45);padding-left:16px;margin-bottom:28px;line-height:1.7;font-style:italic}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.82);padding:6px 14px;border-radius:100px;font-size:.78rem;font-weight:500}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:12px}
+.cta-primary{background:var(--green);color:#fff;padding:15px 32px;border-radius:10px;font-weight:700;font-size:.97rem;box-shadow:0 4px 24px rgba(0,196,122,.4);transition:background .2s,transform .15s;display:inline-block}
+.cta-primary:hover{background:var(--green-dark);transform:translateY(-2px)}
+.cta-secondary{background:rgba(255,255,255,.08);color:#fff;border:2px solid rgba(255,255,255,.22);padding:13px 28px;border-radius:10px;font-weight:600;font-size:.97rem;transition:all .2s;display:inline-block}
+.cta-secondary:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.5)}
+.hero-note{font-size:.8rem;color:rgba(255,255,255,.36)}
+.hero-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:30px 26px;backdrop-filter:blur(8px)}
+.hero-card-title{font-family:var(--serif);font-size:1rem;font-weight:700;color:rgba(255,255,255,.88);margin-bottom:4px}
+.hero-card-subtitle{font-size:.78rem;color:rgba(255,255,255,.36);margin-bottom:18px;font-style:italic}
+.hero-card-item{display:flex;align-items:flex-start;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.hero-card-item:last-child{border-bottom:none;padding-bottom:0}
+.hci-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px}
+.hci-text strong{display:block;font-size:.86rem;font-weight:700;color:rgba(255,255,255,.88);margin-bottom:2px}
+.hci-text span{font-size:.78rem;color:rgba(255,255,255,.48);line-height:1.5;font-style:italic}
+
+/* TRUST BAR */
+.trust-bar{background:var(--lgreen);border-bottom:1px solid #c5edd8;padding:13px 5%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:24px}
+.trust-item{display:flex;align-items:center;gap:7px;font-size:.8rem;font-weight:600;color:var(--slate)}
+.trust-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0}
+
+/* PAGE TITLE */
+.page-title-section{background:#fff;padding:56px 5% 0}
+.sub-label{display:inline-flex;align-items:center;gap:8px;background:var(--lgreen);border:1px solid #c5edd8;color:var(--green-dark);padding:5px 14px;border-radius:100px;font-size:.75rem;font-weight:700;letter-spacing:.05em;margin-bottom:14px}
+
+/* SECTIONS */
+section{padding:80px 5%}
+.section-header{margin-bottom:48px}
+.section-header.center{text-align:center}
+.section-header.center .section-sub{margin:10px auto 0}
+.section-title{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:900;line-height:1.15;letter-spacing:-.03em;color:var(--navy)}
+.section-title span{color:var(--green)}
+.section-sub{font-size:1rem;color:var(--gray);max-width:580px;margin-top:10px;line-height:1.7}
+
+/* ADULT SIGNAL — what adults experience */
+.signal-section{background:var(--lgray);padding:64px 5%}
+.signal-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.signal-quote-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,box-shadow .2s;cursor:default}
+.signal-quote-card:hover{border-color:var(--green);box-shadow:0 4px 16px rgba(0,196,122,.1)}
+.sq-mark{color:var(--green);font-weight:700;font-size:1rem;flex-shrink:0;margin-top:1px}
+.sq-text{font-size:.9rem;color:var(--slate);line-height:1.55;font-style:italic}
+
+/* VALIDATION */
+.validation-section{background:linear-gradient(160deg,#0a0d14 0%,#0d1a28 100%);color:#fff;position:relative;overflow:hidden}
+.validation-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 90% 20%,rgba(0,196,122,.07) 0%,transparent 60%)}
+.validation-inner{position:relative}
+.validation-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.validation-left h2{font-family:var(--serif);font-size:clamp(1.9rem,3.2vw,2.6rem);font-weight:900;color:#fff;line-height:1.15;letter-spacing:-.03em;margin-top:10px;margin-bottom:18px}
+.validation-left h2 em{color:var(--green);font-style:italic}
+.validation-left p{font-size:.95rem;color:rgba(255,255,255,.65);line-height:1.78;margin-bottom:14px}
+.validation-quote{background:rgba(0,196,122,.1);border-left:4px solid var(--green);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0;font-family:var(--serif);font-size:1.05rem;font-style:italic;color:rgba(255,255,255,.88);line-height:1.55}
+.validation-notice{font-size:.84rem;color:rgba(255,255,255,.45);line-height:1.65;border-top:1px solid rgba(255,255,255,.08);padding-top:16px;margin-top:4px}
+.validation-right{display:flex;flex-direction:column;gap:13px}
+.val-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);border-radius:14px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;transition:background .25s,border-color .25s}
+.val-card:hover{background:rgba(0,196,122,.1);border-color:rgba(0,196,122,.3)}
+.val-icon{font-size:1.2rem;flex-shrink:0;margin-top:1px}
+.val-card h4{font-size:.88rem;font-weight:700;color:#fff;margin-bottom:3px}
+.val-card p{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.55}
+.val-age-box{background:rgba(0,196,122,.12);border:1px solid rgba(0,196,122,.28);border-radius:14px;padding:20px 22px;margin-bottom:4px}
+.val-age-box h4{font-size:.84rem;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.val-age-box p{font-size:.86rem;color:rgba(255,255,255,.7);line-height:1.65}
+
+/* WHAT WE SUPPORT — service cards */
+.support-section{background:var(--lgray)}
+.support-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.support-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px 24px;transition:border-color .25s,box-shadow .25s,transform .25s}
+.support-card:hover{border-color:var(--green);box-shadow:var(--shadow);transform:translateY(-3px)}
+.support-card-icon{font-size:1.6rem;margin-bottom:12px;display:block}
+.support-card h3{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px}
+.support-card p{font-size:.86rem;color:var(--gray);line-height:1.65}
+
+/* APPROACH */
+.approach-section{background:#fff}
+.approach-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-top:40px}
+.approach-strategies{display:flex;flex-direction:column;gap:10px}
+.approach-item{display:flex;align-items:flex-start;gap:12px;background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:14px 16px;transition:border-color .2s,background .2s}
+.approach-item:hover{border-color:var(--green);background:var(--lgreen)}
+.ap-dot{width:9px;height:9px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:5px}
+.approach-item p{font-size:.87rem;color:var(--slate);line-height:1.55}
+.approach-right{background:var(--lgray);border:1px solid var(--border);border-radius:18px;padding:30px 26px}
+.approach-right h3{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:12px}
+.approach-right p{font-size:.88rem;color:var(--gray);line-height:1.7;margin-bottom:14px}
+.approach-link-box{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-top:8px}
+.approach-link-box p{font-size:.84rem;color:var(--slate);line-height:1.65;margin-bottom:10px}
+.approach-link-box a{display:inline-flex;align-items:center;gap:6px;font-size:.84rem;font-weight:700;color:var(--green)}
+.approach-note{font-size:.82rem;color:var(--gray);font-style:italic;border-top:1px solid var(--border);padding-top:14px;margin-top:4px}
+
+/* INDIVIDUAL VS GROUP */
+.indvgrp-section{background:var(--navy);color:#fff;padding:70px 5%}
+.indvgrp-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+.indvgrp-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:30px 26px;transition:background .25s,border-color .25s}
+.indvgrp-card:hover{background:rgba(0,196,122,.1);border-color:rgba(0,196,122,.3)}
+.indvgrp-card-icon{font-size:1.8rem;margin-bottom:14px;display:block}
+.indvgrp-card h3{font-family:var(--serif);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:10px}
+.indvgrp-card p{font-size:.88rem;color:rgba(255,255,255,.6);line-height:1.7}
+.indvgrp-note{margin-top:32px;background:rgba(0,196,122,.1);border:1px solid rgba(0,196,122,.25);border-radius:12px;padding:18px 22px;font-size:.86rem;color:rgba(255,255,255,.7);line-height:1.65}
+.indvgrp-note strong{color:var(--green)}
+
+/* VIRTUAL */
+.virtual-section{background:#fff;padding:70px 5%}
+.virtual-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.virtual-left h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;color:var(--navy);line-height:1.15;letter-spacing:-.03em;margin-top:8px;margin-bottom:16px}
+.virtual-left h2 span{color:var(--green)}
+.virtual-left p{font-size:.95rem;color:var(--gray);line-height:1.78;margin-bottom:12px}
+.virtual-note{font-size:.82rem;color:var(--gray);font-style:italic;border-top:1px solid var(--border);padding-top:14px;margin-top:8px}
+.virtual-benefits{display:flex;flex-direction:column;gap:12px}
+.virt-ben{background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:16px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s}
+.virt-ben:hover{border-color:var(--green);background:var(--lgreen)}
+.virt-ben-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px}
+.virt-ben h4{font-size:.86rem;font-weight:700;color:var(--navy);margin-bottom:2px}
+.virt-ben p{font-size:.82rem;color:var(--gray);line-height:1.5}
+
+/* RATES */
+.rates-section{background:var(--lgray)}
+.rate-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px 26px;max-width:520px}
+.rate-card-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:8px}
+.rate-card h3{font-family:var(--serif);font-size:1.6rem;font-weight:900;color:var(--navy);margin-bottom:6px;line-height:1.1}
+.rate-card-sub{font-size:.84rem;color:var(--gray);margin-bottom:16px;line-height:1.55}
+.rate-card-detail{font-size:.82rem;color:var(--slate);line-height:1.65;border-top:1px solid var(--border);padding-top:14px}
+.rates-disclaimer-box{background:#fff8ed;border:1px solid #f0d9a0;border-radius:12px;padding:18px 22px;margin-top:24px;display:flex;gap:14px;align-items:flex-start}
+.rates-disclaimer-box p{font-size:.84rem;color:#7a5a20;line-height:1.65}
+.rates-disclaimer-box strong{color:#5c3d0a}
+
+/* HOW IT WORKS */
+.hiw-section{background:#fff}
+.hiw-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.hiw-step{position:relative}
+.hiw-step:not(:last-child)::after{content:'';position:absolute;top:28px;right:-10%;width:20%;height:2px;background:linear-gradient(to right,var(--green),var(--border));opacity:.5}
+.hiw-num{width:56px;height:56px;border-radius:16px;background:var(--lgreen);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.5rem;font-weight:900;color:var(--green);margin-bottom:16px}
+.hiw-step h3{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:6px}
+.hiw-step p{font-size:.84rem;color:var(--gray);line-height:1.65}
+.hiw-note{margin-top:36px;background:var(--lgray);border-radius:10px;padding:16px 22px;font-size:.82rem;color:var(--gray);text-align:center;border:1px solid var(--border)}
+.hiw-note strong{color:var(--navy)}
+
+/* FAQ */
+.faq-section{background:var(--lgray)}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.faq-item{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.faq-q{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;cursor:pointer;font-weight:600;color:var(--navy);font-size:.9rem;gap:12px;user-select:none}
+.faq-q:hover{color:var(--green)}
+.faq-chevron{font-size:.8rem;color:var(--gray);transition:transform .25s;flex-shrink:0}
+.faq-item.open .faq-chevron{transform:rotate(180deg);color:var(--green)}
+.faq-item.open .faq-q{color:var(--green)}
+.faq-a{display:none;padding:0 22px 18px;font-size:.86rem;color:var(--gray);line-height:1.7;border-top:1px solid var(--border)}
+.faq-item.open .faq-a{display:block}
+
+/* WARM CTA */
+.warm-cta-section{background:var(--lgray);padding:80px 5%}
+.warm-cta-inner{max-width:680px;margin:0 auto;text-align:center}
+.warm-cta-inner h2{font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);font-weight:900;color:var(--navy);line-height:1.15;letter-spacing:-.03em;margin-top:8px;margin-bottom:16px}
+.warm-cta-inner h2 em{color:var(--green);font-style:italic}
+.warm-cta-inner p{font-size:.97rem;color:var(--gray);line-height:1.78;margin-bottom:8px}
+.warm-cta-includes{display:flex;flex-direction:column;gap:10px;max-width:420px;margin:24px auto 28px;text-align:left}
+.warm-inc{display:flex;align-items:flex-start;gap:10px;font-size:.88rem;color:var(--slate)}
+.warm-inc-dot{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:5px}
+.warm-cta-btn{display:inline-block;background:var(--green);color:#fff;padding:16px 40px;border-radius:10px;font-weight:700;font-size:1rem;box-shadow:0 4px 24px rgba(0,196,122,.35);transition:background .2s,transform .15s}
+.warm-cta-btn:hover{background:var(--green-dark);transform:translateY(-2px)}
+.warm-cta-sub{margin-top:14px;font-size:.82rem;color:var(--gray);font-style:italic}
+
+/* CTA STRIP */
+.cta-section{background:linear-gradient(135deg,var(--green) 0%,#009960 100%);color:#fff;text-align:center;padding:80px 5%}
+.cta-section h2{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:900;margin-bottom:14px;letter-spacing:-.03em}
+.cta-section p{font-size:1.05rem;opacity:.9;max-width:540px;margin:0 auto 36px;line-height:1.7}
+.cta-white{background:#fff;color:var(--green-dark);padding:16px 42px;border-radius:10px;font-weight:800;font-size:1rem;display:inline-block;transition:transform .15s,box-shadow .2s;box-shadow:0 4px 20px rgba(0,0,0,.15)}
+.cta-white:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
+.cta-note{margin-top:16px;font-size:.82rem;opacity:.7}
+
+ 
+
+/* STICKY MOBILE */
+.sticky-mobile-cta{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:#fff;border-top:1px solid var(--border);padding:12px 16px;box-shadow:0 -4px 20px rgba(0,0,0,.1)}
+.sticky-mobile-cta a{display:block;background:var(--green);color:#fff;text-align:center;padding:14px;border-radius:10px;font-weight:700;font-size:.95rem}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-d1{transition-delay:.1s}.reveal-d2{transition-delay:.2s}.reveal-d3{transition-delay:.3s}.reveal-d4{transition-delay:.4s}
+
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr}.hero-card{display:none}
+  .signal-grid{grid-template-columns:1fr}
+  .validation-grid{grid-template-columns:1fr}
+  .support-grid{grid-template-columns:1fr}
+  .approach-grid{grid-template-columns:1fr}
+  .indvgrp-grid{grid-template-columns:1fr}
+  .virtual-grid{grid-template-columns:1fr}
+  .hiw-grid{grid-template-columns:1fr 1fr}
+  .faq-grid{grid-template-columns:1fr}
+ 
+}
+@media(max-width:700px){
+  .hiw-grid{grid-template-columns:1fr}
+   
+  section{padding:60px 5%}
+  .sticky-mobile-cta{display:block}body{padding-bottom:80px}
+  .hiw-step::after{display:none}
+}
+ 
+ 
+</style>
+</head>
+
+<body>
+
+<!-- SKIP LINK -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<nav aria-label="Main navigation">
+  <!-- Logo as a link (WCAG 2.4.4) -->
+  <a href="../index.html" class="logo" aria-label="Toriven Health — return to homepage">Toriven<span>Health</span></a>
+
+  <!-- Desktop nav links -->
+  <div class="nav-links" id="desktop-nav">
+    <a href="../index.html" >Home</a>
+    <a href="../about.html">About</a>
+    <div class="nav-has-dropdown">
+      <a href="../services.html" class="nav-services-trigger" aria-haspopup="true" aria-expanded="false" id="services-menu-btn" type="button">Services</a>
+      <div class="nav-dropdown" role="menu" aria-labelledby="services-menu-btn">
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">For Children &amp; Teens</div>
+          <a href="../services/autism-assessment.html" role="menuitem">Autism &amp; ASD Assessment</a>
+          <a href="../services/adhd-assessment.html" role="menuitem">ADHD &amp; Learning Assessment</a>
+          <a href="../services/speech-language.html" role="menuitem">Speech-Language Therapy</a>
+          <a href="../services/occupational-therapy.html" role="menuitem">Occupational Therapy</a>
+          <a href="../services/education-school-support.html" role="menuitem">Education &amp; School Support</a>
+          <a href="../services/communication-social.html" role="menuitem">Communication &amp; Social Skills</a>
+        </div>
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">For Adults</div>
+          <a href="../services/therapy-counselling.html" role="menuitem">Therapy &amp; Counselling</a>
+          <a href="../services/anxiety-depression.html" role="menuitem">Anxiety &amp; Depression</a>
+          <a href="../services/trauma-ptsd-therapy.html" role="menuitem">Trauma &amp; PTSD</a>
+          <a href="../services/work-stress-burnout.html" role="menuitem">Work Stress &amp; Burnout</a>
+          <a href="../services/return-to-work.html" role="menuitem">Return to Work</a>
+          <a href="../services/individual-therapy.html" role="menuitem">Individual Therapy</a>
+        </div>
+        <div class="nav-dropdown-col">
+          <div class="nav-dropdown-col-title">Specialized Programs</div>
+          <a href="../services/womens-mental-health.html" role="menuitem">Women&rsquo;s Mental Health</a>
+          <a href="../services/2slgbtq-mental-health.html" role="menuitem">2SLGBTQ+ Affirming Care</a>
+          <a href="../services/veterans-first-responders.html" role="menuitem">Veterans &amp; First Responders</a>
+          <a href="../services/parent-coaching.html" role="menuitem">Parent Coaching &amp; Support</a>
+          <a href="../services/specialized-programs.html" role="menuitem">View All Programs &rarr;</a>
+        </div>
+      </div>
+    </div>
+    <a href="../careers.html">Careers</a>
+    <a href="../blog.html"  aria-current="page">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Desktop CTA buttons -->
+  <div class="nav-cta-group">
+    <a href="contact.html" class="btn-nav-portal">Patient Portal</a>
+    <a href="contact.html" class="btn-nav-cta">Book Free Consultation</a>
+  </div>
+
+  <!-- Hamburger button (mobile only) -->
+  <button class="nav-hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation menu" onclick="toggleMobileNav(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile navigation menu -->
+<div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+  <a href="../index.html">Home</a>
+  <a href="../about.html">About</a>
+  <a href="../services.html">Services</a>
+  <a href="../career.html">Careers</a>
+  <a href="../blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <div class="mobile-nav-ctas">
+    <a href="contact.html" class="btn-nav-portal">Patient Portal</a>
+    <a href="contact.html" class="btn-nav-cta">Book Free Consultation</a>
+  </div>
+</div>
+
+<main id="main-content">
+
+<section class="hero">
+  <div class="hero-stripe"></div>
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a><span>&rsaquo;</span>
+      <a href="../services.html">Services</a><span>&rsaquo;</span>
+      <a href="communication-social.html">Communication &amp; Social Interaction</a><span>&rsaquo;</span>
+      <span style="color:rgba(255,255,255,.75)">Adult Communication Support</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          <div class="hero-badge-dot" aria-hidden="true"></div>
+          Adults 18+ &middot; Workplace &amp; Social Communication
+        </div>
+        <h1>Clearer Conversations.<br><em>Stronger Confidence.</em></h1>
+        <p class="hero-sub">Communication challenges don&rsquo;t end in high school. Many adults struggle with speaking confidence, social interaction, workplace communication, or relationship conversations &mdash; often while appearing fine on the outside.</p>
+        <p class="hero-who">Support can help you build skills, reduce anxiety, and feel more like yourself in social and professional settings &mdash; without requiring a diagnosis, a referral, or any particular label.</p>
+        <div class="hero-pills">
+          <span class="pill">Adults (18+)</span>
+          <span class="pill">Workplace Communication</span>
+          <span class="pill">Speaking Confidence</span>
+          <span class="pill">Small Groups Available</span>
+          <span class="pill">Virtual-First Ontario</span>
+        </div>
+        <div class="hero-ctas">
+          <a href="contact.html" class="cta-primary">Book Free Consultation</a>
+          <a href="#what-we-support" class="cta-secondary">What We Support</a>
+        </div>
+        <p class="hero-note">No referral required &middot; No diagnosis needed &middot; Private pay &middot; Receipts provided</p>
+        <p style="font-size:.76rem;color:rgba(255,255,255,.45);margin-top:8px;font-style:italic">🕐 Opening late spring / summer 2026 — not yet accepting patients</p>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-title">You might be experiencing&hellip;</div>
+        <div class="hero-card-subtitle">Adults often reach out when they notice patterns like&hellip;</div>
+        <div class="hero-card-item">
+          <span class="hci-icon">&#x1F4BC;</span>
+          <div class="hci-text">
+            <strong>Anxiety in meetings or group discussions</strong>
+            <span>Dreading speaking up, going blank, or feeling overlooked even when you have something to say</span>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <span class="hci-icon">&#x1F3A4;</span>
+          <div class="hci-text">
+            <strong>Fear of presentations or being put on the spot</strong>
+            <span>Avoiding public speaking opportunities or experiencing significant distress before and during them</span>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <span class="hci-icon">&#x1F914;</span>
+          <div class="hci-text">
+            <strong>Overthinking conversations afterward</strong>
+            <span>Replaying interactions, worrying about what you said or didn&rsquo;t say, long after the moment has passed</span>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <span class="hci-icon">&#x1F91D;</span>
+          <div class="hci-text">
+            <strong>Misunderstandings in relationships</strong>
+            <span>Difficulty expressing yourself clearly, being misread, or feeling like hard conversations always go sideways</span>
+          </div>
+        </div>
+        <div class="hero-card-item">
+          <span class="hci-icon">&#x1F9E9;</span>
+          <div class="hci-text">
+            <strong>Feeling socially drained or &ldquo;masked&rdquo;</strong>
+            <span>Spending significant energy managing how you come across, often leaving interactions exhausted</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><div class="trust-dot" aria-hidden="true"></div>Regulated Ontario clinicians</div>
+  <div class="trust-item"><div class="trust-dot" aria-hidden="true"></div>No referral required</div>
+  <div class="trust-item"><div class="trust-dot" aria-hidden="true"></div>PHIPA-compliant &amp; encrypted</div>
+  <div class="trust-item"><div class="trust-dot" aria-hidden="true"></div>Receipts provided for insurance</div>
+  <div class="trust-item"><div class="trust-dot" aria-hidden="true"></div>Virtual-first &middot; All of Ontario</div>
+  <div class="trust-item"><div class="trust-dot" aria-hidden="true"></div>Individual &amp; small group options</div>
+</div>
+
+<!-- ADULT SIGNAL -->
+<section class="signal-section reveal">
+  <div class="container">
+    <div class="signal-grid">
+      <div>
+        <p class="label">What Adults Often Notice</p>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.4rem);font-weight:900;color:var(--navy);line-height:1.15;letter-spacing:-.03em;margin-top:8px;margin-bottom:16px">Adults often reach out when they begin <span style="color:var(--green)">noticing patterns.</span></h2>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.78;margin-bottom:14px">Communication challenges don&rsquo;t always look like a clinical problem from the outside. Many adults manage effectively enough &mdash; but feel the cost of it constantly. They prepare extensively before conversations, avoid certain situations, or leave interactions feeling drained in ways others around them don&rsquo;t seem to.</p>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.78;margin-bottom:22px">Sometimes these patterns are connected to social anxiety, ADHD, autism, or pragmatic language differences. Often, people simply benefit from structured support to build skills and reduce the effort communication currently takes.</p>
+        <p style="font-size:.9rem;color:var(--green-dark);font-weight:600;margin-bottom:22px">You don&rsquo;t need a diagnosis to start exploring support.</p>
+        <a href="contact.html" class="cta-primary" style="font-size:.9rem;padding:12px 26px">Book Free Consultation</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div class="signal-quote-card"><span class="sq-mark">&#x201C;</span><p class="sq-text">I have so much to contribute at work, but I go blank the moment I&rsquo;m put on the spot.</p></div>
+        <div class="signal-quote-card"><span class="sq-mark">&#x201C;</span><p class="sq-text">I overthink every conversation afterward &mdash; wondering if I said the wrong thing.</p></div>
+        <div class="signal-quote-card"><span class="sq-mark">&#x201C;</span><p class="sq-text">Presentations cause me so much anxiety I&rsquo;ve started avoiding opportunities because of them.</p></div>
+        <div class="signal-quote-card"><span class="sq-mark">&#x201C;</span><p class="sq-text">I feel like I&rsquo;m always working so hard just to seem normal in social situations.</p></div>
+        <div class="signal-quote-card"><span class="sq-mark">&#x201C;</span><p class="sq-text">Hard conversations in my relationship never seem to go the way I intend.</p></div>
+        <div class="signal-quote-card"><span class="sq-mark">&#x201C;</span><p class="sq-text">I come home from social events exhausted in a way other people don&rsquo;t seem to be.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE TITLE -->
+<div class="page-title-section">
+  <div class="container">
+    <div style="max-width:820px;padding-bottom:40px;border-bottom:1px solid var(--border)">
+      <div class="sub-label">Part of the Communication &amp; Social Interaction Program</div>
+      <h2 style="font-family:var(--serif);font-size:clamp(2rem,4vw,2.8rem);font-weight:900;color:var(--navy);line-height:1.1;letter-spacing:-.03em;margin-bottom:10px">Adult Communication &amp; Social Interaction Support &mdash; Ontario <span style="font-size:1.1rem;font-weight:500;color:var(--gray)">(18+)</span></h2>
+      <p style="font-size:1.05rem;color:var(--green-dark);font-weight:600;margin-bottom:14px;line-height:1.5">Clearer Conversations. Stronger Confidence. Better Work and Relationship Communication.</p>
+      <p style="font-size:.95rem;color:var(--gray);line-height:1.78;max-width:680px;margin-bottom:14px">For adults navigating workplace communication pressure, social interaction anxiety, relationship communication patterns, or neurodivergent social differences. Support is practical and skills-based &mdash; tailored to your goals and your actual context.</p>
+      <p style="font-size:.93rem;color:var(--gray);line-height:1.78;max-width:680px;margin-bottom:24px">Services are provided by regulated clinicians practicing within their professional scope, including registered speech-language pathologists, psychologists, registered psychotherapists, and social workers. Individual sessions and small groups available when clinically appropriate.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="contact.html" class="cta-primary" style="font-size:.92rem;padding:12px 26px">Book Free Consultation</a>
+        <a href="#what-we-support" style="display:inline-block;background:var(--lgray);color:var(--navy);border:1px solid var(--border);padding:11px 24px;border-radius:10px;font-weight:600;font-size:.92rem;transition:border-color .2s,background .2s">See What We Support</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO WE SUPPORT -->
+<section style="background:var(--lgray);padding:64px 5%" class="reveal">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+      <div>
+        <p class="label">Who This Support Is For</p>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.4rem);font-weight:900;color:var(--navy);line-height:1.15;letter-spacing:-.03em;margin-top:8px;margin-bottom:16px">Adults seek communication support for <span style="color:var(--green)">many different reasons.</span></h2>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.78;margin-bottom:18px">You do not need a diagnosis to explore communication support. What matters is that communication is consistently more effortful, anxiety-producing, or limiting than you would like it to be.</p>
+        <p style="font-size:.88rem;font-style:italic;color:var(--gray);border-top:1px solid var(--border);padding-top:14px;line-height:1.65">Services may be delivered by regulated professionals such as Speech-Language Pathologists, Registered Psychotherapists, or Registered Social Workers depending on the nature of the concern and clinician availability.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='#fff'">
+          <span style="color:var(--green);font-size:1rem;flex-shrink:0;margin-top:2px">&#x2713;</span>
+          <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Professionals navigating workplace communication, meetings, presentations, or leadership conversations</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='#fff'">
+          <span style="color:var(--green);font-size:1rem;flex-shrink:0;margin-top:2px">&#x2713;</span>
+          <p style="font-size:.88rem;color:var(--slate);line-height:1.5">University students preparing for presentations, interviews, or professional social settings</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='#fff'">
+          <span style="color:var(--green);font-size:1rem;flex-shrink:0;margin-top:2px">&#x2713;</span>
+          <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Neurodivergent adults exploring communication patterns, reducing masking fatigue, or navigating social expectations</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='#fff'">
+          <span style="color:var(--green);font-size:1rem;flex-shrink:0;margin-top:2px">&#x2713;</span>
+          <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Adults experiencing social anxiety that shows up in conversations, groups, or professional settings</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='#fff'">
+          <span style="color:var(--green);font-size:1rem;flex-shrink:0;margin-top:2px">&#x2713;</span>
+          <p style="font-size:.88rem;color:var(--slate);line-height:1.5">People adjusting to new social environments, life transitions, or relationships that demand different communication</p>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='#fff'">
+          <span style="color:var(--green);font-size:1rem;flex-shrink:0;margin-top:2px">&#x2713;</span>
+          <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Adults whose communication has been affected by illness, injury, or a neurological condition</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALIDATION -->
+<section class="validation-section reveal">
+  <div class="container validation-inner">
+    <div class="validation-grid">
+      <div class="validation-left">
+        <p class="label" style="color:var(--green)">You&rsquo;re Not Imagining It</p>
+        <h2>Communication can take more<br><em>than it should.</em></h2>
+        <p>Adult life is full of communication demands &mdash; professional meetings, performance reviews, difficult conversations with partners or family, social gatherings, job interviews. For most people, these situations require some effort. For others, they consistently require significantly more &mdash; and that gap is real, even when it&rsquo;s invisible to everyone around you.</p>
+        <p>Many adults describe spending considerable mental energy preparing for, managing, and recovering from interactions that others seem to navigate without much thought. This is exhausting. And it is often something that can be genuinely improved with the right kind of support.</p>
+        <div class="validation-quote">&ldquo;I&rsquo;ve gotten good at hiding it. But it costs me a lot. I&rsquo;d love to feel less like I&rsquo;m performing.&rdquo;</div>
+        <p>Communication and social interaction skills can be developed at any age. The goal of this program is not to make you into someone you&rsquo;re not &mdash; it is to reduce the effort communication takes, expand your options, and help you feel more at ease in the situations that matter most to you.</p>
+        <div class="validation-notice">This support does not require a diagnosis. Many adults who benefit most have never received a formal assessment &mdash; they simply find communication consistently more demanding than it appears to be for others around them.</div>
+      </div>
+      <div class="validation-right">
+        <div class="val-age-box">
+          <h4>Who This Service Is For</h4>
+          <p>Adults 18+ who find communication or social interaction consistently more demanding, draining, or anxiety-producing than it seems to be for others &mdash; whether at work, in relationships, or in social settings. Support is available regardless of whether a diagnosis is in place.</p>
+        </div>
+        <div class="val-card">
+          <div class="val-icon">&#x1F4BC;</div>
+          <div>
+            <h4>Workplace communication is a source of significant stress</h4>
+            <p>Meetings, presentations, feedback conversations, collaboration, or asserting yourself at work consistently feel harder than your actual capabilities warrant.</p>
+          </div>
+        </div>
+        <div class="val-card">
+          <div class="val-icon">&#x1F91D;</div>
+          <div>
+            <h4>Social interaction feels like work</h4>
+            <p>You manage social situations effectively enough &mdash; but the effort is significant. You come home drained from events others seem energized by.</p>
+          </div>
+        </div>
+        <div class="val-card">
+          <div class="val-icon">&#x1F4AC;</div>
+          <div>
+            <h4>Relationship communication doesn&rsquo;t go as intended</h4>
+            <p>Hard conversations escalate, important things go unsaid, or you are often misread &mdash; even when you&rsquo;re trying your best to communicate clearly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE SUPPORT -->
+<section class="support-section reveal" id="what-we-support">
+  <div class="container">
+    <div class="section-header">
+      <p class="label">What We Support</p>
+      <h2 class="section-title" style="margin-top:8px">Five areas of <span>focus.</span></h2>
+      <p class="section-sub">Support is practical and skills-based &mdash; tailored to your goals and your actual life context. Your clinician will work with you to identify which areas are most relevant to address first.</p>
+    </div>
+    <div class="support-grid">
+      <div class="support-card reveal reveal-d1">
+        <span class="support-card-icon">&#x1F4BC;</span>
+        <h3>Workplace Communication</h3>
+        <p>Meetings, collaboration, assertiveness, setting boundaries, delivering and receiving feedback, navigating difficult conversations with managers or colleagues, and leadership communication. Strategies are grounded in your actual workplace context &mdash; not generic professional development scripts.</p>
+      </div>
+      <div class="support-card reveal reveal-d2">
+        <span class="support-card-icon">&#x1F3A4;</span>
+        <h3>Speaking &amp; Presentation Confidence</h3>
+        <p>Tools to reduce performance anxiety and build genuine comfort with public speaking, structured presentations, and being put on the spot. Focuses on reducing avoidance behaviour and building skills that transfer to real professional and social settings.</p>
+      </div>
+      <div class="support-card reveal reveal-d1">
+        <span class="support-card-icon">&#x1F91D;</span>
+        <h3>Social Interaction &amp; Confidence</h3>
+        <p>Conversation flow, reading social cues, reducing overthinking, and building more natural social engagement. For adults who find social situations consistently draining or who feel they are always performing rather than genuinely connecting.</p>
+      </div>
+      <div class="support-card reveal reveal-d2">
+        <span class="support-card-icon">&#x1F4AC;</span>
+        <h3>Relationship Communication</h3>
+        <p>Communication patterns in close relationships, emotional expression, navigating conflict, repairing misunderstandings, and having the hard conversations that matter. For adults whose communication challenges show up most clearly in partnership, family, or close friendships.</p>
+      </div>
+      <div class="support-card reveal reveal-d1" style="grid-column:1/-1;max-width:100%">
+        <span class="support-card-icon">&#x1F9E9;</span>
+        <h3>Pragmatic &amp; Social Communication Differences</h3>
+        <p>Targeted support for adults who experience social communication differences &mdash; including those who identify as neurodivergent, autistic, or who have ADHD. Social communication support may be provided by regulated professionals such as Speech-Language Pathologists or mental health clinicians, depending on the nature of the concern. The goal is not to make you communicate in ways that feel inauthentic &mdash; it is to expand your options and reduce the effort your current approach requires.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKPLACE COMMUNICATION -->
+<section style="background:#fff;padding:80px 5%" class="reveal" id="workplace">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+      <div>
+        <p class="label">Communication in Professional Life</p>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.4rem);font-weight:900;color:var(--navy);line-height:1.15;letter-spacing:-.03em;margin-top:8px;margin-bottom:16px">Many adults seek support when communication challenges begin <span style="color:var(--green)">affecting work.</span></h2>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.78;margin-bottom:16px">Workplace communication demands are constant &mdash; and the stakes are high. Meetings, performance conversations, presentations, team dynamics, and professional relationships all require a level of social and communicative fluency that can feel exhausting when it doesn&rsquo;t come naturally.</p>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.78;margin-bottom:24px">Communication coaching and therapy can help build practical strategies for navigating professional environments with more clarity, confidence, and less ongoing effort.</p>
+        <a href="contact.html" class="cta-primary" style="font-size:.9rem;padding:12px 26px">Book Free Consultation</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <p style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:4px">You might notice&hellip;</p>
+        <div style="background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='var(--lgray)'">
+          <span style="color:var(--green);font-size:1rem;flex-shrink:0;margin-top:2px">&#x2022;</span>
+          <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Difficulty speaking up in meetings &mdash; going blank, losing your train of thought, or hesitating when put on the spot</p>
+        </div>
+        <div style="background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='var(--lgray)'">
+          <span style="color:var(--green);font-size:1rem;flex-shrink:0;margin-top:2px">&#x2022;</span>
+          <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Significant anxiety before or during presentations &mdash; even when you know the material well</p>
+        </div>
+        <div style="background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='var(--lgray)'">
+          <span style="color:var(--green);font-size:1rem;flex-shrink:0;margin-top:2px">&#x2022;</span>
+          <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Recurring misunderstandings with colleagues, managers, or direct reports that feel hard to resolve</p>
+        </div>
+        <div style="background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='var(--lgray)'">
+          <span style="color:var(--green);font-size:1rem;flex-shrink:0;margin-top:2px">&#x2022;</span>
+          <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Struggling with workplace expectations around assertiveness, feedback, or professional tone</p>
+        </div>
+        <div style="background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='var(--lgray)'">
+          <span style="color:var(--green);font-size:1rem;flex-shrink:0;margin-top:2px">&#x2022;</span>
+          <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Feeling exhausted after social interactions at work in ways that carry into your personal life</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEURODIVERGENT -->
+<section style="background:var(--lgray);padding:80px 5%" class="reveal" id="neurodivergent">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+      <div>
+        <p class="label">Neurodivergent Communication Styles</p>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.4rem);font-weight:900;color:var(--navy);line-height:1.15;letter-spacing:-.03em;margin-top:8px;margin-bottom:16px">Many adults exploring communication support are discovering that their style may be shaped by <span style="color:var(--green)">autism, ADHD, or a neurodivergent profile.</span></h2>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.78;margin-bottom:14px">This is one of the most common reasons adults seek communication support &mdash; not because something is wrong, but because understanding how they communicate can help them do it in ways that feel more natural and less exhausting.</p>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.78;margin-bottom:14px">Many adults receive an autism or ADHD diagnosis later in life, often after years of adapting, masking, and spending significant energy just to meet social expectations that others navigate with less effort. That adaptation takes a real toll.</p>
+        <div style="background:#fff;border:1px solid var(--border);border-left:4px solid var(--green);border-radius:0 12px 12px 0;padding:16px 20px;margin:20px 0;font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--navy);line-height:1.55">&ldquo;Our goal is not to change who you are, but to help you communicate in ways that feel more natural and sustainable.&rdquo;</div>
+        <p style="font-size:.84rem;color:var(--gray);font-style:italic;border-top:1px solid var(--border);padding-top:14px;line-height:1.65">Support is adapted to your communication identity &mdash; not imposed over it. We do not ask neurodivergent adults to mask, perform neurotypical communication, or suppress who they are.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <p style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:4px">Support focuses on&hellip;</p>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='#00C47A';this.style.boxShadow='0 4px 16px rgba(0,196,122,.1)'" onmouseout="this.style.borderColor='#e2ebf0';this.style.boxShadow='none'">
+          <span style="font-size:1.3rem;flex-shrink:0">&#x1F9E9;</span>
+          <div>
+            <strong style="display:block;font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:4px">Understanding your communication patterns</strong>
+            <p style="font-size:.83rem;color:var(--gray);line-height:1.55">Identifying how you naturally communicate, where friction tends to occur, and what that friction actually costs you day-to-day.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='#00C47A';this.style.boxShadow='0 4px 16px rgba(0,196,122,.1)'" onmouseout="this.style.borderColor='#e2ebf0';this.style.boxShadow='none'">
+          <span style="font-size:1.3rem;flex-shrink:0">&#x1F5FA;</span>
+          <div>
+            <strong style="display:block;font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:4px">Navigating social expectations</strong>
+            <p style="font-size:.83rem;color:var(--gray);line-height:1.55">Building practical strategies for workplace, social, and relationship contexts where communication norms feel unclear or inconsistent.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='#00C47A';this.style.boxShadow='0 4px 16px rgba(0,196,122,.1)'" onmouseout="this.style.borderColor='#e2ebf0';this.style.boxShadow='none'">
+          <span style="font-size:1.3rem;flex-shrink:0">&#x1F4AA;</span>
+          <div>
+            <strong style="display:block;font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:4px">Building confidence in conversations</strong>
+            <p style="font-size:.83rem;color:var(--gray);line-height:1.55">Developing concrete skills and approaches that reduce the effort communication currently requires &mdash; without asking you to perform a version of yourself that isn&rsquo;t authentic.</p>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px 20px;display:flex;align-items:flex-start;gap:14px;transition:border-color .2s,box-shadow .2s" onmouseover="this.style.borderColor='#00C47A';this.style.boxShadow='0 4px 16px rgba(0,196,122,.1)'" onmouseout="this.style.borderColor='#e2ebf0';this.style.boxShadow='none'">
+          <span style="font-size:1.3rem;flex-shrink:0">&#x1F62E;&#x200D;&#x1F4A8;</span>
+          <div>
+            <strong style="display:block;font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:4px">Reducing exhaustion from masking or social pressure</strong>
+            <p style="font-size:.83rem;color:var(--gray);line-height:1.55">Recognizing where masking is adding cost without adding value, and developing more sustainable ways of navigating the situations that matter most.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ILLNESS / INJURY -->
+<section style="background:#fff;padding:80px 5%" class="reveal" id="illness-injury">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start">
+      <div>
+        <p class="label">After Illness, Injury, or a Neurological Condition</p>
+        <h2 style="font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.4rem);font-weight:900;color:var(--navy);line-height:1.15;letter-spacing:-.03em;margin-top:8px;margin-bottom:16px">Communication changes after a health event can feel <span style="color:var(--green)">isolating and disorienting.</span></h2>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.78;margin-bottom:14px">Some adults seek communication support after a health event or medical condition that has affected how they speak, process language, or express their thoughts. These changes can affect confidence, relationships, and daily life in ways that are not always visible to others.</p>
+        <p style="font-size:.95rem;color:var(--gray);line-height:1.78;margin-bottom:14px">Communication support focuses on helping individuals rebuild confidence, strengthen speech clarity, and develop practical strategies for daily conversations &mdash; at their own pace, in a supportive setting.</p>
+        <div style="background:var(--lgreen);border:1px solid #c5edd8;border-radius:12px;padding:16px 20px;margin:20px 0;font-size:.9rem;color:var(--green-dark);font-weight:500;line-height:1.65">Even when communication changes are related to illness or injury, meaningful improvement is often possible with the right support and practice.</div>
+        <p style="font-size:.84rem;color:var(--gray);font-style:italic;border-top:1px solid var(--border);padding-top:14px;line-height:1.65">Some medical or neurological conditions may require coordinated care with physicians or rehabilitation teams. Depending on the concern, support may involve speech-language therapy, communication coaching, or collaborative care with other healthcare providers.</p>
+      </div>
+      <div>
+        <p style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:14px">These changes may occur after&hellip;</p>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='var(--lgray)'">
+            <span style="color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px">&#x2022;</span>
+            <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Stroke or transient ischemic attack (TIA)</p>
+          </div>
+          <div style="background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='var(--lgray)'">
+            <span style="color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px">&#x2022;</span>
+            <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Parkinson&rsquo;s disease or other neurological conditions</p>
+          </div>
+          <div style="background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='var(--lgray)'">
+            <span style="color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px">&#x2022;</span>
+            <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Traumatic brain injury or concussion</p>
+          </div>
+          <div style="background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='var(--lgray)'">
+            <span style="color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px">&#x2022;</span>
+            <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Recovery following accidents or medical procedures</p>
+          </div>
+          <div style="background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px;transition:border-color .2s,background .2s" onmouseover="this.style.borderColor='#00C47A';this.style.background='#E6FAF3'" onmouseout="this.style.borderColor='#e2ebf0';this.style.background='var(--lgray)'">
+            <span style="color:var(--green);font-weight:700;flex-shrink:0;margin-top:1px">&#x2022;</span>
+            <p style="font-size:.88rem;color:var(--slate);line-height:1.5">Prolonged illness or stress affecting speech clarity or word-finding</p>
+          </div>
+        </div>
+        <div style="background:var(--lgray);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-top:16px">
+          <p style="font-size:.84rem;color:var(--slate);line-height:1.65">Our goal is to help people <strong style="color:var(--navy)">reconnect with their voice</strong> and communicate comfortably in everyday life &mdash; in conversations with family, at work, and in the situations that matter most to them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR APPROACH -->
+<section class="approach-section reveal" id="approach">
+  <div class="container">
+    <div class="section-header">
+      <p class="label">Our Approach</p>
+      <h2 class="section-title" style="margin-top:8px">Evidence-informed strategies, <span>tailored to you.</span></h2>
+      <p class="section-sub">Your clinician draws on approaches that are matched to your goals, your communication profile, and what is most likely to make a real difference in your daily life.</p>
+    </div>
+    <div class="approach-grid">
+      <div class="approach-strategies">
+        <div class="approach-item"><div class="ap-dot"></div><p>Communication coaching and skills practice grounded in your real situations &mdash; not hypotheticals</p></div>
+        <div class="approach-item"><div class="ap-dot"></div><p>Social communication and pragmatic language strategies for reading cues, conversational flow, and flexibility</p></div>
+        <div class="approach-item"><div class="ap-dot"></div><p>Anxiety and emotion regulation tools to reduce avoidance and the physical and cognitive symptoms of communication anxiety</p></div>
+        <div class="approach-item"><div class="ap-dot"></div><p>Cognitive-behavioural approaches for speaking anxiety, negative self-talk, and avoidance patterns</p></div>
+        <div class="approach-item"><div class="ap-dot"></div><p>Structured rehearsal and real-world planning for upcoming high-stakes conversations, presentations, or interactions</p></div>
+      </div>
+      <div class="approach-right">
+        <h3>When more than communication support is needed</h3>
+        <p>If emotional factors &mdash; anxiety, stress, burnout, or trauma &mdash; are significantly impacting your communication, your clinician may recommend integrating work done here with services through our Therapy &amp; Counselling program.</p>
+        <p>With your consent, clinicians across disciplines can coordinate care so that both dimensions are addressed in a connected, consistent way. You will never be redirected without a clear explanation of why and how that support would work together.</p>
+        <div class="approach-link-box">
+          <p>Communication support pairs naturally with our Therapy &amp; Counselling services when anxiety, stress, or emotional factors are significantly at play.</p>
+          <a href="contact.html">Explore Therapy &amp; Counselling &#x2192;</a>
+        </div>
+        <div class="approach-note">All approaches are evidence-informed and selected based on your individual profile, goals, and clinical assessment &mdash; not applied uniformly across all clients. Services may be delivered by regulated professionals such as Speech-Language Pathologists, Registered Psychotherapists, or Registered Social Workers depending on the nature of the concern and clinician availability.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDIVIDUAL VS GROUP -->
+<section class="indvgrp-section reveal">
+  <div class="container">
+    <div class="section-header center">
+      <p class="label" style="color:var(--green)">Individual Support vs. Group Support</p>
+      <h2 class="section-title" style="margin-top:8px;color:#fff">Two ways to <span style="color:var(--green)">build skills.</span></h2>
+      <p class="section-sub" style="color:rgba(255,255,255,.6);margin:10px auto 0">Some adults prefer one-on-one support for privacy and targeted goals. Others benefit from guided group practice. Your clinician will help determine what combination makes the most sense.</p>
+    </div>
+    <div class="indvgrp-grid">
+      <div class="indvgrp-card">
+        <span class="indvgrp-card-icon">&#x1F9D1;</span>
+        <h3>Individual Sessions</h3>
+        <p>One-on-one work with a regulated clinician &mdash; entirely focused on your goals, your context, and your pace. Individual sessions offer privacy, depth, and the ability to work through highly specific situations or patterns. Most clients begin with individual sessions before group participation is considered.</p>
+      </div>
+      <div class="indvgrp-card">
+        <span class="indvgrp-card-icon">&#x1F465;</span>
+        <h3>Small Communication Groups</h3>
+        <p>When clinically appropriate, small groups of 2&ndash;3 adults offer the opportunity to practice real-time communication in a guided peer environment. Group participation is recommended only when it is clinically appropriate. Participants are matched carefully based on goals and readiness so that the experience remains supportive and productive for everyone involved.</p>
+      </div>
+    </div>
+    <div class="indvgrp-note">
+      <strong>Group participation is never assumed.</strong> It is always optional, always requires your explicit consent, and is discussed only after an individual intake has been completed and a clinical recommendation made. No charges for group sessions are incurred before you have been formally accepted and have consented.
+    </div>
+  </div>
+</section>
+
+<!-- VIRTUAL CARE -->
+<section class="virtual-section reveal">
+  <div class="container">
+    <div class="virtual-grid">
+      <div class="virtual-left">
+        <p class="label">Virtual-First Care</p>
+        <h2>Accessible support, <span>wherever you are.</span></h2>
+        <p>Virtual sessions make it easier to access support without added scheduling pressure or commute. Many adults find it helpful to work on communication goals from a familiar environment &mdash; at home, at their desk, in the spaces where real conversations actually happen.</p>
+        <p>For communication skill-building specifically, practicing in familiar environments means skills are more immediately applicable and easier to transfer into your actual life &mdash; workplace, relationships, and social settings.</p>
+        <div class="virtual-note">Virtual-first delivery across all of Ontario. In-person sessions may be recommended where clinically appropriate &mdash; discussed during intake.</div>
+      </div>
+      <div class="virtual-benefits">
+        <div class="virt-ben">
+          <div class="virt-ben-icon">&#x1F3E0;</div>
+          <div>
+            <h4>No commute, no waiting rooms</h4>
+            <p>Access support from wherever you are &mdash; before work, during a lunch break, or after hours &mdash; without adding travel time or clinical environments to the experience.</p>
+          </div>
+        </div>
+        <div class="virt-ben">
+          <div class="virt-ben-icon">&#x1F4BC;</div>
+          <div>
+            <h4>Practice in your actual environment</h4>
+            <p>Working on workplace communication from your home office or on social skills from your living room makes skill transfer more natural and immediate.</p>
+          </div>
+        </div>
+        <div class="virt-ben">
+          <div class="virt-ben-icon">&#x1F5FA;</div>
+          <div>
+            <h4>Available across all of Ontario</h4>
+            <p>Urban, suburban, or rural &mdash; all Ontarians access the same regulated clinical team through our secure virtual platform.</p>
+          </div>
+        </div>
+        <div class="virt-ben">
+          <div class="virt-ben-icon">&#x1F512;</div>
+          <div>
+            <h4>Secure &amp; PHIPA-compliant</h4>
+            <p>Sessions are conducted on an encrypted, fully compliant platform. Everything you share stays private &mdash; including from your employer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RATES -->
+<section class="rates-section reveal" id="fees">
+  <div class="container">
+    <div class="section-header">
+      <p class="label">Fees &amp; Coverage</p>
+      <h2 class="section-title" style="margin-top:8px">Transparent pricing, <span>confirmed at intake.</span></h2>
+      <p class="section-sub">All fees are discussed and confirmed before any charges are incurred. No surprises &mdash; ever.</p>
+    </div>
+    <div class="rate-card">
+      <p class="rate-card-label">Individual Sessions</p>
+      <h3 class="rate-card-title">$200 &ndash; $280<span style="font-size:1rem;font-weight:500;color:var(--gray)"> / hour</span></h3>
+      <p class="rate-card-sub">Rate varies depending on clinician credentials and session complexity.</p>
+      <div class="rate-card-detail">One-on-one sessions with a regulated clinician. All fees are confirmed at intake before any charges are incurred. Group session rates (where applicable) are discussed separately during the intake process.</div>
+    </div>
+    <div style="background:var(--lgreen);border:1px solid #b6ecd8;border-radius:12px;padding:18px 20px;margin-bottom:20px">
+      <p style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--green-dark);margin-bottom:6px">Insurance &amp; Extended Health</p>
+      <p style="font-size:.84rem;color:var(--slate);line-height:1.65">Services are private pay and not covered by OHIP. Many extended health plans cover services delivered by regulated clinicians — please confirm coverage directly with your own insurer before starting. Receipts are provided after each session for reimbursement. Clients are responsible for confirming their own coverage.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="hiw-section reveal" id="how">
+  <div class="container">
+    <div class="section-header center">
+      <p class="label">Getting Started</p>
+      <h2 class="section-title" style="margin-top:8px">How it <span>works</span></h2>
+      <p class="section-sub">A clear, unhurried process so you feel informed and ready before care begins.</p>
+    </div>
+    <div class="hiw-grid">
+      <div class="hiw-step reveal reveal-d1">
+        <div class="hiw-num">1</div>
+        <h3>Request an Intake Appointment</h3>
+        <p>Share your concerns through our secure form or by phone. This is an inquiry only &mdash; you are not yet a Toriven Health patient and no clinical advice is provided at this stage.</p>
+      </div>
+      <div class="hiw-step reveal reveal-d2">
+        <div class="hiw-num">2</div>
+        <h3>Complete Registration &amp; Consents</h3>
+        <p>We review your information, verify identity, and collect required consents. A clinical relationship has not started at this point.</p>
+      </div>
+      <div class="hiw-step reveal reveal-d3">
+        <div class="hiw-num">3</div>
+        <h3>Intake Assessment</h3>
+        <p>Your intake is confirmed after forms and payment are received. This first session is an assessment &mdash; not therapy. The clinician evaluates your goals and determines whether this service is the right fit.</p>
+      </div>
+      <div class="hiw-step reveal reveal-d4">
+        <div class="hiw-num">4</div>
+        <h3>Care Plan &amp; Ongoing Sessions</h3>
+        <p>If accepted into care, your clinician develops a tailored plan based on your goals. Ongoing sessions begin from here &mdash; individual first, with group options discussed when appropriate.</p>
+      </div>
+    </div>
+    <div class="hiw-note">
+      <strong>Please note:</strong> Contacting Toriven Health or booking an intake does not create a therapeutic relationship. Services begin only after formal acceptance into care following the intake and assessment process.
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section reveal" id="faq">
+  <div class="container">
+    <div class="section-header center">
+      <p class="label">Common Questions</p>
+      <h2 class="section-title" style="margin-top:8px">Frequently asked <span>questions</span></h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do I need a diagnosis to access this service? <span class="faq-chevron">&#x25BC;</span></div>
+        <div class="faq-a">No. A diagnosis is not required. Many adults who benefit most from communication support have never received a formal assessment &mdash; they simply find communication consistently more demanding than it appears to be for others. What matters is whether you have goals you want to work toward.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">I&rsquo;m autistic. Will I be asked to mask or act neurotypical? <span class="faq-chevron">&#x25BC;</span></div>
+        <div class="faq-a">No. This program does not aim to make you communicate in ways that feel inauthentic or require you to suppress who you are. The goal is to expand your awareness and options &mdash; to give you more tools and more choice, not to replace your natural style. Support is adapted to your communication identity, not imposed over it.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is this covered by OHIP or my insurance? <span class="faq-chevron">&#x25BC;</span></div>
+        <div class="faq-a">Private pay services. Not covered by OHIP. Clients are responsible for confirming insurance coverage. Receipts are provided for reimbursement.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How is this different from therapy or counselling? <span class="faq-chevron">&#x25BC;</span></div>
+        <div class="faq-a">Communication support is skills-based and practical &mdash; focused on building specific capabilities such as conversational confidence, workplace communication, or social interaction skills. Therapy and counselling focus more on emotional processing, relationships, and mental health concerns. The two can complement each other, and where significant emotional factors are present, we may recommend integrating both approaches with your consent.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What if anxiety is the main thing affecting my communication? <span class="faq-chevron">&#x25BC;</span></div>
+        <div class="faq-a">Anxiety and communication challenges are deeply interconnected. When anxiety is a significant contributing factor, your clinician may recommend coordinated support that addresses both &mdash; for example, communication skill-building alongside cognitive-behavioural approaches or registered psychotherapy. Clinicians from different disciplines can work together with your consent so that both dimensions are addressed in a consistent, connected way.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Will my employer know I&rsquo;m accessing this support? <span class="faq-chevron">&#x25BC;</span></div>
+        <div class="faq-a">No. All sessions are private and confidential, conducted on a PHIPA-compliant encrypted platform. Nothing is shared with your employer. If you choose to share clinical information with anyone &mdash; including for insurance reimbursement purposes &mdash; that is entirely your decision and requires your explicit consent.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do I have to join a group? <span class="faq-chevron">&#x25BC;</span></div>
+        <div class="faq-a">No. Group participation is entirely optional, never assumed, and always requires your explicit consent. Most clients begin with individual sessions. Group sessions are discussed only when clinically appropriate and after an individual intake has been completed. You will never be placed in a group without your agreement.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How practical is virtual communication support? <span class="faq-chevron">&#x25BC;</span></div>
+        <div class="faq-a">Virtual delivery is clinically effective for communication and social skills support. Many adults find it easier to work on communication goals from familiar environments, and skill practice in the spaces where real interactions happen makes transfer more natural. All sessions are delivered virtually across Ontario.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WARM CTA -->
+<section class="warm-cta-section reveal" id="book">
+  <div class="container">
+    <div class="warm-cta-inner">
+      <p class="label">Take the First Step</p>
+      <h2>If communication is holding you back,<br><em>a conversation can help.</em></h2>
+      <p>If communication anxiety, social stress, or workplace conversations are taking more out of you than they should, a brief introductory call can help you understand the right pathway forward &mdash; with no pressure to proceed.</p>
+      <div class="warm-cta-includes">
+        <div class="warm-inc"><div class="warm-inc-dot"></div><span>We listen to your situation in your own words &mdash; without rush or judgment</span></div>
+        <div class="warm-inc"><div class="warm-inc-dot"></div><span>We explain individual and group options and how they typically work</span></div>
+        <div class="warm-inc"><div class="warm-inc-dot"></div><span>We answer your questions about cost, format, and what to expect</span></div>
+        <div class="warm-inc"><div class="warm-inc-dot"></div><span>We help you understand what a realistic first step might look like</span></div>
+        <div class="warm-inc"><div class="warm-inc-dot"></div><span>There is no obligation to proceed &mdash; ever</span></div>
+      </div>
+      <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px 28px;max-width:520px;margin:0 auto 28px;text-align:left">
+        <p style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:8px">&#x1F4A1; Many adults feel uncertain about seeking support at first.</p>
+        <p style="font-size:.87rem;color:var(--gray);line-height:1.7;margin-bottom:8px">Our introductory conversation is simply a chance to talk about what you are experiencing and explore whether support might be helpful &mdash; there is no pressure to begin therapy, no assessment, and no obligation of any kind.</p>
+        <p style="font-size:.87rem;color:var(--slate);line-height:1.7;font-style:italic">You can share as much or as little as you are comfortable with. We will listen first.</p>
+      </div>
+      <a href="contact.html" class="warm-cta-btn">Book Free Consultation</a>
+      <p class="warm-cta-sub" style="margin-top:10px;font-size:.9rem;color:var(--slate);font-style:normal;font-weight:500">A brief conversation to understand your situation and explore next steps &mdash; no pressure, no obligation.</p>
+      <p class="warm-cta-sub">No referral required &middot; No diagnosis needed &middot; Call-back option available</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEES STRIP -->
+<div style="background:#fffbf0;padding:22px 5%;border-top:1px solid #f0d9a0">
+  <div class="container" style="display:flex;gap:14px;align-items:flex-start">
+    <div style="font-size:1.1rem;flex-shrink:0;margin-top:2px">&#x2139;</div>
+    <p style="font-size:.84rem;color:#7a5a20;line-height:1.7"><strong style="color:#5c3d0a">Fees for Private Services.</strong> Private pay services. Not covered by OHIP. Clients are responsible for confirming insurance coverage. Receipts are provided for reimbursement.</p>
+  </div>
+</div>
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Communication is a skill.<br>Confidence can be built.</h2>
+    <p>With the right support, many adults discover that the conversations they&rsquo;ve been dreading become manageable &mdash; and that they have far more to offer than anxiety has let them show.</p>
+    <a href="contact.html" class="cta-white">Start With a Free Conversation</a>
+    <p class="cta-note">No referral &middot; No diagnosis required &middot; No obligation &middot; Private pay &middot; Receipts provided</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+
+</main>
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="../index.html" class="logo" aria-label="Toriven Health — return to homepage">Toriven<span style="color:var(--green)">Health</span></a>
+      <p>Comprehensive virtual allied health care for children, teens, and adults across Ontario. Regulated clinicians. Evidence-based practice. Neurodiversity-affirming.</p>
+      <div class="footer-badges" aria-label="Certifications">
+        <span class="f-badge">PHIPA Compliant</span>
+        <span class="f-badge">Regulated Clinicians</span>
+        <span class="f-badge">Ontario-Wide</span>
+      </div>
+    </div>
+
+    <!-- Services column: plain div so no UA nav interference -->
+    <div class="footer-col" role="navigation" aria-label="Services navigation">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="../services/autism-assessment.html">Autism Assessment</a></li>
+        <li><a href="../services/adhd-assessment.html">ADHD &amp; LD Assessment</a></li>
+        <li><a href="../services/neuropsychological.html">Full Battery Assessment</a></li>
+        <li><a href="../services/speech-language.html">Speech-Language</a></li>
+        <li><a href="../services/occupational-therapy.html">Occupational Therapy</a></li>
+        <li><a href="../services/">Feeding &amp; Nutrition</a></li>
+        <li><a href="../services/cbt-dbt.html">CBT &amp; Trauma Therapy</a></li>
+        <li><a href="../services/">Psychiatry (Summer 2026)</a></li>
+      </ul>
+    </div>
+
+    <!-- Quick links column: plain div so no UA nav interference -->
+    <div class="footer-col" role="navigation" aria-label="Quick links navigation">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../services/specialized-programs.html">Specialized Programs</a></li>
+        <li><a href="../contact.html">Patient Portal</a></li>
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="../accessibility.html">AODA Accessibility</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col footer-contact">
+      <h4>Contact</h4>
+      <p><span aria-hidden="true">📍</span> Serving all of Ontario — Virtual-First</p>
+      <p><span aria-hidden="true">✉️</span> Email available at launch</p>
+    </div>
+  </div>
+
+  <!-- footer-bottom: plain div to avoid UA nav white background -->
+  <div class="footer-bottom">
+    <span>© 2026 Toriven Health. All rights reserved.</span>
+    <div class="footer-bottom-links" role="navigation" aria-label="Legal links">
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../accessibility.html">AODA Accessibility</a>
+    </div>
+  </div>
+
+  <!-- FOOTER COMPLIANCE NOTICES -->
+  <div class="footer-compliance" role="note" aria-label="Legal and compliance notices">
+    <p><span aria-hidden="true">🚫</span> <strong>Not Yet Open:</strong> Toriven Health is not yet open and is not currently accepting clients, patients, or referrals. Anticipated launch is late spring or summer 2026, subject to change.</p>
+    <p><span aria-hidden="true">📋</span> <strong>Informational Only:</strong> This website is for general informational purposes only. Nothing on this website constitutes medical advice, clinical guidance, diagnosis, or treatment. Consult a regulated health professional for health concerns.</p>
+    <p><span aria-hidden="true">🔒</span> <strong>PHIPA:</strong> PHIPA-compliant secure systems will be used for clinical communication and patient records at launch. Do not send personal health information through social media or general web channels.</p>
+    <p><span aria-hidden="true">💳</span> <strong>Private Pay:</strong> Services will be private pay. Not covered by OHIP. Insurance reimbursement depends on individual plans. Clients are responsible for confirming insurance coverage. Receipts are provided for reimbursement.</p>
+    <p><span aria-hidden="true">⚖️</span> <strong>No Therapeutic Relationship:</strong> Visiting this website, contacting us, or following us on social media does not establish a therapeutic, clinical, or professional relationship of any kind. A therapeutic relationship is only formed after formal intake, clinical acceptance, and completion of required consent documentation.</p>
+    <p><span aria-hidden="true">🆘</span> <strong>Crisis Support:</strong> Toriven Health is not a crisis service. If you are in immediate distress, contact <strong>9-8-8</strong> (Canada Suicide Crisis Helpline) or your nearest emergency department.</p>
+  </div>
+
+  <div class="footer-disclaimer">
+    <p>Educational content on this website is for informational purposes only and does not constitute clinical advice. Diagnosis and treatment decisions are made only after a full clinical assessment by a regulated clinician. TorivenHealth&#8482; is a trade name of Toriven Health Inc., a federally incorporated company.</p>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-mobile-cta">
+  <a href="contact.html">Book Free Consultation</a>
+</div>
+
+<script>
+function showAge(age, btn) {
+  document.querySelectorAll('.age-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.age-tab').forEach(b => b.classList.remove('active'));
+  const panel = document.getElementById('panel-' + age);
+  if (panel) panel.classList.add('active');
+  if (btn) btn.classList.add('active');
+}
+function toggleFaq(el) {
+  const item = el.parentElement;
+  item.classList.toggle('open');
+}
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+</script>
+
+
+<script>
+(function() {
+  var item = document.querySelector('.nav-has-dropdown');
+  if (!item) return;
+
+  var trigger = item.querySelector('.nav-services-trigger');
+  var dropdown = item.querySelector('.nav-dropdown');
+  var closeTimer;
+
+  function openDropdown() {
+    clearTimeout(closeTimer);
+    dropdown.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeDropdown() {
+    closeTimer = setTimeout(function() {
+      dropdown.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+    }, 150);
+  }
+
+  // Hover → show dropdown
+  trigger.addEventListener('mouseenter', openDropdown);
+  trigger.addEventListener('mouseleave', closeDropdown);
+
+  dropdown.addEventListener('mouseenter', function() {
+    clearTimeout(closeTimer);
+  });
+
+  dropdown.addEventListener('mouseleave', closeDropdown);
+
+  // ❗ IMPORTANT: Click par page open hone do
+  trigger.addEventListener('click', function(e) {
+    // e.preventDefault();  ❌ is line ko remove rakho
+    // Browser automatically services.html open karega
+  });
+
+})();
+</script>
+
+<script>
+function showTeam(tab, el) {
+  document.getElementById('pane-mgmt').style.display = tab === 'mgmt' ? 'block' : 'none';
+  document.getElementById('pane-clin').style.display = tab === 'clin' ? 'block' : 'none';
+  document.querySelectorAll('.team-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }});
+}, {threshold: 0.08});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+function toggleMobileNav(btn) {
+  var nav = document.getElementById('mobile-nav');
+  var isOpen = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  btn.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+}
+document.addEventListener('click', function(e) {
+  var nav = document.getElementById('mobile-nav');
+  var btn = document.querySelector('.nav-hamburger');
+  if (nav && btn && nav.classList.contains('open') && !nav.contains(e.target) && !btn.contains(e.target)) {
+    nav.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open navigation menu');
+  }
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    var nav = document.getElementById('mobile-nav');
+    var btn = document.querySelector('.nav-hamburger');
+    if (nav && nav.classList.contains('open')) {
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-label', 'Open navigation menu');
+      btn.focus();
+    }
+  }
+});
+</script>
+
+<!-- CTA POPUP OVERLAY -->
+<div class="th-popup-overlay" id="th-popup-overlay" role="dialog" aria-modal="true" aria-labelledby="th-popup-title" aria-describedby="th-popup-desc">
+  <div class="th-popup">
+    <button class="th-popup-close" onclick="thClosePopup()" aria-label="Close">&#x2715;</button>
+    <span class="th-popup-icon" aria-hidden="true">&#x1F331;</span>
+    <div class="th-popup-badge"><span class="th-popup-badge-dot" aria-hidden="true"></span> Coming Late Spring / Summer 2026</div>
+    <h2 id="th-popup-title">You&#x2019;re ahead of the <em>curve.</em></h2>
+    <p class="th-popup-body" id="th-popup-desc">We&#x2019;re putting the finishing touches on something we&#x2019;re genuinely proud of. <strong>Toriven Health opens late spring / early summer 2026</strong> &#x2014; and when we do, we&#x2019;d love for you to be among the first to know.<br><br><strong>Follow us on social media for launch updates</strong> &#x2014; we&#x2019;ll announce our opening there first.</p>
+    <div class="th-popup-actions">
+      <a href="../contact.html" class="th-popup-btn-primary" onclick="thClosePopup()">See What&#x2019;s Coming &#x2192;</a>
+      <button class="th-popup-btn-secondary" onclick="thClosePopup()">Close</button>
+    </div>
+    <p class="th-popup-note">No appointments available yet &#x2014; not accepting clients or referrals at this time.</p>
+  </div>
+</div>
+<script>
+/* ── CTA POPUP ── */
+function thOpenPopup(e) {
+  if (e) { e.preventDefault(); }
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay) {
+    overlay.classList.add('open');
+    overlay.querySelector('.th-popup-close').focus();
+    document.body.style.overflow = 'hidden';
+  }
+}
+function thClosePopup() {
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay) {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+// Close on overlay background click
+document.addEventListener('click', function(e) {
+  var overlay = document.getElementById('th-popup-overlay');
+  if (overlay && e.target === overlay) { thClosePopup(); }
+});
+// Close on Escape
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { thClosePopup(); }
+});
+// Wire CTA buttons to popup EXCEPT on contact.html, footer links, nav dropdown links
+(function() {
+  var isContactPage = window.location.pathname.indexOf('contact.html') !== -1;
+  if (isContactPage) return;
+  document.querySelectorAll('a[href]').forEach(function(el) {
+    var href = el.getAttribute('href') || '';
+    if (href.indexOf('contact.html') === -1) return;
+    var isFooter = el.closest('footer') !== null;
+    var isPopup = el.closest('#th-popup-overlay') !== null;
+    var isDropdown = el.closest('.nav-dropdown') !== null;
+    var isMobileNav = el.closest('.mobile-nav') !== null || el.closest('.th-mobile-nav') !== null;
+    var isContactPage = window.location.pathname.indexOf('contact') !== -1;
+    if (!isFooter && !isPopup && !isDropdown && !isMobileNav && !isContactPage) {
+      el.addEventListener('click', function(e) { thOpenPopup(e); });
+    }
+  });
+})();
+</script>
+</body>
+</html>
